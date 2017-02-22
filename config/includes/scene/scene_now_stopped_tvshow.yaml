@@ -1,0 +1,4 @@
+- name: 'now_stopped_tvshow'
+  entities:
+      input_boolean.plex_tvshow:
+          state: off

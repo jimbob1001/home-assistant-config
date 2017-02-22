@@ -1,0 +1,4 @@
+- name: 'now_stopped_movie'
+  entities:
+      input_boolean.plex_movie:
+          state: off

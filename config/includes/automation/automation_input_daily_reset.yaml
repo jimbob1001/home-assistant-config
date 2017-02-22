@@ -1,0 +1,26 @@
+- alias: 'input_daily_reset'
+
+  trigger:
+    platform: time
+    after: "02:00"
+
+  condition:
+    condition: and
+    conditions:
+
+    - condition: state
+      entity_id: input_boolean.enable_guest
+      state: 'off'
+    - condition: time
+      weekday:
+       - mon
+       - tue
+       - wed
+       - thu
+       - fri
+       - sat
+       - sun
+
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.input_reset

@@ -1,0 +1,11 @@
+- alias: 'outside_lights_off'
+
+  trigger:
+    platform: time
+    after: "08:45"
+
+  action:
+  - service: homeassistant.turn_off
+    entity_id: light.hue_outside
+    data:
+      transition: 2

@@ -1,0 +1,109 @@
+### Page 1 ###
+
+group:
+  default_view:
+    view: true
+    entities:
+      - group.today
+      - group.tomorrow
+      - group.home
+      - group.living_room_lights
+      - group.outside
+      - group.media_centre
+
+### Page 2 ###
+
+  Page_2:
+    name: 'Page 2'
+    view: true
+    entities:
+      - group.media_players
+
+### Page 3 ###
+
+  Page_3:
+    name: 'Page 3'
+    view: true
+    entities:
+      - group.other_scenes
+      - group.scripts
+      - group.scenes
+
+### Page 4 ###
+
+  Page_4:
+    name: 'Page 4'
+    view: true
+    entities:
+      - group.guest
+      - group.bedtime
+      - group.overrides
+      - group.now_playing
+      - group.sunset
+      - group.all_automations
+
+### Groups ###
+
+  today:
+      name: 'Today'
+      entities:
+      - sensor.time
+      - sensor.date
+      - sun.sun
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_daily_high_apparent_temperature
+      - sensor.dark_sky_daily_low_apparent_temperature
+
+  tomorrow:
+      name: 'Tomorrow'
+      entities:
+      - sensor.dark_sky_daily_high_apparent_temperature_1
+      - sensor.dark_sky_daily_low_apparent_temperature_1
+
+  scenes:
+      name: 'Scenes'
+      entities:
+      - scene.morning
+      - scene.dim
+      - scene.full
+      - scene.movie
+      - scene.white
+      - scene.night
+
+  other_scenes:
+      name: 'Other Scenes'
+      entities:
+      - scene.input_after_sunset
+      - scene.input_guests
+      - scene.input_late_bedtime
+      - scene.input_normal_bedtime
+      - scene.input_reset
+      - scene.now_playing_movie
+      - scene.now_playing_tvshow
+
+### Customize ###
+
+homeassistant:
+  customize:
+    - entity_id: group.today
+      order: 1
+    - entity_id: group.tomorrow
+      order: 2
+    - entity_id: group.home
+      order: 3
+    - entity_id: group.living_room_lights
+      order: 4
+    - entity_id: group.outside
+      order: 5
+    - entity_id: group.media_centre
+      order: 6
+
+    - entity_id: group.scenes
+      control: hidden
+      entity_picture: /local/bulb3.png
+      hidden: false
+
+    - entity_id: group.all_automations
+      friendly_name: 'Automations'
+      control: hidden
+      hidden: false

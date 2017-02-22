@@ -1,0 +1,28 @@
+- alias: 'lights_on_morning'
+
+  trigger:
+    platform: time
+    after: "05:55"
+
+  condition:
+    condition: and
+    conditions:
+
+    - condition: state
+      entity_id: group.living_room_lights
+      state: 'off'
+    - condition: time
+      weekday:
+       - mon
+       - tue
+       - wed
+       - thu
+       - fri
+       - sat
+       - sun
+
+  action:
+  - service: light.hue_activate_scene
+    data:
+      group_name: "Living Room"
+      scene_name: "Dim"

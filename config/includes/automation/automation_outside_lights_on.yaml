@@ -1,0 +1,18 @@
+- alias: 'outside_lights_on'
+
+  trigger:
+  - platform: time
+    after: "17:30"
+  - platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 10
+  - platform: sun
+    event: sunset
+    offset: "-1:00:00"
+
+  action:
+  - service: light.hue_activate_scene
+    data:
+      group_name: "Outside"
+      scene_name: "Full"

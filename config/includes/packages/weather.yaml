@@ -1,0 +1,38 @@
+sensor:
+  - platform: darksky
+    api_key: !secret darksky_api
+    update_inverval:
+      hours: 6
+    forecast: 1
+    monitored_conditions:
+    - temperature_max
+    - temperature_min
+    - apparent_temperature_max
+    - apparent_temperature_min
+    - summary
+    - icon
+
+homeassistant:
+  customize:
+    - entity_id: sensor.dark_sky*
+      homebridge_hidden: true
+
+    # today's forecast
+    - entity_id: sensor.dark_sky_daily_high_apparent_temperature
+      friendly_name: 'Feels like (high)'
+    - entity_id: sensor.dark_sky_daily_low_apparent_temperature
+      friendly_name: 'Feels like (low)'
+    - entity_id: sensor.dark_sky_daily_high_temperature
+      friendly_name: 'Daily High'
+    - entity_id: sensor.dark_sky_daily_low_temperature
+      friendly_name: 'Daily Low'
+
+    # tomorrow's forecast
+    - entity_id: sensor.dark_sky_daily_high_apparent_temperature_1
+      friendly_name: 'Feels like (high)'
+    - entity_id: sensor.dark_sky_daily_low_apparent_temperature_1
+      friendly_name: 'Feels like (low)'
+    - entity_id: sensor.dark_sky_daily_high_temperature_1
+      friendly_name: 'Daily High'
+    - entity_id: sensor.dark_sky_daily_low_temperature_1
+      friendly_name: 'Daily Low'

@@ -1,0 +1,63 @@
+- alias: 'plex_now_stopped_tvshow'
+
+  trigger:
+  - platform: state
+    entity_id:
+    - media_player.plex_shield_tv
+    from: 'playing'
+    to: 'idle'
+    for:
+      seconds: 5
+
+  - platform: state
+    entity_id:
+    - media_player.plex_shield_tv
+    from: 'playing'
+    to: 'off'
+    for:
+      seconds: 5
+
+  - platform: state
+    entity_id:
+    - media_player.plex_shield_tv
+    from: 'playing'
+    to: 'paused'
+    for:
+      seconds: 5
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.plex_tvshow
+        state: 'on'
+      - condition: or
+        conditions:
+        - condition: time
+          after: "17:30"
+        - condition: sun
+          after: sunset
+          after_offset: "-1:30:00"
+        - condition: state
+          entity_id: input_boolean.simulate_sunset
+          state: 'on'
+          
+      - condition: or
+        conditions:
+        - condition: state
+          entity_id: input_boolean.enable_guest
+          state: 'off'
+        - condition: state
+          entity_id: input_boolean.disable_plex
+          state: 'off'
+        - condition: state
+          entity_id: input_boolean.simulate_sunset
+          state: 'on'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.now_stopped_tvshow
+  - service: light.hue_activate_scene
+    data:
+      group_name: "Living Room"
+      scene_name: "Full"

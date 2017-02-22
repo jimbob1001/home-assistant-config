@@ -1,0 +1,8 @@
+### Late bedtime scene to turn lights off later
+
+- name: 'input_late_bedtime'
+  entities:
+    input_boolean.bedtime_late:
+        state: on
+    input_boolean.bedtime_normal:
+        state: off

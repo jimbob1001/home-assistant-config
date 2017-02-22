@@ -1,0 +1,10 @@
+- alias: 'input_late'
+
+  trigger:
+    platform: state
+    entity_id: input_boolean.bedtime_late
+    state: 'on'
+
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.input_late_bedtime

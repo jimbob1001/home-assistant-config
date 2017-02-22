@@ -1,0 +1,40 @@
+- alias: 'plex_now_playing_tvshow'
+
+  trigger:
+  - platform: state
+    entity_id:
+    - media_player.plex_shield_tv
+    to: 'playing'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ states.media_player.plex_shield_tv.attributes.media_content_type == "tvshow" }}'
+      - condition: or
+        conditions:
+        - condition: time
+          after: "17:30"
+        - condition: sun
+          after: sunset
+          after_offset: "-1:30:00"
+        - condition: state
+          entity_id: input_boolean.simulate_sunset
+          state: 'on'
+
+      - condition: or
+        conditions:
+        - condition: state
+          entity_id: input_boolean.enable_guest
+          state: 'off'
+        - condition: state
+          entity_id: input_boolean.disable_plex
+          state: 'off'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.now_playing_tvshow
+  - service: light.hue_activate_scene
+    data:
+      group_name: "Living Room"
+      scene_name: "Dim"

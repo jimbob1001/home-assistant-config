@@ -1,0 +1,39 @@
+zone:
+  - name: 'Home'
+    latitude: !secret latitude_home
+    longitude: !secret longitude_home
+    radius: 150
+    icon: mdi:account-location
+
+  - name: 'Work'
+    latitude: !secret latitude_work
+    longitude: !secret longitude_work
+    radius: 150
+    icon: mdi:account-multiple
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: !secret trusted_ip_2
+    exclude: !secret exclude_ip_1
+    track_new_devices: true
+    consider_home: 180
+    interval_seconds: 30
+    home_interval: 90
+
+  - platform: asuswrt
+    host: !secret asus_ip
+    protocol: ssh
+    mode: router
+    username: !secret asus_username
+    password: !secret asus_password
+
+#  - platform: tado
+#    username: !secret tado_user
+#    password: !secret tado_pass
+#    home_id: !secret home_id
+
+homeassistant:
+  customize:
+    - entity_id: device_tracker.home*
+      hidden: true
+      homebridge_hidden: true

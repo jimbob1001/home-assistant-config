@@ -1,0 +1,31 @@
+- alias: 'lights_off_morning'
+
+  trigger:
+    platform: time
+    after: "08:45"
+
+  condition:
+    condition: and
+    conditions:
+
+    - condition: state
+      entity_id: input_boolean.disable_work
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.enable_guest
+      state: 'off'
+    - condition: time
+      weekday:
+       - mon
+       - tue
+       - wed
+       - thu
+       - fri
+       #- sat
+       #- sun
+
+  action:
+  - service: homeassistant.turn_off
+    entity_id: light.hue_living_room
+    data:
+      transition: 2

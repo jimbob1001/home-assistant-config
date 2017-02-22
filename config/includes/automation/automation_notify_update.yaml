@@ -1,0 +1,16 @@
+- alias: 'notify_update'
+
+  trigger:
+    platform: state
+    entity_id: updater.updater
+
+  condition:
+  - condition: template
+    value_template: "{{ states('updater.updater') != 'unknown' }}"
+
+  action:
+    service: notify.get_notified
+    data:
+      title: "Home Assistant Update"
+      message: "Home Assistant {{ states('updater.updater') }} is now available. Go to https://home-assistant.io"
+      target: ""

@@ -1,0 +1,14 @@
+- alias: 'input_guest_mode_on'
+
+  trigger:
+    platform: state
+    entity_id: input_boolean.enable_guest
+    state: 'on'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.input_guests
+  - service: notify.get_notified
+    data:
+      message: No automations will trigger until guest mode has been disabled.
+      title: "Guest Mode Enabled"

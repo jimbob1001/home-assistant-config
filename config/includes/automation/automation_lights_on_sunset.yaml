@@ -1,0 +1,29 @@
+- alias: 'lights_on_sunset'
+
+  trigger:
+  - platform: time
+    after: "17:30"
+  - platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 12
+  - platform: sun
+    event: sunset
+    offset: "-1:30:00"
+
+  condition:
+    condition: and
+    conditions:
+
+    - condition: state
+      entity_id: input_boolean.disable_sunset
+      state: 'off'
+    - condition: state
+      entity_id: group.living_room_lights
+      state: 'off'
+
+  action:
+  - service: light.hue_activate_scene
+    data:
+      group_name: "Living Room"
+      scene_name: "Full"

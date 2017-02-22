@@ -1,0 +1,63 @@
+### HOME ASSISTANT ###
+###  BASIC CONFIG  ###
+#
+homeassistant:
+  name: 'No. 33'
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  elevation: !secret elevation_home
+  unit_system: metric
+  time_zone: Europe/London
+  packages: !include_dir_named includes/packages
+#
+### ADDITIONAL CONFIG ###
+#
+#introduction:
+#discovery:
+updater:
+frontend:
+sun:
+conversation:
+history:
+#
+logger:
+  default: error
+recorder:
+  purge_days: 3
+  exclude:
+    domains:
+      - sun
+      - automation
+      - sensor
+#
+logbook:
+  exclude:
+    domains:
+      - sun
+      - sensor
+#
+sensor:
+- platform: time_date
+  display_options:
+  - 'time'
+  - 'date'
+#
+http:
+  api_password: !secret http_password
+  trusted_networks:
+    - !secret trusted_ip_1
+    - !secret trusted_ip_2
+    - !secret trusted_ip_3
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
+#
+#emulated_hue:
+#  host_ip: !secret emulated_hue
+#  expose_by_default: true
+#  exposed_domains:
+#    - light
+
+### INCLUDE FURTHER CONFIG FILES ###
+
+automation: !include_dir_merge_list includes/automation
+scene: !include_dir_merge_list includes/scene

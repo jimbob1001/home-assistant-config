@@ -1,0 +1,18 @@
+- alias: 'plex_playing_pauses_sonos'
+
+  trigger:
+  - platform: state
+    entity_id:
+    - media_player.plex_shield_tv
+    - media_player.cast_shield
+    to: 'playing'
+
+  condition:
+    condition: state
+    entity_id: media_player.sonos_all
+    state: 'playing'
+
+  action:
+    service: media_player.media_pause
+    data:
+      entity_id: media_player.universal_sonos

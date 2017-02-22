@@ -1,0 +1,72 @@
+input_boolean:
+  bedtime_late:
+    name: 'Late Bedtime'
+    initial: off
+
+  bedtime_normal:
+    name: 'Normal Bedtime'
+    initial: on
+
+  disable_bedtime:
+    name: 'Disable Bedtime Automation'
+    initial: off
+
+  disable_plex:
+    name: 'Disable Plex Automation'
+    initial: off
+
+  disable_sunset:
+    name: 'Disable Sunset Automation'
+    initial: off
+
+  disable_work:
+    name: 'Disable Work Automation'
+    initial: off
+
+  enable_guest:
+    name: 'Enable Guest Mode'
+    initial: off
+
+  plex_movie:
+    name: 'Plex Movie'
+    initial: off
+
+  plex_tvshow:
+    name: 'Plex TV Show'
+    initial: off
+
+  simulate_sunset:
+    name: 'Simulate Sunset'
+    initial: off
+
+group:
+  guest:
+    name: 'Guest mode'
+    entities:
+    - input_boolean.enable_guest
+
+  bedtime:
+    name: 'Bedtime mode'
+    control: hidden
+    entities:
+    - input_boolean.disable_bedtime
+    - input_boolean.bedtime_normal
+    - input_boolean.bedtime_late
+
+  overrides:
+    name: 'Automation Overrides'
+    control: hidden
+    entities:
+    - input_boolean.disable_work
+    - input_boolean.disable_sunset
+    - input_boolean.disable_plex
+
+  sunset:
+    name: 'Simulate Sunset'
+    entities:
+    - input_boolean.simulate_sunset
+
+homeassistant:
+  customize:
+    - entity_id: input_boolean
+      homebridge_hidden: true

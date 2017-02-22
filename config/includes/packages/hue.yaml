@@ -1,0 +1,41 @@
+light:
+  - platform: hue
+    entity_namespace: 'hue'
+    host: !secret hue_ip
+    allow_unreachable: true
+    allow_hue_groups: true
+
+group:
+  outside:
+      name: 'Outside'
+      entities:
+      - light.hue_front_porch
+
+  living_room_lights:
+      name: 'Living Room Lights'
+      entities:
+      - light.hue_big_floor_lamp
+      - light.hue_small_floor_lamp
+      - light.hue_table_lamp
+      - light.hue_tv_backlight
+      - group.scripts
+
+homeassistant:
+  customize:
+    - entity_id: light.hue*
+      hidden: true
+      homebridge_hidden: true
+
+    - entity_id: light.hue_big_floor_lamp, light.hue_small_floor_lamp, light.hue_table_lamp, light.hue_tv_backlight, light.hue_front_porch
+      hidden: false
+      homebridge_hidden: false
+
+    - entity_id: group.living_room_lights
+      friendly_name: 'Living Room Lights'
+      #control: hidden
+      hidden: false
+
+    - entity_id: group.outside
+      friendly_name: 'Outside'
+      control: hidden
+      hidden: false

@@ -1,0 +1,12 @@
+- alias: 'notify_restart'
+
+  trigger:
+    platform: event
+    event_type: homeassistant_start
+
+  action:
+    service: notify.get_notified
+    data:
+      title: "Home Assistant Restarted"
+      message: "Home Assistant should now be available"
+      target: ""

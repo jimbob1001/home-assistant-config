@@ -1,0 +1,23 @@
+- name: dim
+  entities:
+      script.dim: on
+
+- name: full
+  entities:
+      script.full: on
+
+- name: movie
+  entities:
+      script.movie: on
+
+- name: morning
+  entities:
+      script.morning: on
+
+- name: white
+  entities:
+      script.white: on
+
+- name: night
+  entities:
+      script.night: on

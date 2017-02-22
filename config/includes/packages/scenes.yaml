@@ -1,0 +1,7 @@
+homeassistant:
+  customize:
+    - entity_id: scene
+      homebridge_hidden: true
+
+    - entity_id: scene.dim, scene.full, scene.movie, scene.morning, scene.white, scene.night
+      homebridge_hidden: false

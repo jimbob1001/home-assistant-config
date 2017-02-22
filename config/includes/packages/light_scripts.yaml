@@ -1,0 +1,72 @@
+script:
+  dim:
+    alias: Dim
+    sequence:
+      # This is Home Assistant Script Syntax
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Living Room"
+          scene_name: "Dim"
+
+  full:
+    alias: Full
+    sequence:
+      # This is Home Assistant Script Syntax
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Living Room"
+          scene_name: "Full"
+
+  morning:
+    alias: Morning
+    sequence:
+      # This is Home Assistant Script Syntax
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Living Room"
+          scene_name: "Dim"
+
+  movie:
+    alias: Movie
+    sequence:
+      # This is Home Assistant Script Syntax
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Living Room"
+          scene_name: "Movie"
+
+  night:
+    alias: Night
+    sequence:
+      # This is Home Assistant Script Syntax
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Living Room"
+          scene_name: "Night"
+
+  white:
+    alias: White
+    sequence:
+      # This is Home Assistant Script Syntax
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Living Room"
+          scene_name: "White"
+
+group:
+  scripts:
+      name: 'Scripts'
+      entities:
+      - script.dim
+      - script.full
+      - script.movie
+      - script.morning
+      - script.white
+      - script.night
+
+homeassistant:
+  customize:
+    - entity_id: group.scripts
+      control: hidden
+      entity_picture: /local/bulb3.png
+      hidden: false
