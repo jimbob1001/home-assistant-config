@@ -6,6 +6,6 @@
 
   action:
   - service: homeassistant.turn_off
-    entity_id: light.hue_outside
+    entity_id: light.hue_front_porch
     data:
       transition: 2
