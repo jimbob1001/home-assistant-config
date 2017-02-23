@@ -1,8 +1,0 @@
-### Normal bedtime scene triggers lights off scene
-
-- name: 'input_normal_bedtime'
-  entities:
-    input_boolean.bedtime_normal:
-        state: on
-    input_boolean.bedtime_late:
-        state: off

@@ -1,12 +1,4 @@
 input_boolean:
-  bedtime_late:
-    name: 'Late Bedtime'
-    initial: off
-
-  bedtime_normal:
-    name: 'Normal Bedtime'
-    initial: on
-
   disable_bedtime:
     name: 'Disable Bedtime Automation'
     initial: off
@@ -50,8 +42,6 @@ group:
     control: hidden
     entities:
     - input_boolean.disable_bedtime
-    - input_boolean.bedtime_normal
-    - input_boolean.bedtime_late
 
   overrides:
     name: 'Automation Overrides'

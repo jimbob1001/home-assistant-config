@@ -17,9 +17,6 @@
     - condition: state
       entity_id: input_boolean.enable_guest
       state: 'off'
-    - condition: state
-      entity_id: input_boolean.bedtime_normal
-      state: 'on'
     - condition: time
       weekday:
        - mon

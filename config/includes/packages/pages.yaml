@@ -74,9 +74,7 @@ group:
       name: 'Other Scenes'
       entities:
       - scene.input_after_sunset
-      - scene.input_guests
-      - scene.input_late_bedtime
-      - scene.input_normal_bedtime
+      - scene.input_guests  
       - scene.input_reset
       - scene.now_playing_movie
       - scene.now_playing_tvshow
