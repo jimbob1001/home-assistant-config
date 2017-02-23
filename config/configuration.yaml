@@ -51,13 +51,7 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 5
 #
-#emulated_hue:
-#  host_ip: !secret emulated_hue
-#  expose_by_default: true
-#  exposed_domains:
-#    - light
-
 ### INCLUDE FURTHER CONFIG FILES ###
-
+#
 automation: !include_dir_merge_list includes/automation
 scene: !include_dir_merge_list includes/scene
