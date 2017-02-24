@@ -36,3 +36,21 @@ homeassistant:
       friendly_name: 'Daily High'
     - entity_id: sensor.dark_sky_daily_low_temperature_1
       friendly_name: 'Daily Low'
+
+#homeassistant:
+  #customize_glob:
+  #    'sensor.dark_sky*':
+  #      homebridge_hidden: true
+  
+  #customize_glob:
+  #  - 'sensor.dark_sky_daily_high_apparent*':
+  #      friendly_name: 'Feels like (high)'
+
+  #  - 'sensor.dark_sky_daily_low_apparent*':
+  #      friendly_name: 'Feels like (low)'
+
+  #  - 'sensor.dark_sky_daily_high_temp*':
+  #      friendly_name: 'Daily High'
+
+  #  - 'sensor.dark_sky_daily_low_temp*':
+  #      friendly_name: 'Daily Low'

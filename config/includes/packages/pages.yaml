@@ -63,18 +63,18 @@ group:
   scenes:
       name: 'Scenes'
       entities:
-      - scene.morning
-      - scene.dim
-      - scene.full
-      - scene.movie
-      - scene.white
-      - scene.night
+      - scene.hue_morning
+      - scene.hue_dim
+      - scene.hue_full
+      - scene.hue_movie
+      - scene.hue_white
+      - scene.hue_night
 
   other_scenes:
       name: 'Other Scenes'
       entities:
       - scene.input_after_sunset
-      - scene.input_guests  
+      - scene.input_guests
       - scene.input_reset
       - scene.now_playing_movie
       - scene.now_playing_tvshow

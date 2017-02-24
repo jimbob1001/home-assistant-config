@@ -37,3 +37,9 @@ homeassistant:
     - entity_id: device_tracker.home*
       hidden: true
       homebridge_hidden: true
+
+#homeassistant:
+  #customize_glob:
+  #    'device_tracker.home*':
+  #      hidden: true
+  #      homebridge_hidden: true

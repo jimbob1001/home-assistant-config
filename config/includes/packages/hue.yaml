@@ -3,7 +3,7 @@ light:
     entity_namespace: 'hue'
     host: !secret hue_ip
     allow_unreachable: true
-    allow_hue_groups: true
+    allow_hue_groups: false
 
 group:
   outside:
@@ -20,51 +20,13 @@ group:
       - light.hue_tv_backlight
       - group.scripts
 
-homeassistant:
+#homeassistant:
   #customize_domain:
   #    light:
   #      hidden: true
   #      homebridge_hidden: true
-  customize:
-    - entity_id: light.hue*
-      hidden: true
-      homebridge_hidden: true
-
-#  customize:
-#      light.hue_big_floor_lamp:
-#        hidden: false
-#        homebridge_hidden: false
-    - entity_id: light.hue_big_floor_lamp, light.hue_small_floor_lamp, light.hue_table_lamp, light.hue_tv_backlight, light.hue_front_porch
-      hidden: false
-      homebridge_hidden: false
-
-#  customize:
-#      group.living_room_lights:
-#        friendly_name: 'Living Room Lights'
-#        hidden: false
-#        homebridge_hidden: false
-    - entity_id: group.living_room_lights
-      friendly_name: 'Living Room Lights'
-      hidden: false
-
-#  customize:
-#      group.outside:
-#        friendly_name: 'Outside'
-#        control: hidden
-#        hidden: false
-    - entity_id: group.outside
-      friendly_name: 'Outside'
-      control: hidden
-      hidden: false
-
-### example new customize
-#homeassistant:
-#  customize:
-#      light.kitchen:
-#        friendly_name: Beer
-#  customize_domain:
-#      light:
-#        icon: mdi:cow
-#  customize_glob:
-#      'light.*_kitchen':
-#        entity_picture: /local/wut.png
+  
+  #customize_glob:
+  #    'light.hue*':
+  #      hidden: false
+  #      homebridge_hidden: false
