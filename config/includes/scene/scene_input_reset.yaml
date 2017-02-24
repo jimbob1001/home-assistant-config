@@ -6,8 +6,6 @@
         state: off
     input_boolean.disable_plex:
         state: off
-    #input_boolean.disable_work:
-        #state: off
     input_boolean.disable_sunset:
         state: off
     input_boolean.simulate_sunset:

@@ -60,3 +60,4 @@ homeassistant:
   customize:
     - entity_id: input_boolean
       homebridge_hidden: true
+      icon: mdi:album

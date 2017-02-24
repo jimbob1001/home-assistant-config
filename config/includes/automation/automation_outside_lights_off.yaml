@@ -2,10 +2,10 @@
 
   trigger:
     platform: time
-    after: "08:45"
+    after: "08:40"
 
   action:
-  - service: homeassistant.turn_off
+    service: homeassistant.turn_off
     entity_id: light.hue_front_porch
     data:
       transition: 2
