@@ -39,3 +39,15 @@ homeassistant:
       friendly_name: 'Outside'
       control: hidden
       hidden: false
+
+### example new customize
+#homeassistant: 
+#  customize: 
+#      light.kitchen: 
+#        friendly_name: Beer 
+#  customize_domain:
+#      light: 
+#        icon: mdi:cow 
+#  customize_glob:
+#      'light.*_kitchen':
+#        entity_picture: /local/wut.png
