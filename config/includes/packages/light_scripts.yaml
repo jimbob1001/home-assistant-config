@@ -70,3 +70,10 @@ homeassistant:
       control: hidden
       entity_picture: /local/bulb3.png
       hidden: false
+
+# homeassistant:
+#   customize:
+#     - group.scripts:
+#         control: hidden
+#         entity_picture: /local/bulb3.png
+#         hidden: false

@@ -34,24 +34,24 @@ homeassistant:
       friendly_name: 'SONOS ALL'
       homebridge_name: 'All Speakers'
 
-#homeassistant:
-  #customize_glob:
-  #    'media_player.sonos*':
-  #      homebridge_hidden: true
+# homeassistant:
+#   customize_glob:
+#         'media_player.sonos*':
+#            hidden: false
 
-  # customize:
-  #     - media_player.sonos_living_room:
-  #         friendly_name: 'SONOS LIVING ROOM'
-  #         homebridge_name: 'Living Room Speakers'
-  #
-  #     - media_player.sonos_kitchen:
-  #         friendly_name: 'SONOS KITCHEN'
-  #         homebridge_name: 'Kitchen Speakers'
-  #
-  #     - media_player.sonos_bedroom:
-  #         friendly_name: 'SONOS BEDROOM'
-  #         homebridge_name: 'Bedroom Speakers'
-  #
-  #     - media_player.sonos_all:
-  #         friendly_name: 'SONOS ALL'
-  #         homebridge_name: 'All Speakers'
+#   customize:
+#       - media_player.sonos_living_room:
+#           friendly_name: 'SONOS LIVING ROOM'
+#           homebridge_name: 'Living Room Speakers'
+#
+#       - media_player.sonos_kitchen:
+#           friendly_name: 'SONOS KITCHEN'
+#           homebridge_name: 'Kitchen Speakers'
+#
+#       - media_player.sonos_bedroom:
+#           friendly_name: 'SONOS BEDROOM'
+#           homebridge_name: 'Bedroom Speakers'
+#
+#       - media_player.sonos_all:
+#           friendly_name: 'SONOS ALL'
+#           homebridge_name: 'All Speakers'

@@ -4,14 +4,12 @@ group:
       entities:
       - device_tracker.james
       - device_tracker.james_tado
-      #- device_tracker.james_ipad
 
   gillian:
       name: 'Gillian'
       entities:
       - device_tracker.gillian
       - device_tracker.gillian_tado
-      #- device_tracker.gillian_ipad
 
   home:
       name: 'Home'
@@ -34,3 +32,18 @@ homeassistant:
 
     - entity_id: device_tracker.gillian*
       entity_picture: /local/gillian.jpg
+
+# homeassistant:
+#   customize_glob:
+#    - 'device_tracker.james*':
+#        entity_picture: /local/james.png
+#    - 'device_tracker.gillian*':
+#        entity_picture: /local/gillian.jpg
+
+#   customize:
+#    - group.james:
+#         friendly_name: 'James'
+#         entity_picture: /local/james.png
+#    - group.gillian:
+#         friendly_name: 'Gillian'
+#         entity_picture: /local/gillian.jpg

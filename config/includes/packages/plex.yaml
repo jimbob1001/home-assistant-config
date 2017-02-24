@@ -57,3 +57,25 @@ homeassistant:
       friendly_name: 'MEDIA CENTRE'
       hidden: false
       homebridge_hidden: true
+
+# homeassistant:
+#   customize_domain:
+#      media_player:
+#        hidden: true
+#        homebridge_hidden: true
+#
+#   customize:
+#     - media_player.plex_shield_tv:
+#         friendly_name: 'PLEX'
+#         hidden: false
+#         homebridge_hidden: true
+#
+#     - media_player.cast_shield:
+#         friendly_name: 'CAST'
+#         hidden: false
+#         homebridge_hidden: true
+#
+#     - media_player.universal_tv:
+#         friendly_name: 'MEDIA CENTRE'
+#         hidden: false
+#         homebridge_hidden: true
