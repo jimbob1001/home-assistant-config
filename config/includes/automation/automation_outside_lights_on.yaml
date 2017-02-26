@@ -16,3 +16,17 @@
     data:
       group_name: "Outside"
       scene_name: "Full"
+
+#
+
+- alias: 'outside_lights_dim'
+
+  trigger:
+  - platform: time
+    after: "22:30"
+
+  action:
+    service: light.hue_activate_scene
+    data:
+      group_name: "Outside"
+      scene_name: "Dim"
