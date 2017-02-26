@@ -57,13 +57,9 @@ group:
     - input_boolean.simulate_sunset
 
 homeassistant:
-  customize:
-    - entity_id: input_boolean
+  customize: {}
+  customize_domain:
+    input_boolean:
       homebridge_hidden: true
-      icon: mdi:album
-
-# homeassistant:
-#   customize_domain:
-#       input_boolean:
-#         homebridge_hidden: true
-#         icon: mdi:album
+      icon: 'mdi:album'
+  customize_glob: {}

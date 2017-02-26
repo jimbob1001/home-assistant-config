@@ -19,31 +19,15 @@ group:
 
 homeassistant:
   customize:
-    - entity_id: group.james
-      friendly_name: 'James'
+    group.james:
+      friendly_name: James
       entity_picture: /local/james.png
-
-    - entity_id: device_tracker.james*
-      entity_picture: /local/james.png
-
-    - entity_id: group.gillian
-      friendly_name: 'Gillian'
+    group.gillian:
+      friendly_name: Gillian
       entity_picture: /local/gillian.jpg
 
-    - entity_id: device_tracker.gillian*
+  customize_glob:
+    device_tracker.james*:
+      entity_picture: /local/james.png
+    device_tracker.gillian*:
       entity_picture: /local/gillian.jpg
-
-# homeassistant:
-#   customize_glob:
-#    - 'device_tracker.james*':
-#        entity_picture: /local/james.png
-#    - 'device_tracker.gillian*':
-#        entity_picture: /local/gillian.jpg
-
-#   customize:
-#    - group.james:
-#         friendly_name: 'James'
-#         entity_picture: /local/james.png
-#    - group.gillian:
-#         friendly_name: 'Gillian'
-#         entity_picture: /local/gillian.jpg

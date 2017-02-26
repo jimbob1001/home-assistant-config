@@ -83,50 +83,23 @@ group:
 
 homeassistant:
   customize:
-    - entity_id: group.today
+    group.today:
       order: 1
-    - entity_id: group.tomorrow
+    group.tomorrow:
       order: 2
-    - entity_id: group.home
+    group.home:
       order: 3
-    - entity_id: group.living_room_lights
+    group.living_room_lights:
       order: 4
-    - entity_id: group.outside
+    group.outside:
       order: 5
-    - entity_id: group.media_centre
+    group.media_centre:
       order: 6
-
-    - entity_id: group.scenes
+    group.scenes:
       control: hidden
       entity_picture: /local/bulb3.png
       hidden: false
-
-    - entity_id: group.all_automations
-      friendly_name: 'Automations'
+    group.all_automations:
+      friendly_name: Automations
       control: hidden
       hidden: false
-
-# homeassistant:
-#   customize:
-#     - group.today:
-#         order: 1
-#     - group.tomorrow:
-#         order: 2
-#     - group.home:
-#         order: 3
-#     - group.living_room_lights:
-#         order: 4
-#     - group.outside:
-#         order: 5
-#     - group.media_centre:
-#         order: 6
-#
-#     - group.scenes:
-#         control: hidden
-#         entity_picture: /local/bulb3.png
-#         hidden: false
-#
-#     - group.all_automations:
-#         friendly_name: 'Automations'
-#         control: hidden
-#         hidden: false

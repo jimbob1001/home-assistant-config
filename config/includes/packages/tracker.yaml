@@ -27,19 +27,13 @@ device_tracker:
     username: !secret asus_username
     password: !secret asus_password
 
-#  - platform: tado
-#    username: !secret tado_user
-#    password: !secret tado_pass
-#    home_id: !secret home_id
+  - platform: tado
+    username: !secret tado_user
+    password: !secret tado_pass
+    home_id: !secret home_id
 
 homeassistant:
-  customize:
-    - entity_id: device_tracker.home*
+  customize_glob:
+    device_tracker.home*:
       hidden: true
       homebridge_hidden: true
-
-#homeassistant:
-  #customize_glob:
-  #    'device_tracker.home*':
-  #      hidden: true
-  #      homebridge_hidden: true

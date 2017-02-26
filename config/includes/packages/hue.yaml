@@ -20,13 +20,12 @@ group:
       - light.hue_tv_backlight
       - group.scripts
 
-#homeassistant:
-  #customize_domain:
-  #    light:
-  #      hidden: true
-  #      homebridge_hidden: true
-  
-  #customize_glob:
-  #    'light.hue*':
-  #      hidden: false
-  #      homebridge_hidden: false
+homeassistant:
+  customize_domain:
+    light:
+      hidden: true
+      homebridge_hidden: true
+  customize_glob:
+    light.hue*:
+      hidden: false
+      homebridge_hidden: false

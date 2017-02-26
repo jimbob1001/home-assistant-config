@@ -13,44 +13,18 @@ sensor:
     - icon
 
 homeassistant:
-  customize:
-    - entity_id: sensor.dark_sky*
+  customize_glob:
+    sensor.dark_sky*:
       homebridge_hidden: true
 
-    # today's forecast
-    - entity_id: sensor.dark_sky_daily_high_apparent_temperature
-      friendly_name: 'Feels like (high)'
-    - entity_id: sensor.dark_sky_daily_low_apparent_temperature
-      friendly_name: 'Feels like (low)'
-    - entity_id: sensor.dark_sky_daily_high_temperature
-      friendly_name: 'Daily High'
-    - entity_id: sensor.dark_sky_daily_low_temperature
-      friendly_name: 'Daily Low'
+    sensor.dark_sky_daily_high_temp*:
+      friendly_name: Daily High
 
-    # tomorrow's forecast
-    - entity_id: sensor.dark_sky_daily_high_apparent_temperature_1
-      friendly_name: 'Feels like (high)'
-    - entity_id: sensor.dark_sky_daily_low_apparent_temperature_1
-      friendly_name: 'Feels like (low)'
-    - entity_id: sensor.dark_sky_daily_high_temperature_1
-      friendly_name: 'Daily High'
-    - entity_id: sensor.dark_sky_daily_low_temperature_1
-      friendly_name: 'Daily Low'
+    sensor.dark_sky_daily_high_app*:
+      friendly_name: Feels like (high)
 
-#homeassistant:
-  #customize_glob:
-  #    'sensor.dark_sky*':
-  #      homebridge_hidden: true
-  
-  #customize_glob:
-  #  - 'sensor.dark_sky_daily_high_apparent*':
-  #      friendly_name: 'Feels like (high)'
+    sensor.dark_sky_daily_low_temp*:
+      friendly_name: Daily Low
 
-  #  - 'sensor.dark_sky_daily_low_apparent*':
-  #      friendly_name: 'Feels like (low)'
-
-  #  - 'sensor.dark_sky_daily_high_temp*':
-  #      friendly_name: 'Daily High'
-
-  #  - 'sensor.dark_sky_daily_low_temp*':
-  #      friendly_name: 'Daily Low'
+    sensor.dark_sky_daily_low_app*:
+      friendly_name: Feels like (low)

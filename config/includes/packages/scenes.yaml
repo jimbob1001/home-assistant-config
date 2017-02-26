@@ -1,16 +1,8 @@
 homeassistant:
-  customize:
-    - entity_id: scene
+  customize_domain:
+    scene:
       homebridge_hidden: true
 
-    - entity_id: scene.hue*
+  customize_glob:
+    scene.hue*:
       homebridge_hidden: false
-
-#homeassistant:
-  #customize_domain:
-  #    scene:
-  #      homebridge_hidden: true
-
-  #customize_glob:
-  #    'scene.hue*':
-  #      homebridge_hidden: false
