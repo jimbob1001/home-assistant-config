@@ -3,10 +3,6 @@
   trigger:
   - platform: time
     after: "17:30"
-#  - platform: numeric_state
-#    entity_id: sun.sun
-#    value_template: '{{ state.attributes.elevation }}'
-#    below: 12
   - platform: sun
     event: sunset
     offset: "-1:30:00"

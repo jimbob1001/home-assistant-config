@@ -5,21 +5,9 @@
     after: "02:00"
 
   condition:
-    condition: and
-    conditions:
-
-    - condition: state
-      entity_id: input_boolean.enable_guest
-      state: 'off'
-    - condition: time
-      weekday:
-       - mon
-       - tue
-       - wed
-       - thu
-       - fri
-       - sat
-       - sun
+    condition: state
+    entity_id: input_boolean.enable_guest
+    state: 'off'
 
   action:
     service: homeassistant.turn_on

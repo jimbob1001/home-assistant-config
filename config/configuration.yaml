@@ -16,6 +16,7 @@ homeassistant:
 #discovery:
 updater:
 frontend:
+config:
 sun:
 conversation:
 history:
@@ -24,17 +25,8 @@ logger:
   default: error
 recorder:
   purge_days: 3
-  exclude:
-    domains:
-      - sun
-      - automation
-      - sensor
 #
 logbook:
-  exclude:
-    domains:
-      - sun
-      - sensor
 #
 sensor:
 - platform: time_date

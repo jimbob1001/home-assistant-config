@@ -25,6 +25,7 @@ homeassistant:
     light:
       hidden: true
       homebridge_hidden: true
+
   customize_glob:
     light.hue*:
       hidden: false

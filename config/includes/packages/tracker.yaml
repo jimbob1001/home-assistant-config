@@ -37,3 +37,4 @@ homeassistant:
     device_tracker.home*:
       hidden: true
       homebridge_hidden: true
+      entity_picture: /local/hologram.png

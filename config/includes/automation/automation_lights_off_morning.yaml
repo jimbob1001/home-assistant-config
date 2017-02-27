@@ -21,8 +21,6 @@
        - wed
        - thu
        - fri
-       #- sat
-       #- sun
 
   action:
     service: homeassistant.turn_off

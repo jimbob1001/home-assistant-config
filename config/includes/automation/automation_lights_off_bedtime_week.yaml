@@ -17,15 +17,6 @@
     - condition: state
       entity_id: input_boolean.enable_guest
       state: 'off'
-    - condition: time
-      weekday:
-       - mon
-       - tue
-       - wed
-       - thu
-       - fri
-       - sat
-       - sun
 
   action:
     service: homeassistant.turn_off

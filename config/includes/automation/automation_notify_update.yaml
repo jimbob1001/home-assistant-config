@@ -5,7 +5,7 @@
     entity_id: updater.updater
 
   condition:
-  - condition: template
+    condition: template
     value_template: "{{ states('updater.updater') != 'unknown' }}"
 
   action:

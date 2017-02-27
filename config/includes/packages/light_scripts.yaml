@@ -2,7 +2,6 @@ script:
   dim:
     alias: Dim
     sequence:
-      # This is Home Assistant Script Syntax
       - service: light.hue_activate_scene
         data:
           group_name: "Living Room"
@@ -11,7 +10,6 @@ script:
   full:
     alias: Full
     sequence:
-      # This is Home Assistant Script Syntax
       - service: light.hue_activate_scene
         data:
           group_name: "Living Room"
@@ -20,7 +18,6 @@ script:
   morning:
     alias: Morning
     sequence:
-      # This is Home Assistant Script Syntax
       - service: light.hue_activate_scene
         data:
           group_name: "Living Room"
@@ -29,7 +26,6 @@ script:
   movie:
     alias: Movie
     sequence:
-      # This is Home Assistant Script Syntax
       - service: light.hue_activate_scene
         data:
           group_name: "Living Room"
@@ -38,7 +34,6 @@ script:
   night:
     alias: Night
     sequence:
-      # This is Home Assistant Script Syntax
       - service: light.hue_activate_scene
         data:
           group_name: "Living Room"
@@ -47,7 +42,6 @@ script:
   white:
     alias: White
     sequence:
-      # This is Home Assistant Script Syntax
       - service: light.hue_activate_scene
         data:
           group_name: "Living Room"
@@ -68,6 +62,10 @@ homeassistant:
   customize:
     group.scripts:
       control: hidden
-      entity_picture: /local/bulb3.png
       hidden: false
+      entity_picture: /local/tie.png
+
+  customize_domain:
+    script:
+      entity_picture: /local/bobafett.png
       

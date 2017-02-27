@@ -21,13 +21,13 @@ homeassistant:
   customize:
     group.james:
       friendly_name: James
-      entity_picture: /local/james.png
+      entity_picture: /local/hansolo.png
     group.gillian:
       friendly_name: Gillian
-      entity_picture: /local/gillian.jpg
+      entity_picture: /local/leia.png
 
   customize_glob:
     device_tracker.james*:
-      entity_picture: /local/james.png
+      entity_picture: /local/hansolo.png
     device_tracker.gillian*:
-      entity_picture: /local/gillian.jpg
+      entity_picture: /local/hologram.png
