@@ -62,10 +62,8 @@ homeassistant:
   customize:
     group.scripts:
       control: hidden
-      hidden: false
       entity_picture: /local/tie.png
 
   customize_domain:
     script:
       entity_picture: /local/bobafett.png
-      

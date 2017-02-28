@@ -1,5 +1,3 @@
-### Guest scene disables specific automations
-
 - name: 'input_guests'
   entities:
     input_boolean.disable_bedtime:

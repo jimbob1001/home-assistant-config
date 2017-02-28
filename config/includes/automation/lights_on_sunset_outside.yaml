@@ -1,11 +1,11 @@
-- alias: 'outside_lights_on'
+- alias: 'lights_on_sunset_outside'
 
   trigger:
   - platform: time
-    after: "17:30"
+    after: '17:30:00'
   - platform: sun
     event: sunset
-    offset: "-1:00:00"
+    offset: '-1:00:00'
 
   action:
     service: light.hue_activate_scene
@@ -15,11 +15,11 @@
 
 #
 
-- alias: 'outside_lights_dim'
+- alias: 'lights_dim_night_outside'
 
   trigger:
     platform: time
-    after: "22:30"
+    after: '22:30:00'
 
   action:
     service: light.hue_activate_scene

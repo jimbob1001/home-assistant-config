@@ -1,5 +1,3 @@
-### after sunset scene mimics sunset for testing certain automations
-
 - name: 'input_after_sunset'
   entities:
       input_boolean.simulate_sunset:

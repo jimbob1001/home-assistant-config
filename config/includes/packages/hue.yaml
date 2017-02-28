@@ -3,7 +3,7 @@ light:
     entity_namespace: 'hue'
     host: !secret hue_ip
     allow_unreachable: true
-    allow_hue_groups: false
+    allow_hue_groups: true
 
 group:
   outside:
@@ -19,14 +19,3 @@ group:
       - light.hue_table_lamp
       - light.hue_tv_backlight
       - group.scripts
-
-homeassistant:
-  customize_domain:
-    light:
-      hidden: true
-      homebridge_hidden: true
-
-  customize_glob:
-    light.hue*:
-      hidden: false
-      homebridge_hidden: false

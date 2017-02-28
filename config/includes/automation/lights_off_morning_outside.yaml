@@ -1,8 +1,8 @@
-- alias: 'outside_lights_off'
+- alias: 'lights_off_morning_outside'
 
   trigger:
     platform: time
-    after: "08:40"
+    after: '08:40:00'
 
   action:
     service: homeassistant.turn_off

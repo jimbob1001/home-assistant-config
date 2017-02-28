@@ -28,6 +28,6 @@ homeassistant:
 
   customize_glob:
     device_tracker.james*:
-      entity_picture: /local/hansolo.png
+      entity_picture: /local/anakin.png
     device_tracker.gillian*:
       entity_picture: /local/hologram.png

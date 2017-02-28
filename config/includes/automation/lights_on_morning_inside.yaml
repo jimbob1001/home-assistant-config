@@ -1,8 +1,8 @@
-- alias: 'lights_on_morning'
+- alias: 'lights_on_morning_inside'
 
   trigger:
     platform: time
-    after: "05:55"
+    after: '05:55:00'
 
   condition:
     condition: state

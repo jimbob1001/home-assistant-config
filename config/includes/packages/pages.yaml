@@ -95,10 +95,7 @@ homeassistant:
       order: 5
     group.media_centre:
       order: 6
-    group.scenes:
-      control: hidden
-      entity_picture: /local/bulb3.png
-      hidden: false
+
     group.all_automations:
       friendly_name: Automations
       control: hidden

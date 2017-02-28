@@ -1,8 +1,8 @@
-- alias: 'lights_off_bedtime_week'
+- alias: 'lights_off_bedtime_inside'
 
   trigger:
     platform: time
-    after: "22:15"
+    after: '22:15:00'
 
   condition:
     condition: and

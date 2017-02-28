@@ -1,5 +1,3 @@
-### Reset scene restores all input boolean switches to off
-
 - name: 'input_reset'
   entities:
     input_boolean.disable_bedtime:
