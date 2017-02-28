@@ -21,10 +21,16 @@ sun:
 conversation:
 history:
 logger:
-#  default: error
+  default: error
 recorder:
   purge_days: 3
 logbook:
+  exclude:
+    domains:
+    - sun
+    entities:
+    - sensor.dark_sky
+    - sensor.date
 sensor:
 - platform: time_date
   display_options:
