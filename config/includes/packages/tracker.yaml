@@ -37,3 +37,8 @@ device_tracker:
     hosts:
       gillian_ping: !secret ping_2
       james_ping: !secret ping_1
+
+homeassistant:
+  customize_domain:
+    device_tracker:
+      homebridge_hidden: true
