@@ -10,7 +10,7 @@
 - Plex Media Server *(currently running via synology docker)*
 - Philips Hue
 - Sonos
-- [Tado Smart Thermostat](https://www.tado.com/gb/) *(currently not integrated with home-assistant)*
+- [Tado Smart Thermostat](https://www.tado.com/gb/) *(currently only integrated with home-assistant as device tracker)*
 - Nvidia Shield TV *(also runs plex media server but not yet good enough for main server due to smb bug in software)*
 
 ## Automations
@@ -23,12 +23,12 @@ Plex
 
 Lights
 - Turn lights on around sunset (inside & out)
-- Turn lights off at bedtime (inside)
-- Turn lights off on the morning (outside)
+- Turn inside lights off at bedtime
+- Turn outside lights off in the morning
 
 Notifications
-- notify if home-assistant restarts
-- notify if home-assistant has an update available
+- Send pushover notification if home-assistant restarts
+- Send pushover notification if home-assistant has an update available
 
 Various
 - Guest mode - turns off certain automations if we have guests over (i.e. we *might* have to stay up later than 22:15!)
