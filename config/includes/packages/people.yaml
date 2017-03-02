@@ -22,10 +22,8 @@ group:
 homeassistant:
   customize:
     group.james:
-      friendly_name: James
       entity_picture: /local/hansolo.png
     group.gillian:
-      friendly_name: Gillian
       entity_picture: /local/leia.png
 
   customize_glob:
