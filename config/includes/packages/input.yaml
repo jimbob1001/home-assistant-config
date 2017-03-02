@@ -60,4 +60,3 @@ homeassistant:
   customize_domain:
     input_boolean:
       homebridge_hidden: true
-      entity_picture: /local/nien.png
