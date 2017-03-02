@@ -12,29 +12,28 @@ zone:
     icon: mdi:account-multiple
 
 device_tracker:
-  - platform: nmap_tracker
-    hosts: !secret trusted_ip_2
-    exclude: !secret exclude_ip_1
-    track_new_devices: true
-    consider_home: 180
-    interval_seconds: 30
-    home_interval: 90
-
   - platform: asuswrt
     host: !secret asus_ip
     protocol: ssh
     mode: router
     username: !secret asus_username
     password: !secret asus_password
+    consider_home: 0:03:00
+    interval_seconds: 0:00:30
+    track_new_devices: true
+
+  - platform: nmap_tracker
+    hosts: !secret trusted_ip_2
+    exclude: !secret exclude_ip_1
+    scan_options: " --privileged -sP "
+    home_interval: 10
 
   - platform: tado
     username: !secret tado_user
     password: !secret tado_pass
     home_id: !secret home_id
 
-homeassistant:
-  customize_glob:
-    device_tracker.home*:
-      hidden: true
-      homebridge_hidden: true
-      entity_picture: /local/hologram.png
+  - platform: ping
+    hosts:
+      gillian_ping: !secret ping_2
+      james_ping: !secret ping_1
