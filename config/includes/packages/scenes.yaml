@@ -6,6 +6,6 @@ homeassistant:
 
 
   customize_glob:
-    scene.hue*:
+    "scene.hue*":
       homebridge_hidden: false
       entity_picture: /local/k2so.png

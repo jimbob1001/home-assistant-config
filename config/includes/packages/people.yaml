@@ -27,7 +27,7 @@ homeassistant:
       entity_picture: /local/leia.png
 
   customize_glob:
-    device_tracker.james*:
+    "device_tracker.james*":
       entity_picture: /local/anakin.png
-    device_tracker.gillian*:
+    "device_tracker.gillian*":
       entity_picture: /local/hologram.png

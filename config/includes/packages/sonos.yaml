@@ -32,6 +32,6 @@ homeassistant:
       homebridge_name: All Speakers
 
   customize_glob:
-    media_player.sonos*:
+    "media_player.sonos*":
       hidden: false
       homebridge_hidden: true

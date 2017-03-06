@@ -14,17 +14,17 @@ sensor:
 
 homeassistant:
   customize_glob:
-    sensor.dark_sky*:
+    "sensor.dark_sky*":
       homebridge_hidden: true
 
-    sensor.dark_sky_daily_high_temp*:
+    "sensor.dark_sky_daily_high_temp*":
       friendly_name: Daily High
 
-    sensor.dark_sky_daily_high_app*:
+    "sensor.dark_sky_daily_high_app*":
       friendly_name: Feels like (high)
 
-    sensor.dark_sky_daily_low_temp*:
+    "sensor.dark_sky_daily_low_temp*":
       friendly_name: Daily Low
 
-    sensor.dark_sky_daily_low_app*:
+    "sensor.dark_sky_daily_low_app*":
       friendly_name: Feels like (low)
