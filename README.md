@@ -1,5 +1,9 @@
 # Home Assistant Configuration
 
+## Screenshot
+
+![UI](Screenshot 2017-03-08 12.30.39.png)
+
 ## Setup
 - Synology DS415+ *(running synology docker)*
 - [Home Assistant](https://home-assistant.io/)
