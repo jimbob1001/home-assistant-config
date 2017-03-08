@@ -63,7 +63,28 @@ homeassistant:
     group.scripts:
       control: hidden
       entity_picture: /local/tie.png
+      
+    scene.hue_dim:
+      friendly_name: 'Dim'
+    scene.hue_full:
+      friendly_name: 'Full'
+    scene.hue_movie:
+      friendly_name: 'Movie'
+    scene.hue_morning:
+      friendly_name: 'Morning'
+    scene.hue_white:
+      friendly_name: 'White'
+    scene.hue_night:
+      friendly_name: 'Night'
 
   customize_domain:
     script:
       entity_picture: /local/bobafett.png
+    scene:
+      homebridge_hidden: true
+      entity_picture: /local/jawa.png
+
+  customize_glob:
+    "scene.hue*":
+      homebridge_hidden: false
+      entity_picture: /local/k2so.png
