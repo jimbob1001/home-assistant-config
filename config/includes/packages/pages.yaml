@@ -42,6 +42,23 @@ group:
       - group.sunset
       - group.all_automations
 
+### Page 5 ALL ###
+
+  Page_5:
+    name: 'ALL'
+    view: true
+    entities:
+      - group.today
+      - group.tomorrow
+      - group.home
+      - group.living_room_lights
+      - group.outside
+      - media_player.plex_shield_tv
+      - media_player.cast_shield
+      - group.scenes
+      - group.guest
+      - group.overrides
+
 ### Groups ###
 
   today:
