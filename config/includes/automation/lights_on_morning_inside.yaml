@@ -4,10 +4,10 @@
     platform: time
     after: '05:55:00'
 
-  condition:
-    condition: state
-    entity_id: group.living_room_lights
-    state: 'off'
+#  condition:
+#    condition: state
+#    entity_id: group.living_room_lights
+#    state: 'off'
 
   action:
     service: light.hue_activate_scene
