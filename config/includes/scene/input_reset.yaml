@@ -8,3 +8,5 @@
         state: off
     input_boolean.simulate_sunset:
         state: off
+    input_boolean.disable_work:
+        state: off
