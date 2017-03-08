@@ -16,6 +16,9 @@ homeassistant:
   customize_glob:
     "sensor.dark_sky*":
       homebridge_hidden: true
+      
+    "sensor.darksky*":
+      homebridge_hidden: true
 
     "sensor.dark_sky_daily_high_temp*":
       friendly_name: Daily High

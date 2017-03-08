@@ -30,6 +30,7 @@ logbook:
     - sun
     entities:
     - sensor.dark_sky
+    - sensor.darksky
     - sensor.date
 sensor:
 - platform: time_date
