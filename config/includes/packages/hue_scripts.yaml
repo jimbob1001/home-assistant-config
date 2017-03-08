@@ -58,12 +58,22 @@ group:
       - script.white
       - script.night
 
+  scenes:
+      name: 'Scenes'
+      entities:
+      - scene.hue_dim
+      - scene.hue_full
+      - scene.hue_movie
+      - scene.hue_morning
+      - scene.hue_white
+      - scene.hue_night
+
 homeassistant:
   customize:
     group.scripts:
       control: hidden
       entity_picture: /local/tie.png
-      
+
     scene.hue_dim:
       friendly_name: 'Dim'
     scene.hue_full:

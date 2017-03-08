@@ -60,16 +60,6 @@ group:
       - sensor.dark_sky_daily_high_apparent_temperature_1
       - sensor.dark_sky_daily_low_apparent_temperature_1
 
-  scenes:
-      name: 'Scenes'
-      entities:
-      - scene.hue_morning
-      - scene.hue_dim
-      - scene.hue_full
-      - scene.hue_movie
-      - scene.hue_white
-      - scene.hue_night
-
   other_scenes:
       name: 'Other Scenes'
       entities:
