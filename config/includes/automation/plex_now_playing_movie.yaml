@@ -1,4 +1,4 @@
-- alias: 'plex_now_playing_movie'
+- alias: plex_now_playing_movie
 
   trigger:
   - platform: state
@@ -14,14 +14,14 @@
       - condition: or
         conditions:
         - condition: time
-          after: "17:30"
+          after: "17:30:00"
         - condition: sun
           after: sunset
           after_offset: "-1:30:00"
         - condition: state
           entity_id: input_boolean.simulate_sunset
           state: 'on'
-          
+
       - condition: or
         conditions:
         - condition: state

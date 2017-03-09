@@ -1,4 +1,0 @@
-- name: 'now_playing_tvshow'
-  entities:
-      input_boolean.plex_tvshow:
-          state: on

@@ -1,4 +1,4 @@
-- alias: 'lights_on_sunset_inside'
+- alias: lights_on_sunset_inside
 
   trigger:
   - platform: time

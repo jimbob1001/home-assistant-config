@@ -7,12 +7,12 @@ light:
 
 group:
   outside:
-      name: 'Outside'
+      name: Outside
       entities:
       - light.hue_front_porch
 
   living_room_lights:
-      name: 'Living Room Lights'
+      name: Living Room Lights
       entities:
       - light.hue_big_floor_lamp
       - light.hue_small_floor_lamp

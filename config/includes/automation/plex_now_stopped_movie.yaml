@@ -1,4 +1,4 @@
-- alias: 'plex_now_stopped_movie'
+- alias: plex_now_stopped_movie
 
   trigger:
   - platform: state
@@ -34,7 +34,7 @@
       - condition: or
         conditions:
         - condition: time
-          after: "17:30"
+          after: "17:30:00"
         - condition: sun
           after: sunset
           after_offset: "-1:30:00"

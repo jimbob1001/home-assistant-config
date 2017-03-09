@@ -1,4 +1,4 @@
-- alias: 'input_guest_mode_off'
+- alias: input_guest_mode_off
 
   trigger:
     platform: state

@@ -1,50 +1,50 @@
 input_boolean:
   disable_bedtime:
-    name: 'Disable Bedtime Automation'
+    name: Disable Bedtime Automation
     initial: off
 
   disable_plex:
-    name: 'Disable Plex Automation'
+    name: Disable Plex Automation
     initial: off
 
   disable_sunset:
-    name: 'Disable Sunset Automation'
+    name: Disable Sunset Automation
     initial: off
 
   disable_work:
-    name: 'Disable Work Automation'
+    name: Disable Work Automation
     initial: off
 
   enable_guest:
-    name: 'Enable Guest Mode'
+    name: Enable Guest Mode
     initial: off
 
   plex_movie:
-    name: 'Plex Movie'
+    name: Plex Movie
     initial: off
 
   plex_tvshow:
-    name: 'Plex TV Show'
+    name: Plex TV Show
     initial: off
 
   simulate_sunset:
-    name: 'Simulate Sunset'
+    name: Simulate Sunset
     initial: off
 
 group:
   guest:
-    name: 'Guest mode'
+    name: Guest mode
     entities:
     - input_boolean.enable_guest
 
   bedtime:
-    name: 'Bedtime mode'
+    name: Bedtime mode
     control: hidden
     entities:
     - input_boolean.disable_bedtime
 
   overrides:
-    name: 'Automation Overrides'
+    name: Automation Overrides
     control: hidden
     entities:
     - input_boolean.disable_work
@@ -52,7 +52,7 @@ group:
     - input_boolean.disable_plex
 
   sunset:
-    name: 'Simulate Sunset'
+    name: Simulate Sunset
     entities:
     - input_boolean.simulate_sunset
 

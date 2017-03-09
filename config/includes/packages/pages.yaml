@@ -14,7 +14,7 @@ group:
 ### Page 2 ###
 
   Page_2:
-    name: 'Page 2'
+    name: Page 2
     view: true
     entities:
       - group.media_players
@@ -22,7 +22,7 @@ group:
 ### Page 3 ###
 
   Page_3:
-    name: 'Page 3'
+    name: Page 3
     view: true
     entities:
       - group.other_scenes
@@ -32,7 +32,7 @@ group:
 ### Page 4 ###
 
   Page_4:
-    name: 'Page 4'
+    name: Page 4
     view: true
     entities:
       - group.guest
@@ -45,7 +45,7 @@ group:
 ### Page 5 ALL ###
 
   Page_5:
-    name: 'ALL'
+    name: ALL
     view: true
     entities:
       - group.today
@@ -62,7 +62,7 @@ group:
 ### Groups ###
 
   today:
-      name: 'Today'
+      name: Today
       entities:
       - sensor.time
       - sensor.date
@@ -72,13 +72,13 @@ group:
       - sensor.dark_sky_daily_low_apparent_temperature
 
   tomorrow:
-      name: 'Tomorrow'
+      name: Tomorrow
       entities:
       - sensor.dark_sky_daily_high_apparent_temperature_1
       - sensor.dark_sky_daily_low_apparent_temperature_1
 
   other_scenes:
-      name: 'Other Scenes'
+      name: Other Scenes
       entities:
       - scene.input_after_sunset
       - scene.input_guests

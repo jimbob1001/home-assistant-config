@@ -49,7 +49,7 @@ script:
 
 group:
   scripts:
-      name: 'Scripts'
+      name: Scripts
       entities:
       - script.dim
       - script.full
@@ -59,7 +59,7 @@ group:
       - script.night
 
   scenes:
-      name: 'Scenes'
+      name: Scenes
       entities:
       - scene.hue_dim
       - scene.hue_full
@@ -75,17 +75,32 @@ homeassistant:
       entity_picture: /local/tie.png
 
     scene.hue_dim:
-      friendly_name: 'Dim'
+      friendly_name: Dim
+      homebridge_name: Dim
     scene.hue_full:
-      friendly_name: 'Full'
+      friendly_name: Full
+      homebridge_name: Full
     scene.hue_movie:
-      friendly_name: 'Movie'
+      friendly_name: Movie
+      homebridge_name: Movie
     scene.hue_morning:
-      friendly_name: 'Morning'
+      friendly_name: Morning
+      homebridge_name: Morning
     scene.hue_white:
-      friendly_name: 'White'
+      friendly_name: White
+      homebridge_name: White
     scene.hue_night:
-      friendly_name: 'Night'
+      friendly_name: Night
+      homebridge_name: Night
+
+    light.hue_garage:
+      homebridge_hidden: true
+    light.hue_outside:
+      homebridge_hidden: true
+    light.hue_living_room:
+      homebridge_hidden: true
+    light.hue_all:
+      homebridge_hidden: true
 
   customize_domain:
     script:
@@ -98,3 +113,5 @@ homeassistant:
     "scene.hue*":
       homebridge_hidden: false
       entity_picture: /local/k2so.png
+    "light.hue_hue_white*":
+      homebridge_hidden: true

@@ -2,7 +2,7 @@
 ###  BASIC CONFIG  ###
 #
 homeassistant:
-  name: 'No. 33'
+  name: No. 33
   latitude: !secret latitude_home
   longitude: !secret longitude_home
   elevation: !secret elevation_home
@@ -35,8 +35,8 @@ logbook:
 sensor:
 - platform: time_date
   display_options:
-  - 'time'
-  - 'date'
+  - time
+  - date
 #
 http:
   api_password: !secret http_password

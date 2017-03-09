@@ -1,4 +1,4 @@
-- alias: 'lights_on_morning_inside'
+- alias: lights_on_morning_inside
 
   trigger:
     platform: time

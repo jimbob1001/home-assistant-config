@@ -14,13 +14,13 @@ media_player:
 
 group:
   media_centre:
-      name: 'Media Centre'
+      name: Media Centre
       entities:
       - media_player.plex_shield_tv
       - media_player.sonos_all
 
   media_players:
-      name: 'Media Players'
+      name: Media Players
       entities:
       - media_player.plex_shield_tv
       - media_player.cast_shield
@@ -31,7 +31,7 @@ group:
       - media_player.sonos_all
 
   now_playing:
-      name: 'Now Playing'
+      name: Now Playing
       control: hidden
       entities:
       - input_boolean.plex_movie

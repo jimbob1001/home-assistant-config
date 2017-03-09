@@ -1,4 +1,4 @@
-- name: 'input_reset'
+- name: input_reset
   entities:
     input_boolean.disable_bedtime:
         state: off

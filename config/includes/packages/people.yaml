@@ -1,20 +1,20 @@
 group:
   james:
-      name: 'James'
+      name: James
       entities:
       - device_tracker.james_oneplus3
       - device_tracker.james_tado
       - device_tracker.james_ping
 
   gillian:
-      name: 'Gillian'
+      name: Gillian
       entities:
       - device_tracker.gillian_oneplus3
       - device_tracker.gillian_tado
       - device_tracker.gillian_ping
 
   home:
-      name: 'Home'
+      name: Home
       entities:
       - group.james
       - group.gillian

@@ -1,11 +1,11 @@
 zone:
-  - name: 'Home'
+  - name: Home
     latitude: !secret latitude_home
     longitude: !secret longitude_home
     radius: 150
     icon: mdi:account-location
 
-  - name: 'Work'
+  - name: Work
     latitude: !secret latitude_work
     longitude: !secret longitude_work
     radius: 150

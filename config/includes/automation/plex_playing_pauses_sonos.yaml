@@ -1,4 +1,4 @@
-- alias: 'plex_playing_pauses_sonos'
+- alias: plex_playing_pauses_sonos
 
   trigger:
   - platform: state

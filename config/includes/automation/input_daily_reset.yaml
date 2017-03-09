@@ -1,4 +1,4 @@
-- alias: 'input_daily_reset'
+- alias: input_daily_reset
 
   trigger:
     platform: time

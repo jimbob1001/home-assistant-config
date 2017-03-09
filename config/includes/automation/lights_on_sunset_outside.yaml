@@ -1,4 +1,4 @@
-- alias: 'lights_on_sunset_outside'
+- alias: lights_on_sunset_outside
 
   trigger:
   - platform: time

@@ -1,4 +1,0 @@
-- name: 'now_playing_movie'
-  entities:
-      input_boolean.plex_movie:
-          state: on

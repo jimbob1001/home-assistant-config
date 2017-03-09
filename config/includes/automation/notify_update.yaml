@@ -1,4 +1,4 @@
-- alias: 'notify_update'
+- alias: notify_update
 
   trigger:
     platform: state

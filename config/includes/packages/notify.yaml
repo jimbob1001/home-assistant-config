@@ -1,6 +1,6 @@
 notify:
   - platform: pushover
-    name: 'Pushover'
+    name: Pushover
     api_key: !secret pushover_api
     user_key: !secret pushover_user
 
@@ -12,7 +12,7 @@ notify:
   #   username: 'home-assistant'
 
   - platform: group
-    name: 'get_notified'
+    name: get_notified
     services:
       #- service: slack
       #- service: nfandroidtv

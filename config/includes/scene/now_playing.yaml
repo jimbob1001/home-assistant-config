@@ -1,0 +1,19 @@
+- name: now_playing_movie
+  entities:
+      input_boolean.plex_movie:
+          state: on
+
+- name: now_playing_tvshow
+  entities:
+      input_boolean.plex_tvshow:
+          state: on
+
+- name: now_stopped_movie
+  entities:
+      input_boolean.plex_movie:
+          state: off
+
+- name: now_stopped_tvshow
+  entities:
+      input_boolean.plex_tvshow:
+          state: off
