@@ -4,33 +4,15 @@ homeassistant:
 
     script:
       entity_picture: /local/bobafett.png
-      homebridge_hidden: true
     scene:
       entity_picture: /local/jawa.png
       homebridge_hidden: true
     input_boolean:
       entity_picture: /local/thumbs.png
       homebridge_hidden: true
-    device_tracker:
-      homebridge_hidden: true
-    media_player:
-      homebridge_hidden: true
     light:
       homebridge_hidden: true
-    sensor:
-      homebridge_hidden: true
-### I don't use any of the following,
-### but if I ever do they will be
-### automatically hidden from homebridge
-    binary_sensor:
-      homebridge_hidden: true
-    cover:
-      homebridge_hidden: true
-    fan:
-      homebridge_hidden: true
-    lock:
-      homebridge_hidden: true
-    switch:
+    media_player:
       homebridge_hidden: true
 
   customize_glob:
@@ -45,16 +27,7 @@ homeassistant:
     "scene.hue*":
       entity_picture: /local/k2so.png
       homebridge_hidden: false
-
     "light.hue*":
-      homebridge_hidden: false
-    "media_player.plex*":
-      homebridge_hidden: false
-    "media_player.sonos*":
-      homebridge_hidden: false
-    "media_player.cast*":
-      homebridge_hidden: false
-    "input_boolean.enable_guest*":
       homebridge_hidden: false
 
     "sensor.dark_sky_daily_high_temp*":
@@ -95,6 +68,13 @@ homeassistant:
     scene.hue_night:
       friendly_name: Night
       homebridge_name: NIGHT
+    scene.hue_outside_off:
+      friendly_name: Outside Off
+      homebridge_hidden: true
+
+    input_boolean.enable_guest:
+      homebridge_hidden: false
+      homebridge_name: GUEST
 
     media_player.plex_shield_tv:
       friendly_name: PLEX
@@ -126,10 +106,20 @@ homeassistant:
       order: 6
 
     light.hue_garage:
+      hidden: true
       homebridge_hidden: true
     light.hue_outside:
+      hidden: true
       homebridge_hidden: true
     light.hue_living_room:
+      hidden: true
       homebridge_hidden: true
     light.hue_all:
+      hidden: true
+      homebridge_hidden: true
+    light.hue_hue_white_lamp_2:
+      hidden: true
+      homebridge_hidden: true
+    light.hue_hue_white_lamp_3:
+      hidden: true
       homebridge_hidden: true
