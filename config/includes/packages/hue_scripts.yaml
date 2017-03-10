@@ -76,42 +76,23 @@ homeassistant:
 
     scene.hue_dim:
       friendly_name: Dim
-      homebridge_name: Dim
     scene.hue_full:
       friendly_name: Full
-      homebridge_name: Full
     scene.hue_movie:
       friendly_name: Movie
-      homebridge_name: Movie
     scene.hue_morning:
       friendly_name: Morning
-      homebridge_name: Morning
     scene.hue_white:
       friendly_name: White
-      homebridge_name: White
     scene.hue_night:
       friendly_name: Night
-      homebridge_name: Night
-
-    light.hue_garage:
-      homebridge_hidden: true
-    light.hue_outside:
-      homebridge_hidden: true
-    light.hue_living_room:
-      homebridge_hidden: true
-    light.hue_all:
-      homebridge_hidden: true
 
   customize_domain:
     script:
       entity_picture: /local/bobafett.png
     scene:
-      homebridge_hidden: true
       entity_picture: /local/jawa.png
 
   customize_glob:
     "scene.hue*":
-      homebridge_hidden: false
       entity_picture: /local/k2so.png
-    "light.hue_hue_white*":
-      homebridge_hidden: true

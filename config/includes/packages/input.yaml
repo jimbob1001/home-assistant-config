@@ -55,8 +55,3 @@ group:
     name: Simulate Sunset
     entities:
     - input_boolean.simulate_sunset
-
-homeassistant:
-  customize_domain:
-    input_boolean:
-      homebridge_hidden: true

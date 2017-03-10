@@ -1,0 +1,36 @@
+ homeassistant:
+
+  customize_domain:
+    input_boolean:
+      homebridge_hidden: true
+    device_tracker:
+      homebridge_hidden: true
+    media_player:
+      homebridge_hidden: true
+
+  customize:
+    scene.hue_dim:
+      homebridge_name: Dim
+    scene.hue_full:
+      homebridge_name: Full
+    scene.hue_movie:
+      homebridge_name: Movie
+    scene.hue_morning:
+      homebridge_name: Morning
+    scene.hue_white:
+      homebridge_name: White
+    scene.hue_night:
+      homebridge_name: Night
+
+    light.hue_garage:
+      homebridge_hidden: true
+    light.hue_outside:
+      homebridge_hidden: true
+    light.hue_living_room:
+      homebridge_hidden: true
+    light.hue_all:
+      homebridge_hidden: true
+
+  customize_glob:
+    "sensor.dark_sky*":
+      homebridge_hidden: true
