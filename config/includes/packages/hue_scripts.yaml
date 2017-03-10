@@ -47,6 +47,14 @@ script:
           group_name: "Living Room"
           scene_name: "White"
 
+  hue_outside_full:
+    alias: Outside Full
+    sequence:
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Outside"
+          scene_name: "Full"
+
 group:
   scripts:
       name: Hue Scripts
@@ -57,6 +65,7 @@ group:
       - script.hue_morning
       - script.hue_white
       - script.hue_night
+      - script.hue_outside_full
 
   scenes:
       name: Hue Scenes

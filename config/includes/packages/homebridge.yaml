@@ -50,24 +50,24 @@
   ### Customize individual entities
   ### Overrides domain & glob
 
-    # scene.hue_dim:
-    #   homebridge_name: DIM
-    # scene.hue_full:
-    #   homebridge_name: FULL
-    # scene.hue_movie:
-    #   homebridge_name: MOVIE
-    # scene.hue_morning:
-    #   homebridge_name: MORNING
-    # scene.hue_white:
-    #   homebridge_name: WHITE
-    # scene.hue_night:
-    #   homebridge_name: NIGHT
+    scene.hue_dim:
+      homebridge_name: DIM
+    scene.hue_full:
+      homebridge_name: FULL
+    scene.hue_movie:
+      homebridge_name: MOVIE
+    scene.hue_morning:
+      homebridge_name: MORNING
+    scene.hue_white:
+      homebridge_name: WHITE
+    scene.hue_night:
+      homebridge_name: NIGHT
 
-    # light.hue_garage:
-    #   homebridge_hidden: true
-    # light.hue_outside:
-    #   homebridge_hidden: true
-    # light.hue_living_room:
-    #   homebridge_hidden: true
-    # light.hue_all:
-    #   homebridge_hidden: true
+    light.hue_garage:
+      homebridge_hidden: true
+    light.hue_outside:
+      homebridge_hidden: true
+    light.hue_living_room:
+      homebridge_hidden: true
+    light.hue_all:
+      homebridge_hidden: true

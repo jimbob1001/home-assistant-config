@@ -6,6 +6,8 @@ homeassistant:
       entity_picture: /local/bobafett.png
     scene:
       entity_picture: /local/jawa.png
+    input_boolean:
+      entity_picture: /local/thumbs.png
 
   customize_glob:
   ### Customize similar entities

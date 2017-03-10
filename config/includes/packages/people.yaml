@@ -18,3 +18,4 @@ group:
       entities:
       - group.james
       - group.gillian
+      - input_boolean.enable_guest
