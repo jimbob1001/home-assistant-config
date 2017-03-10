@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![UI](Screenshot 2017-03-08 12.30.39.png)
+![UI](hass.png)
 
 ## Setup
 - Synology DS415+ *(running synology docker)*
