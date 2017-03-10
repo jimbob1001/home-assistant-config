@@ -68,19 +68,15 @@ homeassistant:
     media_player.sonos_all:
       friendly_name: SONOS
 
-# ### Customize ###
-#
-# homeassistant:
-#   customize:
-#     group.today:
-#       order: 1
-#     group.tomorrow:
-#       order: 2
-#     group.home:
-#       order: 3
-#     group.living_room_lights:
-#       order: 4
-#     group.outside:
-#       order: 5
-#     group.media_centre:
-#       order: 6
+    group.today:
+      order: 1
+    group.tomorrow:
+      order: 2
+    group.home:
+      order: 3
+    group.living_room_lights:
+      order: 4
+    group.outside:
+      order: 5
+    group.media_centre:
+      order: 6
