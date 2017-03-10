@@ -1,6 +1,5 @@
 ### All customizations relating to homebridge
-
- homeassistant:
+homeassistant:
   customize_domain:
   ### Customize entire domains
     input_boolean:
