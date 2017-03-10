@@ -49,7 +49,7 @@ script:
 
 group:
   scripts:
-      name: Scripts
+      name: Hue Scripts
       entities:
       - script.hue_dim
       - script.hue_full
@@ -59,7 +59,7 @@ group:
       - script.hue_night
 
   scenes:
-      name: Scenes
+      name: Hue Scenes
       entities:
       - scene.hue_dim
       - scene.hue_full
@@ -67,32 +67,3 @@ group:
       - scene.hue_morning
       - scene.hue_white
       - scene.hue_night
-
-homeassistant:
-  customize:
-    group.scripts:
-      control: hidden
-      entity_picture: /local/tie.png
-
-    scene.hue_dim:
-      friendly_name: Dim
-    scene.hue_full:
-      friendly_name: Full
-    scene.hue_movie:
-      friendly_name: Movie
-    scene.hue_morning:
-      friendly_name: Morning
-    scene.hue_white:
-      friendly_name: White
-    scene.hue_night:
-      friendly_name: Night
-
-  customize_domain:
-    script:
-      entity_picture: /local/bobafett.png
-    scene:
-      entity_picture: /local/jawa.png
-
-  customize_glob:
-    "scene.hue*":
-      entity_picture: /local/k2so.png

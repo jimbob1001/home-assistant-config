@@ -1,36 +1,73 @@
- homeassistant:
+### All customizations relating to homebridge
 
+ homeassistant:
   customize_domain:
+  ### Customize entire domains
     input_boolean:
       homebridge_hidden: true
     device_tracker:
       homebridge_hidden: true
     media_player:
       homebridge_hidden: true
+    light:
+      homebridge_hidden: true
+    scene:
+      homebridge_hidden: true
+    sensor:
+      homebridge_hidden: true
 
-  customize:
-    scene.hue_dim:
-      homebridge_name: Dim
-    scene.hue_full:
-      homebridge_name: Full
-    scene.hue_movie:
-      homebridge_name: Movie
-    scene.hue_morning:
-      homebridge_name: Morning
-    scene.hue_white:
-      homebridge_name: White
-    scene.hue_night:
-      homebridge_name: Night
-
-    light.hue_garage:
+### I don't use any of the following,
+### but if I ever do they will be
+### automatically hidden from homebridge
+    binary_sensor:
       homebridge_hidden: true
-    light.hue_outside:
+    cover:
       homebridge_hidden: true
-    light.hue_living_room:
+    fan:
       homebridge_hidden: true
-    light.hue_all:
+    lock:
+      homebridge_hidden: true
+    switch:
       homebridge_hidden: true
 
   customize_glob:
-    "sensor.dark_sky*":
-      homebridge_hidden: true
+  ### Customize similar entities
+  ### Overrides domain
+    "light.hue*":
+      homebridge_hidden: false
+    "scene.hue*":
+      homebridge_hidden: false
+    "media_player.plex*":
+      homebridge_hidden: false
+    "media_player.sonos*":
+      homebridge_hidden: false
+    "media_player.cast*":
+      homebridge_hidden: false
+    "input_boolean.enable_guest*":
+      homebridge_hidden: false
+
+  customize:
+  ### Customize individual entities
+  ### Overrides domain & glob
+
+    # scene.hue_dim:
+    #   homebridge_name: DIM
+    # scene.hue_full:
+    #   homebridge_name: FULL
+    # scene.hue_movie:
+    #   homebridge_name: MOVIE
+    # scene.hue_morning:
+    #   homebridge_name: MORNING
+    # scene.hue_white:
+    #   homebridge_name: WHITE
+    # scene.hue_night:
+    #   homebridge_name: NIGHT
+
+    # light.hue_garage:
+    #   homebridge_hidden: true
+    # light.hue_outside:
+    #   homebridge_hidden: true
+    # light.hue_living_room:
+    #   homebridge_hidden: true
+    # light.hue_all:
+    #   homebridge_hidden: true

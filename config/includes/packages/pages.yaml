@@ -40,7 +40,6 @@ group:
       - group.overrides
       - group.now_playing
       - group.sunset
-      - group.all_automations
 
 ### Page 5 ALL ###
 
@@ -85,25 +84,3 @@ group:
       - scene.input_reset
       - scene.now_playing_movie
       - scene.now_playing_tvshow
-
-### Customize ###
-
-homeassistant:
-  customize:
-    group.today:
-      order: 1
-    group.tomorrow:
-      order: 2
-    group.home:
-      order: 3
-    group.living_room_lights:
-      order: 4
-    group.outside:
-      order: 5
-    group.media_centre:
-      order: 6
-
-    group.all_automations:
-      friendly_name: Automations
-      control: hidden
-      hidden: false

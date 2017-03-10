@@ -4,16 +4,16 @@ notify:
     api_key: !secret pushover_api
     user_key: !secret pushover_user
 
-  # - platform: slack
-  #   name: 'Slack'
-  #   api_key: !secret slack_api
-  #   default_channel: 'home-assistant'
-  #   icon: ':rocket:'
-  #   username: 'home-assistant'
-
   - platform: group
     name: get_notified
     services:
       #- service: slack
       #- service: nfandroidtv
       - service: pushover
+
+  # - platform: slack
+  #   name: 'Slack'
+  #   api_key: !secret slack_api
+  #   default_channel: 'home-assistant'
+  #   icon: ':rocket:'
+  #   username: 'home-assistant'

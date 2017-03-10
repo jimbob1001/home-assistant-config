@@ -36,14 +36,3 @@ group:
       entities:
       - input_boolean.plex_movie
       - input_boolean.plex_tvshow
-
-homeassistant:
-  customize:
-    media_player.plex_shield_tv:
-      friendly_name: PLEX
-
-    media_player.cast_shield:
-      friendly_name: CAST
-
-    media_player.universal_tv:
-      friendly_name: MEDIA CENTRE
