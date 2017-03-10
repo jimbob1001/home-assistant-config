@@ -1,0 +1,6 @@
+- name: hue_outside_off
+  entities:
+      light.hue_front_porch:
+          state: off
+      light.hue_outside:
+          state: off

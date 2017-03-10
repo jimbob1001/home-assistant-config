@@ -1,5 +1,5 @@
 script:
-  dim:
+  hue_dim:
     alias: Dim
     sequence:
       - service: light.hue_activate_scene
@@ -7,7 +7,7 @@ script:
           group_name: "Living Room"
           scene_name: "Dim"
 
-  full:
+  hue_full:
     alias: Full
     sequence:
       - service: light.hue_activate_scene
@@ -15,7 +15,7 @@ script:
           group_name: "Living Room"
           scene_name: "Full"
 
-  morning:
+  hue_morning:
     alias: Morning
     sequence:
       - service: light.hue_activate_scene
@@ -23,7 +23,7 @@ script:
           group_name: "Living Room"
           scene_name: "Dim"
 
-  movie:
+  hue_movie:
     alias: Movie
     sequence:
       - service: light.hue_activate_scene
@@ -31,7 +31,7 @@ script:
           group_name: "Living Room"
           scene_name: "Movie"
 
-  night:
+  hue_night:
     alias: Night
     sequence:
       - service: light.hue_activate_scene
@@ -39,7 +39,7 @@ script:
           group_name: "Living Room"
           scene_name: "Night"
 
-  white:
+  hue_white:
     alias: White
     sequence:
       - service: light.hue_activate_scene
@@ -51,12 +51,12 @@ group:
   scripts:
       name: Scripts
       entities:
-      - script.dim
-      - script.full
-      - script.movie
-      - script.morning
-      - script.white
-      - script.night
+      - script.hue_dim
+      - script.hue_full
+      - script.hue_movie
+      - script.hue_morning
+      - script.hue_white
+      - script.hue_night
 
   scenes:
       name: Scenes

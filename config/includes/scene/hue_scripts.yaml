@@ -1,23 +1,23 @@
 - name: hue_dim
   entities:
-      script.dim: on
+      script.hue_dim: on
 
 - name: hue_full
   entities:
-      script.full: on
+      script.hue_full: on
 
 - name: hue_movie
   entities:
-      script.movie: on
+      script.hue_movie: on
 
 - name: hue_morning
   entities:
-      script.morning: on
+      script.hue_morning: on
 
 - name: hue_white
   entities:
-      script.white: on
+      script.hue_white: on
 
 - name: hue_night
   entities:
-      script.night: on
+      script.hue_night: on

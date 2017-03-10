@@ -13,9 +13,7 @@
       group_name: "Outside"
       scene_name: "Full"
 
-#
-
-- alias: 'lights_dim_night_outside'
+- alias: lights_dim_night_outside
 
   trigger:
     platform: time
@@ -26,3 +24,19 @@
     data:
       group_name: "Outside"
       scene_name: "Dim"
+
+- alias: lights_off_morning_outside
+
+  trigger:
+  - platform: time
+    after: '08:30:00'
+  - platform: time
+    after: '08:35:00'
+  - platform: time
+    after: '08:40:00'
+  - platform: time
+    after: '08:45:00'
+
+  action:
+  - service: scene.turn_on
+    entity_id: scene.hue_outside_off

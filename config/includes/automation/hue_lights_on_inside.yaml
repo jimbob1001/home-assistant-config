@@ -1,3 +1,15 @@
+- alias: lights_on_morning_inside
+
+  trigger:
+    platform: time
+    after: '05:55:00'
+
+  action:
+    service: light.hue_activate_scene
+    data:
+      group_name: "Living Room"
+      scene_name: "Dim"
+
 - alias: lights_on_sunset_inside
 
   trigger:
