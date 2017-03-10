@@ -22,8 +22,12 @@ conversation:
 history:
 logger:
   default: error
+# recorder:
+#   purge_days: 3
 recorder:
-  purge_days: 3
+  purge_days: 60
+  db_url: 'mysql://hass:hassword@127.0.0.1/homeassistant'
+#
 logbook:
   exclude:
     domains:
