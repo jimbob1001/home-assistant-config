@@ -1,0 +1,12 @@
+weblink:
+  entities:
+    - name: homeassistant
+      url: https://home-assistant.io
+    # - name: Router
+    #   url: http://192.168.1.1/
+
+sensor:
+  - platform: scrape
+    resource: https://home-assistant.io
+    select: ".current-version h1"
+    name: hass
