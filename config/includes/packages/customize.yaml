@@ -24,6 +24,11 @@ homeassistant:
     "device_tracker.gillian*":
       entity_picture: /local/hologram.png
 
+    "sensor.james*":
+      entity_picture: /local/anakin.png
+    "sensor.gillian*":
+      entity_picture: /local/hologram.png
+
     "scene.hue*":
       entity_picture: /local/k2so.png
       homebridge_hidden: false

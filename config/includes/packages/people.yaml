@@ -2,16 +2,22 @@ group:
   james:
       name: James
       entities:
-      - device_tracker.james_oneplus3
-      - device_tracker.james_tado
-      - device_tracker.james_ping
+      # - device_tracker.james_oneplus3
+      # - device_tracker.james_tado
+      # - device_tracker.james_ping
+      - sensor.james_oneplus3
+      - sensor.james_tado
+      - sensor.james_ping
 
   gillian:
       name: Gillian
       entities:
-      - device_tracker.gillian_oneplus3
-      - device_tracker.gillian_tado
-      - device_tracker.gillian_ping
+      # - device_tracker.gillian_oneplus3
+      # - device_tracker.gillian_tado
+      # - device_tracker.gillian_ping
+      - sensor.gillian_oneplus3
+      - sensor.gillian_tado
+      - sensor.gillian_ping
 
   home:
       name: Home
