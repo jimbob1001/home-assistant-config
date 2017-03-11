@@ -1,6 +1,17 @@
 sensor:
   - platform: template
     sensors:
+      james_group:
+        value_template:
+          "{% if is_state('group.james', 'home') %}
+          is at home
+          {% else %}
+          is away
+          {% endif %}"
+        friendly_name: James
+
+  - platform: template
+    sensors:
       james_ping:
         value_template:
           "{% if is_state('device_tracker.james_ping', 'home') %}
@@ -28,6 +39,17 @@ sensor:
           {% else %}
           is away
           {% endif %}"
+
+  - platform: template
+    sensors:
+      gillian_group:
+        value_template:
+          "{% if is_state('group.gillian', 'home') %}
+          is at home
+          {% else %}
+          is away
+          {% endif %}"
+        friendly_name: Gillian
 
   - platform: template
     sensors:
