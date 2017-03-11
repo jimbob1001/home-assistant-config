@@ -7,6 +7,7 @@ group:
       - group.today
       - group.tomorrow
       - group.home
+      - group.web
       - group.living_room_lights
       - group.outside
       - group.media_centre
@@ -85,3 +86,9 @@ group:
       - scene.input_reset
       - scene.now_playing_movie
       - scene.now_playing_tvshow
+
+  web:
+    name: Websites
+    entities:
+    - weblink.homeassistant
+    - sensor.hass
