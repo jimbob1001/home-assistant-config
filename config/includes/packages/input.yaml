@@ -40,7 +40,7 @@ group:
     name: Guest mode
     entities:
     - input_boolean.enable_guest
-    - sensor.guest_mode
+    # - sensor.guest_mode
 
   bedtime:
     name: Bedtime mode
