@@ -22,11 +22,11 @@ device_tracker:
     interval_seconds: 0:00:30
     track_new_devices: true
 
-  - platform: nmap_tracker
-    hosts: !secret trusted_ip_2
-    exclude: !secret exclude_ip_1
-    scan_options: " --privileged -sP "
-    home_interval: 10
+  # - platform: nmap_tracker
+  #   hosts: !secret trusted_ip_2
+  #   exclude: !secret exclude_ip_1
+  #   scan_options: " --privileged -sP "
+  #   home_interval: 10
 
   - platform: tado
     username: !secret tado_user
