@@ -8,12 +8,14 @@ homeassistant:
       entity_picture: /local/jawa.png
       homebridge_hidden: true
     input_boolean:
-      entity_picture: /local/thumbs.png
+      entity_picture: /local/thumbs_up.png
       homebridge_hidden: true
     light:
       homebridge_hidden: true
     media_player:
       homebridge_hidden: true
+    # weblink:
+    #   entity_picture: /local/vader_melted.png
 
   customize_glob:
   ### Customize similar entities
@@ -54,6 +56,15 @@ homeassistant:
       entity_picture: /local/hansolo.png
     group.gillian:
       entity_picture: /local/leia.png
+    sensor.james_group:
+      entity_picture: /local/hansolo.png
+    sensor.gillian_group:
+      entity_picture: /local/leia.png
+
+    sensor.hass:
+      entity_picture: /local/kylo_ren.png
+    # weblink.homeassistant:
+    #   friendly_name: https://home-assistant.io
 
     scene.hue_dim:
       friendly_name: Dim
