@@ -12,16 +12,6 @@ sensor:
 
   - platform: template
     sensors:
-      james_ping:
-        value_template:
-          "{% if is_state('device_tracker.james_ping', 'home') %}
-          is at home
-          {% else %}
-          is away
-          {% endif %}"
-
-  - platform: template
-    sensors:
       james_tado:
         value_template:
           "{% if is_state('device_tracker.james_tado', 'home') %}
@@ -53,16 +43,6 @@ sensor:
 
   - platform: template
     sensors:
-      gillian_ping:
-        value_template:
-          "{% if is_state('device_tracker.gillian_ping', 'home') %}
-          is at home
-          {% else %}
-          is away
-          {% endif %}"
-
-  - platform: template
-    sensors:
       gillian_tado:
         value_template:
           "{% if is_state('device_tracker.gillian_tado', 'home') %}
@@ -79,14 +59,4 @@ sensor:
           is at home
           {% else %}
           is away
-          {% endif %}"
-
-  - platform: template
-    sensors:
-      guest_mode:
-        value_template:
-          "{% if is_state('input_boolean.enable_guest', 'off') %}
-          Enable Guest Mode
-          {% else %}
-          Disable Guest Mode
           {% endif %}"
