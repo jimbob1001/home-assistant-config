@@ -1,12 +1,7 @@
 - name: input_reset
   entities:
-    input_boolean.disable_bedtime:
-        state: off
-    input_boolean.disable_plex:
-        state: off
-    input_boolean.disable_sunset:
-        state: off
-    input_boolean.simulate_sunset:
-        state: off
-    input_boolean.disable_work:
-        state: off
+    input_boolean.disable_bedtime: off
+    input_boolean.disable_plex: off
+    input_boolean.disable_sunset: off
+    input_boolean.simulate_sunset: off
+    input_boolean.disable_work: off

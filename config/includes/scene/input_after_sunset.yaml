@@ -1,4 +1,3 @@
 - name: input_after_sunset
   entities:
-      input_boolean.simulate_sunset:
-          state: on
+      input_boolean.simulate_sunset: on
