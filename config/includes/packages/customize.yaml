@@ -4,6 +4,7 @@ homeassistant:
 
     script:
       entity_picture: /local/bobafett.png
+
     scene:
       entity_picture: /local/jawa.png
       homebridge_hidden: true
@@ -14,8 +15,6 @@ homeassistant:
       homebridge_hidden: true
     media_player:
       homebridge_hidden: true
-    # weblink:
-    #   entity_picture: /local/vader_melted.png
 
   customize_glob:
   ### Customize similar entities
@@ -63,8 +62,8 @@ homeassistant:
 
     sensor.hass:
       entity_picture: /local/kylo_ren.png
-    # weblink.homeassistant:
-    #   friendly_name: https://home-assistant.io
+    weblink.homeassistant:
+      entity_picture: /local/kylo_ren.png
 
     scene.hue_dim:
       friendly_name: Dim
