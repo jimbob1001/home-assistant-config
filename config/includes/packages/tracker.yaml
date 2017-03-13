@@ -33,7 +33,7 @@ device_tracker:
     password: !secret tado_pass
     home_id: !secret home_id
 
-  - platform: ping
-    hosts:
-      gillian_ping: !secret ping_2
-      james_ping: !secret ping_1
+  # - platform: ping
+  #   hosts:
+  #     gillian_ping: !secret ping_2
+  #     james_ping: !secret ping_1
