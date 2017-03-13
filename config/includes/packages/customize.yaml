@@ -1,10 +1,8 @@
 homeassistant:
   customize_domain:
   ### Customize entire domains
-
     script:
       entity_picture: /local/bobafett.png
-
     scene:
       entity_picture: /local/jawa.png
       homebridge_hidden: true
@@ -19,7 +17,6 @@ homeassistant:
   customize_glob:
   ### Customize similar entities
   ### Overrides domain
-
     "device_tracker.james*":
       entity_picture: /local/anakin.png
     "device_tracker.gillian*":
@@ -86,8 +83,7 @@ homeassistant:
     scene.hue_outside_off:
       friendly_name: Outside Off
       homebridge_hidden: true
-
-    input_boolean.enable_guest:
+    scene.input_guests:
       homebridge_hidden: false
       homebridge_name: GUEST
 
@@ -119,22 +115,5 @@ homeassistant:
       order: 5
     group.media_centre:
       order: 6
-
-    light.hue_garage:
-      hidden: true
-      homebridge_hidden: true
-    light.hue_outside:
-      hidden: true
-      homebridge_hidden: true
-    light.hue_living_room:
-      hidden: true
-      homebridge_hidden: true
-    light.hue_all:
-      hidden: true
-      homebridge_hidden: true
-    light.hue_hue_white_lamp_2:
-      hidden: true
-      homebridge_hidden: true
-    light.hue_hue_white_lamp_3:
-      hidden: true
-      homebridge_hidden: true
+    group.web:
+      order: 7

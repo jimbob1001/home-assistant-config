@@ -17,6 +17,7 @@ group:
 
   home:
       name: Home
+      control: hidden
       entities:
       # - group.james
       # - group.gillian
