@@ -42,6 +42,9 @@ homeassistant:
     "sensor.dark_sky_daily_low_app*":
       friendly_name: Feels like (low)
 
+    "group.all*":
+      hidden: false
+
   customize:
   ### Customize individual entities
   ### Overrides domain & glob

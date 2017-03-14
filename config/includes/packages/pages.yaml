@@ -56,9 +56,12 @@ group:
       - media_player.plex_shield_tv
       - media_player.cast_shield
       - media_player.sonos_all
-      - group.scenes
       - group.guest
       - group.overrides
+      - group.all_devices
+      - group.all_automations
+      - group.all_lights
+      - group.all_scripts
 
 ### Groups ###
 
