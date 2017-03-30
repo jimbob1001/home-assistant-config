@@ -11,3 +11,8 @@ sensor:
     - apparent_temperature_min
     - summary
     - icon
+
+tado:
+  username: !secret tado_user
+  password: !secret tado_pass
+  #entity_namespace: 'tado'
