@@ -3,7 +3,7 @@
   trigger:
   - platform: state
     entity_id:
-    - media_player.plex_shield_tv
+    - media_player.plex_shield
     - media_player.cast_shield
     to: 'playing'
 

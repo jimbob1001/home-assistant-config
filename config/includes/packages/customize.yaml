@@ -90,7 +90,7 @@ homeassistant:
       homebridge_hidden: false
       homebridge_name: GUEST
 
-    media_player.plex_shield_tv:
+    media_player.plex_shield:
       friendly_name: PLEX
     media_player.cast_shield:
       friendly_name: CAST

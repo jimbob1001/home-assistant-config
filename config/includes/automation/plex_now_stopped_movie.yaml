@@ -3,7 +3,7 @@
   trigger:
   - platform: state
     entity_id:
-    - media_player.plex_shield_tv
+    - media_player.plex_shield
     from: 'playing'
     to: 'idle'
     for:
@@ -11,7 +11,7 @@
 
   - platform: state
     entity_id:
-    - media_player.plex_shield_tv
+    - media_player.plex_shield
     from: 'playing'
     to: 'off'
     for:
@@ -19,7 +19,7 @@
 
   - platform: state
     entity_id:
-    - media_player.plex_shield_tv
+    - media_player.plex_shield
     from: 'playing'
     to: 'paused'
     for:

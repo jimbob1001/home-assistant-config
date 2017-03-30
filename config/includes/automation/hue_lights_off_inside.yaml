@@ -41,7 +41,7 @@
     conditions:
 
     - condition: state
-      entity_id: media_player.plex_shield_tv
+      entity_id: media_player.plex_shield
       state: 'idle'
     - condition: state
       entity_id: input_boolean.disable_bedtime

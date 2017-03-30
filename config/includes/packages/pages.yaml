@@ -53,7 +53,7 @@ group:
       - group.home
       - group.living_room_lights
       - group.outside
-      - media_player.plex_shield_tv
+      - media_player.plex_shield
       - media_player.cast_shield
       - media_player.sonos_all
       - group.guest

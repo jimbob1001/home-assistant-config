@@ -3,14 +3,14 @@
   trigger:
   - platform: state
     entity_id:
-    - media_player.plex_shield_tv
+    - media_player.plex_shield
     to: 'playing'
 
   condition:
     condition: and
     conditions:
       - condition: template
-        value_template: '{{ states.media_player.plex_shield_tv.attributes.media_content_type == "movie" }}'
+        value_template: '{{ states.media_player.plex_shield.attributes.media_content_type == "movie" }}'
       - condition: or
         conditions:
         - condition: time
