@@ -29,8 +29,8 @@ device_tracker:
 
   - platform: nmap_tracker
     hosts:
-      - 192.168.179.28
-      - 192.168.179.114
+      - trusted_nmap_1
+      - trusted_nmap_2
     home_interval: 10
 
   - platform: tado
