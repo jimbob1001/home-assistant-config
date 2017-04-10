@@ -1,23 +1,23 @@
 input_boolean:
   disable_bedtime:
     name: Disable Bedtime Automation
-    initial: off
+    #initial: off
 
   disable_plex:
     name: Disable Plex Automation
-    initial: off
+    #initial: off
 
   disable_sunset:
     name: Disable Sunset Automation
-    initial: off
+    #initial: off
 
   disable_work:
     name: Disable Work Automation
-    initial: off
+    #initial: off
 
   enable_guest:
     name: Enable Guest Mode
-    initial: off
+    #initial: off
 
   # enable_guest:
   #   name: "{% if is_state('input_boolean.enable_guest', 'off') %}Enable Guest Mode{% else %}Disable Guest Mode{% endif %}"
