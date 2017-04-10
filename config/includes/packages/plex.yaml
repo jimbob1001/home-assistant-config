@@ -1,6 +1,7 @@
 media_player:
   - platform: plex
     entity_namespace: 'plex'
+    scan_interval: 5
 
   - platform: cast
     entity_namespace: 'cast'
