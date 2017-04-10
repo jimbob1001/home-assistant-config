@@ -1,8 +1,6 @@
 - alias: lights_on_sunset_outside
 
   trigger:
-  - platform: time
-    after: '17:30:00'
   - platform: sun
     event: sunset
     offset: '-1:00:00'
@@ -28,14 +26,16 @@
 - alias: lights_off_morning_outside
 
   trigger:
+  - platform: sun
+    event: sunrise
+    offset: '1:00:00'
+
   - platform: time
     after: '08:30:00'
   - platform: time
     after: '08:35:00'
   - platform: time
     after: '08:40:00'
-  - platform: time
-    after: '08:45:00'
 
   action:
   - service: scene.turn_on
