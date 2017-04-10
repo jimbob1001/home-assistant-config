@@ -24,7 +24,7 @@ logger:
   default: error
 #
 recorder:
-  purge_days: 5
+  purge_days: 3
   db_url: !secret recorder_db_url
   exclude:
     domains:
