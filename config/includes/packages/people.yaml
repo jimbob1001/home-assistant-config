@@ -24,3 +24,4 @@ group:
       - sensor.james_group
       - sensor.gillian_group
       - input_boolean.enable_guest
+      - input_boolean.text_to_speech

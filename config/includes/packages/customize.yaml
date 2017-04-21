@@ -60,10 +60,31 @@ homeassistant:
     sensor.gillian_group:
       entity_picture: /local/leia.png
 
+    sensor.heating_temperature:
+      friendly_name: Tado˚ Temperature
+    sensor.heating_humidity:
+      friendly_name: Tado˚ Humidity
+    sensor.heating_heating:
+      friendly_name: Tado˚ Heating
+      entity_picture: /local/Tado/manual.png
+    sensor.heating_link:
+      friendly_name: Tado˚ Link
+    sensor.heating_overlay:
+      friendly_name: Tado˚ Overlay
+    sensor.heating_power:
+      friendly_name: Tado˚ Power
+    sensor.heating_tado_mode:
+      friendly_name: Tado˚ Mode
+    sensor.james__gillians_tado_bridge_status:
+      friendly_name: Tado˚ Bridge Status
+
     sensor.hass:
       entity_picture: /local/kylo_ren.png
     weblink.homeassistant:
       entity_picture: /local/kylo_ren.png
+    sensor.itvl:
+      friendly_name: ITV
+      icon: mdi:chart-areaspline
 
     scene.hue_dim:
       friendly_name: Dim
@@ -114,9 +135,11 @@ homeassistant:
       order: 3
     group.living_room_lights:
       order: 4
-    group.outside:
+    group.all_scripts:
       order: 5
-    group.media_centre:
+    group.outside:
       order: 6
-    group.web:
+    group.media_centre:
       order: 7
+    group.web:
+      order: 8

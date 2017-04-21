@@ -10,3 +10,7 @@ sensor:
     resource: https://home-assistant.io
     select: ".current-version h1"
     name: hass
+
+  - platform: yahoo_finance
+    symbols:
+      - ITV.L

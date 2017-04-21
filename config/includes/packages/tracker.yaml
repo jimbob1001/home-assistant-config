@@ -3,7 +3,7 @@ zone:
     latitude: !secret latitude_home
     longitude: !secret longitude_home
     radius: 150
-    icon: mdi:account-location
+    icon: mdi:home-map-marker
 
   - name: Work
     latitude: !secret latitude_work
@@ -27,11 +27,11 @@ device_tracker:
     interval_seconds: 0:03:00
     track_new_devices: true
 
-  - platform: nmap_tracker
-    hosts:
-      - trusted_nmap_1
-      - trusted_nmap_2
-    home_interval: 10
+#  - platform: nmap_tracker
+#    hosts:
+#      - trusted_nmap_1
+#      - trusted_nmap_2
+#    home_interval: 10
 
   - platform: tado
     username: !secret tado_user

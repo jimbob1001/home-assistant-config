@@ -9,6 +9,7 @@ group:
       - group.home
       - group.web
       - group.living_room_lights
+      - group.all_scripts
       - group.outside
       - group.media_centre
 
@@ -41,6 +42,7 @@ group:
       - group.overrides
       - group.now_playing
       - group.sunset
+      - group.tado
 
 ### Page 5 ALL ###
 
@@ -70,6 +72,8 @@ group:
       entities:
       - sensor.time
       - sensor.date
+      - sensor.heating_temperature
+      - sensor.heating_humidity
       - sun.sun
       - sensor.dark_sky_summary
       - sensor.dark_sky_daily_high_apparent_temperature
@@ -95,3 +99,4 @@ group:
     entities:
     - weblink.homeassistant
     - sensor.hass
+    - sensor.itvl

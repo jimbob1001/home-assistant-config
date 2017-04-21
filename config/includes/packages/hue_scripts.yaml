@@ -56,6 +56,12 @@ script:
           scene_name: "Full"
 
 group:
+
+  all_scripts:
+      name: All Scripts
+      entities:
+      - group.scripts
+
   scripts:
       name: Hue Scripts
       entities:

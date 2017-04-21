@@ -35,6 +35,10 @@ input_boolean:
     name: Simulate Sunset
     initial: off
 
+  text_to_speech:
+    name: text-to-speech
+    initial: off
+
 group:
   guest:
     name: Guest mode

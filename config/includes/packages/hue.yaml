@@ -18,4 +18,3 @@ group:
       - light.hue_small_floor_lamp
       - light.hue_table_lamp
       - light.hue_tv_backlight
-      - group.scripts

@@ -1,0 +1,26 @@
+- alias: notify_tts
+
+  trigger:
+    platform: state
+    entity_id: input_boolean.text_to_speech
+    state: 'on'
+
+  action:
+  - service: script.sonos_say
+    data:
+      sonos_entity: media_player.sonos_all
+      volume: 0.5
+      message: Hello! The weather is {{states('sensor.dark_sky_summary')}}. James {{states('sensor.james_group')}} & Gillian {{states('sensor.gillian_group')}}.
+      delay: '00:00:05'
+      cache: false
+
+#  - service: tts.google_say
+#    entity_id: media_player.sonos_all
+#    data_template:
+#      message: "Hello, the Temperature in the house is {{states('sensor.heating_temperature')}} degrees C. The weather is {{states('sensor.dark_sky_summary')}}. James {{states('sensor.james_group')}} & Gillian {{states('sensor.gillian_group')}}. Ayteevees shares are worth {{states('sensor.itvl')}} pence." 
+#      cache: false
+
+  #- service: tts.google_say
+    #entity_id: media_player.sonos_all
+    #data:
+      #message: 'May the Force be with you.'

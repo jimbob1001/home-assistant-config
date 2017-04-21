@@ -14,7 +14,7 @@
 - Plex Media Server *(currently running via synology docker)*
 - Philips Hue
 - Sonos
-- [Tado Smart Thermostat](https://www.tado.com/gb/) *(currently only integrated with home-assistant as device tracker)*
+- [Tado Smart Thermostat](https://www.tado.com/gb/)
 - Nvidia Shield TV *(also runs plex media server but not yet good enough for main server due to smb bug in software)*
 
 ## Automations
