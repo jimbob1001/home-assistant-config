@@ -1,6 +1,0 @@
-- name: input_guests
-  entities:
-    input_boolean.disable_bedtime: on
-    input_boolean.disable_plex: on
-    input_boolean.disable_work: on
-    input_boolean.simulate_sunset: off

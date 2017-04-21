@@ -1,0 +1,22 @@
+- name: input_guests
+  entities:
+    input_boolean.disable_bedtime: on
+    input_boolean.disable_plex: on
+    input_boolean.disable_work: on
+    input_boolean.simulate_sunset: off
+
+- name: input_after_sunset
+  entities:
+      input_boolean.simulate_sunset: on
+
+- name: input_reset
+  entities:
+    input_boolean.disable_bedtime: off
+    input_boolean.disable_plex: off
+    input_boolean.disable_sunset: off
+    input_boolean.simulate_sunset: off
+    input_boolean.disable_work: off
+
+- name: input_tts
+  entities:
+    input_boolean.text_to_speech: off

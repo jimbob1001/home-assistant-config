@@ -6,21 +6,44 @@
     state: 'on'
 
   action:
-  - service: script.sonos_say
-    data:
-      sonos_entity: media_player.sonos_all
-      volume: 0.5
-      message: Hello! The weather is {{states('sensor.dark_sky_summary')}}. James {{states('sensor.james_group')}} & Gillian {{states('sensor.gillian_group')}}.
-      delay: '00:00:05'
+  - service: media_player.sonos_snapshot
+    # data_template:
+    #   entity_id: media_player.sonos_all
+
+  # - service: media_player.sonos_unjoin
+  #   data_template:
+  #     entity_id: "{{ sonos_entity }}"
+
+  - service: tts.google_say
+    entity_id: media_player.sonos_all
+    data_template:
+      message:
+        "Hello.
+
+        The Temperature in the house is {{states('sensor.heating_temperature') | round(0) }} degrees C.
+
+        The weather is {{states('sensor.dark_sky_summary')}}.
+
+        {%- if is_state('sensor.james_group', 'is at home') and
+               is_state('sensor.gillian_group', 'is at home') -%}
+
+          James & Gillian are both at home.
+
+        {%- else -%}
+
+          James {{states('sensor.james_group')}} & Gillian {{states('sensor.gillian_group')}}.
+
+        {%- endif %}
+
+        Ayteevees shares are worth {{states('sensor.itvl') | round(0)}} pence."
+
       cache: false
 
-#  - service: tts.google_say
-#    entity_id: media_player.sonos_all
-#    data_template:
-#      message: "Hello, the Temperature in the house is {{states('sensor.heating_temperature')}} degrees C. The weather is {{states('sensor.dark_sky_summary')}}. James {{states('sensor.james_group')}} & Gillian {{states('sensor.gillian_group')}}. Ayteevees shares are worth {{states('sensor.itvl')}} pence." 
-#      cache: false
+  - delay: '00:00:15'
 
-  #- service: tts.google_say
-    #entity_id: media_player.sonos_all
-    #data:
-      #message: 'May the Force be with you.'
+  - service: media_player.sonos_restore
+    # data_template:
+    #   entity_id: media_player.sonos_all
+
+  - service: homeassistant.turn_on
+    entity_id: scene.input_tts

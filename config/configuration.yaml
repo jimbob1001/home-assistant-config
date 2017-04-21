@@ -14,7 +14,6 @@ homeassistant:
 #
 #introduction:
 #discovery:
-#ios:
 updater:
 frontend:
 config:
@@ -25,7 +24,7 @@ logger:
   default: error
 #
 recorder:
-  purge_days: 3
+  purge_days: 7
   db_url: !secret recorder_db_url
   exclude:
     domains:
