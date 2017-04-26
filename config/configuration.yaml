@@ -14,6 +14,7 @@ homeassistant:
 #
 #introduction:
 #discovery:
+#ios:
 updater:
 frontend:
 config:
@@ -51,7 +52,6 @@ http:
     - !secret trusted_ip_3
   ip_ban_enabled: true
   login_attempts_threshold: 5
-#
 #
 emulated_hue:
 #
