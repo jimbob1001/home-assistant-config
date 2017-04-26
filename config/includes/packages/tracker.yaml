@@ -33,10 +33,10 @@ device_tracker:
 #      - trusted_nmap_2
 #    home_interval: 10
 
-  - platform: tado
-    username: !secret tado_user
-    password: !secret tado_pass
-    home_id: !secret home_id
+#  - platform: tado
+#    username: !secret tado_user
+#    password: !secret tado_pass
+#    home_id: !secret home_id
 
   # - platform: ping
   #   hosts:

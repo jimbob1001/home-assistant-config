@@ -16,9 +16,9 @@ weather:
   - platform: metoffice
     api_key: !secret metoffice
 
-tado:
-  username: !secret tado_user
-  password: !secret tado_pass
+#tado:
+#  username: !secret tado_user
+#  password: !secret tado_pass
   #entity_namespace: 'tado'
 
 group:
