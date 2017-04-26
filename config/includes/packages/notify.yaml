@@ -4,12 +4,17 @@ notify:
     api_key: !secret pushover_api
     user_key: !secret pushover_user
 
+  - platform: telegram 
+    name: bot
+    api_key: !secret telegram_api
+    chat_id: !secret telegram_id
+
   - platform: group
     name: get_notified
     services:
       #- service: slack
-      #- service: nfandroidtv
       - service: pushover
+      - service: bot
 
   # - platform: slack
   #   name: 'Slack'
