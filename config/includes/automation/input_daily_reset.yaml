@@ -1,5 +1,5 @@
 - alias: input_daily_reset
-
+  initial_state: True
   trigger:
     platform: time
     after: '02:00:00'

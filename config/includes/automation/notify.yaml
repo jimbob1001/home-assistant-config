@@ -1,18 +1,19 @@
 - alias: notify_restart
-
+  initial_state: True
   trigger:
-    platform: homeassistant
+  - platform: homeassistant
     event: start
+  - platform: event
+    event_type: homeassistant_start
 
   action:
     service: notify.get_notified
     data:
-      title: "Home Assistant Restarted"
       message: "Home Assistant should now be available"
-      target: ""
+      title: "Home Assistant Restarted"
 
 - alias: notify_update
-
+  initial_state: True
   trigger:
     platform: state
     entity_id: updater.updater
@@ -24,7 +25,5 @@
   action:
     service: notify.get_notified
     data:
-      title: "Home Assistant Update"
       message: "Home Assistant {{ states('updater.updater') }} is now available. Go to https://home-assistant.io"
-      target: ""
-      
+      title: "Home Assistant Update"

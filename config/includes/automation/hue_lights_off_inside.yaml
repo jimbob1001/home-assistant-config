@@ -1,5 +1,5 @@
 - alias: lights_off_morning_inside
-
+  initial_state: True
   trigger:
   - platform: time
     after: '08:45:00'
@@ -31,7 +31,7 @@
       transition: 2
 
 - alias: lights_off_bedtime_inside
-
+  initial_state: True
   trigger:
     platform: time
     after: '22:15:00'

@@ -1,5 +1,5 @@
 - alias: plex_now_stopped_tvshow
-
+  initial_state: True
   trigger:
   - platform: state
     entity_id:

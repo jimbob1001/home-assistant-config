@@ -1,5 +1,5 @@
 - alias: plex_playing_pauses_sonos
-
+  initial_state: True
   trigger:
   - platform: state
     entity_id:

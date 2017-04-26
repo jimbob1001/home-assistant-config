@@ -1,5 +1,5 @@
 - alias: notify_tts
-
+  initial_state: True
   trigger:
     platform: state
     entity_id: input_boolean.text_to_speech
