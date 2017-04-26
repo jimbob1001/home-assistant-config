@@ -1,0 +1,42 @@
+- alias: auto_bot_ping
+  initial_state: True
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/ping'
+
+  action:
+  - service: notify.bot
+    data:
+      message: 'pong'
+
+- alias: auto_bot_restart
+  initial_state: True
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/restart'
+
+  action:
+  - service: notify.bot
+    data:
+      message: 'restarting hass'
+
+  - service: homeassistant.restart
+
+- alias: auto_bot_reload
+  initial_state: True
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/reload'
+
+  action:
+  - service: notify.bot
+    data:
+      message: 'reloading core config'
+
+  - service: homeassistant.reload_core_config

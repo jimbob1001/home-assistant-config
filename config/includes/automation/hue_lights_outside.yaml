@@ -1,9 +1,13 @@
 - alias: lights_on_sunset_outside
-
+  initial_state: True
   trigger:
   - platform: sun
     event: sunset
     offset: '-1:00:00'
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/outside'
 
   action:
     service: light.hue_activate_scene
@@ -12,7 +16,7 @@
       scene_name: "Full"
 
 - alias: lights_dim_night_outside
-
+  initial_state: True
   trigger:
     platform: time
     after: '22:30:00'
@@ -24,7 +28,7 @@
       scene_name: "Dim"
 
 - alias: lights_off_morning_outside
-
+  initial_state: True
   trigger:
   - platform: sun
     event: sunrise

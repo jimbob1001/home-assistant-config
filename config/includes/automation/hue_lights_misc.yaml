@@ -1,0 +1,38 @@
+- alias: lights_on_white
+  initial_state: True
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/white'
+  action:
+    service: light.hue_activate_scene
+    data:
+      group_name: "Living Room"
+      scene_name: "White"
+
+- alias: lights_on_night
+  initial_state: True
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/night'
+  action:
+    service: light.hue_activate_scene
+    data:
+      group_name: "Living Room"
+      scene_name: "Night"
+
+- alias: lights_on_morning
+  initial_state: True
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/morning'
+  action:
+    service: light.hue_activate_scene
+    data:
+      group_name: "Living Room"
+      scene_name: "Dim"

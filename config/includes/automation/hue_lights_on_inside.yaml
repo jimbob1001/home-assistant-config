@@ -1,8 +1,12 @@
 - alias: lights_on_morning_inside
-
+  initial_state: True
   trigger:
-    platform: time
+  - platform: time
     after: '05:55:00'
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/dim'
 
   action:
     service: light.hue_activate_scene
@@ -11,13 +15,17 @@
       scene_name: "Dim"
 
 - alias: lights_on_sunset_inside
-
+  initial_state: True
   trigger:
   - platform: time
     after: '17:30:00'
   - platform: sun
     event: sunset
     offset: '-1:30:00'
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/full'
 
   condition:
     condition: and
