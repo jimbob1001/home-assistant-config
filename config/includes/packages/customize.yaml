@@ -21,6 +21,8 @@ homeassistant:
       entity_picture: /local/anakin.png
     "device_tracker.gillian*":
       entity_picture: /local/hologram.png
+    "device_tracker.home*":
+      entity_picture: /local/deathstar.png
 
     "sensor.james*":
       entity_picture: /local/anakin.png

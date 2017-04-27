@@ -58,12 +58,12 @@ script:
 group:
 
   all_scripts:
-      name: All Scripts
+      name: Hue Scenes
       entities:
       - group.scripts
 
   scripts:
-      name: Hue Scripts
+      name: Hue Scenes
       entities:
       - script.hue_dim
       - script.hue_full
