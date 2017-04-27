@@ -24,4 +24,5 @@ secrets.yaml
 custom_components
 deps
 www
+tts
 deprecated
