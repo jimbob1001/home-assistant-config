@@ -40,3 +40,18 @@
       message: 'reloading core config'
 
   - service: homeassistant.reload_core_config
+
+- alias: auto_bot_check_config
+  initial_state: True
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/config'
+
+  action:
+  - service: notify.bot
+    data:
+      message: 'checking config'
+
+  - service: homeassistant.check_config
