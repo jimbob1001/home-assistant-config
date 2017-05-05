@@ -12,9 +12,9 @@ sensor:
     - summary
     - icon
 
-weather:
-  - platform: metoffice
-    api_key: !secret metoffice
+#weather:
+#  - platform: metoffice
+#    api_key: !secret metoffice
 
 #tado:
 #  username: !secret tado_user

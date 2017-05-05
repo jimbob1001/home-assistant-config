@@ -11,34 +11,27 @@ zone:
     radius: 150
     icon: mdi:account-multiple
 
-binary_sensor:
-  - platform: workday
-    country: UK
-    #province:
-
 device_tracker:
+  - platform: ping
+    hosts:
+      james_ping: !secret james_ip
+      gillian_ping: !secret gillian_ip
+
+  - platform: tado
+    username: !secret tado_user
+    password: !secret tado_pass
+    home_id: !secret home_id
+
+  - platform: nmap_tracker
+    hosts:
+      - !secret james_ip
+      - !secret gillian_ip
+
   - platform: asuswrt
     host: !secret asus_ip
-    protocol: ssh
-    mode: router
     username: !secret asus_username
     password: !secret asus_password
+
     consider_home: 0:03:00
     interval_seconds: 0:03:00
     track_new_devices: true
-
-#  - platform: nmap_tracker
-#    hosts:
-#      - trusted_nmap_1
-#      - trusted_nmap_2
-#    home_interval: 10
-
-#  - platform: tado
-#    username: !secret tado_user
-#    password: !secret tado_pass
-#    home_id: !secret home_id
-
-  # - platform: ping
-  #   hosts:
-  #     gillian_ping: !secret ping_2
-  #     james_ping: !secret ping_1

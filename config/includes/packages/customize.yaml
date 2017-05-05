@@ -81,9 +81,11 @@ homeassistant:
       friendly_name: Tado˚ Bridge Status
 
     sensor.hass:
-      entity_picture: /local/kylo_ren.png
+      icon: mdi:home-assistant
     weblink.homeassistant:
-      entity_picture: /local/kylo_ren.png
+      icon: mdi:home-assistant
+    weblink.router:
+      icon: mdi:router-wireless
     sensor.itvl:
       friendly_name: ITV
       icon: mdi:chart-areaspline

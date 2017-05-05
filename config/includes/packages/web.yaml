@@ -2,8 +2,8 @@ weblink:
   entities:
     - name: homeassistant
       url: https://home-assistant.io
-    # - name: Router
-    #   url: http://192.168.1.1/
+    - name: Router
+      url: https://192.168.179.1:8443/index.asp
 
 sensor:
   - platform: scrape
