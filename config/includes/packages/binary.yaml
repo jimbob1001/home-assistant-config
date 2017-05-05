@@ -1,0 +1,54 @@
+binary_sensor:
+  - platform: workday
+    country: UK
+    #province:
+
+  - platform: ping
+    host: !secret cast_ip
+    name: ping_shield
+
+  - platform: ping
+    host: !secret tado_ip
+    name: ping_tado
+
+  - platform: ping
+    host: !secret hue_ip
+    name: ping_hue
+
+  - platform: ping
+    host: !secret sonos_ip_1
+    name: ping_sonos_1
+
+  - platform: ping
+    host: !secret sonos_ip_2
+    name: ping_sonos_2
+
+  - platform: ping
+    host: !secret sonos_ip_3
+    name: ping_sonos_3
+
+  - platform: ping
+    host: !secret sony_ip
+    name: ping_sony
+
+  - platform: ping
+    host: !secret humax_ip
+    name: ping_humax
+
+  - platform: ping
+    host: !secret synology_ip
+    name: ping_synology
+
+group:
+  binary_sensors:
+    name: Online/Offline
+    entities:
+    - binary_sensor.ping_hue
+    - binary_sensor.ping_tado
+    - binary_sensor.ping_shield
+    - binary_sensor.ping_sonos_1
+    - binary_sensor.ping_sonos_2
+    - binary_sensor.ping_sonos_3
+    - binary_sensor.ping_sony
+    - binary_sensor.ping_humax
+    - binary_sensor.ping_synology
