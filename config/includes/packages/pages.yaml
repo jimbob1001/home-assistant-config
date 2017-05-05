@@ -64,6 +64,7 @@ group:
       - group.all_automations
       - group.all_lights
       - group.all_scripts
+      - group.binary_sensors
 
 ### Groups ###
 
@@ -95,8 +96,9 @@ group:
       - scene.now_playing_tvshow
 
   web:
-    name: Websites
+    name: Info
     entities:
     - weblink.homeassistant
+    - weblink.router
     - sensor.hass
     - sensor.itvl
