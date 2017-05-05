@@ -16,13 +16,16 @@
     - condition: state
       entity_id: input_boolean.enable_guest
       state: 'off'
-    - condition: time
-      weekday:
-       - mon
-       - tue
-       - wed
-       - thu
-       - fri
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: 'on'
+#    - condition: time
+#      weekday:
+#       - mon
+#       - tue
+#       - wed
+#       - thu
+#       - fri
 
   action:
     service: homeassistant.turn_off
