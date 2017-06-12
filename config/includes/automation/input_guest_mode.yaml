@@ -1,9 +1,10 @@
 - alias: input_guest_mode_on
   initial_state: True
+
   trigger:
   - platform: state
     entity_id: input_boolean.enable_guest
-    state: 'on'
+    to: 'on'
   - platform: event
     event_type: telegram_command
     event_data:
@@ -12,17 +13,22 @@
   action:
   - service: homeassistant.turn_on
     entity_id: scene.input_guests
+  - service: homeassistant.turn_on
+    entity_id: input_boolean.enable_guest
   - service: notify.get_notified
     data:
-      message: 'No automations will trigger until guest mode has been disabled.'
+      message: 'Automations are off until guest mode has been disabled.'
       title: "Guest Mode Enabled"
+
+########################
 
 - alias: input_guest_mode_off
   initial_state: True
+
   trigger:
   - platform: state
     entity_id: input_boolean.enable_guest
-    state: 'off'
+    to: 'off'
   - platform: event
     event_type: telegram_command
     event_data:

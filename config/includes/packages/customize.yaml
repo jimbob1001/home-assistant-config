@@ -115,6 +115,8 @@ homeassistant:
       homebridge_hidden: false
       homebridge_name: GUEST
 
+    media_player.kodi_kodi:
+      friendly_name: KODI
     media_player.plex_shield:
       friendly_name: PLEX
     media_player.cast_shield:

@@ -19,10 +19,6 @@ input_boolean:
     name: Enable Guest Mode
     #initial: off
 
-  # enable_guest:
-  #   name: "{% if is_state('input_boolean.enable_guest', 'off') %}Enable Guest Mode{% else %}Disable Guest Mode{% endif %}"
-  #   initial: off
-
   plex_movie:
     name: Plex Movie
     initial: off

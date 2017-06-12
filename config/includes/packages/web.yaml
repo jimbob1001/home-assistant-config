@@ -11,6 +11,6 @@ sensor:
     select: ".current-version h1"
     name: hass
 
-  - platform: yahoo_finance
-    symbols:
-      - ITV.L
+#  - platform: yahoo_finance
+#    symbols:
+#      - ITV.L

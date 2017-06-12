@@ -1,26 +1,21 @@
 - alias: notify_tts
   initial_state: True
+
   trigger:
     platform: state
     entity_id: input_boolean.text_to_speech
-    state: 'on'
+    to: 'on'
 
   action:
   - service: media_player.sonos_snapshot
-    # data_template:
-    #   entity_id: media_player.sonos_all
-
-  # - service: media_player.sonos_unjoin
-  #   data_template:
-  #     entity_id: "{{ sonos_entity }}"
 
   - service: tts.google_say
     entity_id: media_player.sonos_all
     data_template:
       message:
-        "Hello.
+        "Hello. The Temperature in the house is
 
-        The Temperature in the house is {{states('sensor.heating_temperature') | round(0) }} degrees C.
+        {{states('sensor.heating_temperature') | round(0) }} degrees C.
 
         The weather is {{states('sensor.dark_sky_summary')}}.
 

@@ -1,5 +1,6 @@
 - alias: auto_bot_ping
   initial_state: True
+
   trigger:
   - platform: event
     event_type: telegram_command
@@ -11,8 +12,11 @@
     data:
       message: 'pong'
 
+########################
+
 - alias: auto_bot_restart
   initial_state: True
+
   trigger:
   - platform: event
     event_type: telegram_command
@@ -26,8 +30,11 @@
 
   - service: homeassistant.restart
 
+########################
+
 - alias: auto_bot_reload
   initial_state: True
+
   trigger:
   - platform: event
     event_type: telegram_command
@@ -41,8 +48,11 @@
 
   - service: homeassistant.reload_core_config
 
+########################
+
 - alias: auto_bot_check_config
   initial_state: True
+
   trigger:
   - platform: event
     event_type: telegram_command

@@ -1,10 +1,11 @@
 - alias: lights_off_morning_inside
   initial_state: True
+
   trigger:
+  # - platform: time
+  #   after: '08:45:00'
   - platform: time
-    after: '08:45:00'
-  - platform: time
-    after: '08:50:00'
+    at: '08:45:00'
 
   condition:
     condition: and
@@ -19,13 +20,6 @@
     - condition: state
       entity_id: binary_sensor.workday_sensor
       state: 'on'
-#    - condition: time
-#      weekday:
-#       - mon
-#       - tue
-#       - wed
-#       - thu
-#       - fri
 
   action:
     service: homeassistant.turn_off
@@ -33,11 +27,16 @@
     data:
       transition: 2
 
+########################
+
 - alias: lights_off_bedtime_inside
   initial_state: True
+
   trigger:
-    platform: time
-    after: '22:15:00'
+  # - platform: time
+  #   after: '22:15:00'
+  - platform: time
+    at: '22:15:00'
 
   condition:
     condition: and

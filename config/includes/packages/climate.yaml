@@ -21,15 +21,15 @@ sensor:
 #  password: !secret tado_pass
   #entity_namespace: 'tado'
 
-group:
-  Tado:
-      name: Tado˚
-      entities:
-      - sensor.heating_heating
-      - sensor.heating_humidity
-      - sensor.heating_link
-      - sensor.heating_overlay
-      - sensor.heating_power
-      - sensor.heating_tado_mode
-      - sensor.heating_temperature
-      - sensor.james__gillians_tado_bridge_status
+# group:
+#   Tado:
+#       name: Tado˚
+#       entities:
+#       - sensor.heating_heating
+#       - sensor.heating_humidity
+#       - sensor.heating_link
+#       - sensor.heating_overlay
+#       - sensor.heating_power
+#       - sensor.heating_tado_mode
+#       - sensor.heating_temperature
+#       - sensor.james__gillians_tado_bridge_status

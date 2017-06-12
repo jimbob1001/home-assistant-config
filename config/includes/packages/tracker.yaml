@@ -27,10 +27,10 @@ device_tracker:
       - !secret james_ip
       - !secret gillian_ip
 
-  - platform: asuswrt
-    host: !secret asus_ip
-    username: !secret asus_username
-    password: !secret asus_password
+#  - platform: asuswrt
+#    host: !secret asus_ip
+#    username: !secret asus_username
+#    password: !secret asus_password
 
     consider_home: 0:03:00
     interval_seconds: 0:03:00

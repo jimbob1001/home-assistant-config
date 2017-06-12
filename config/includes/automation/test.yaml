@@ -1,0 +1,18 @@
+- alias: test
+  initial_state: False
+
+  trigger:
+  - platform: time
+    minutes: '/60'
+    seconds: 00
+
+  condition:
+  - condition: numeric_state
+    entity_id: 'sensor.dark_sky_daily_high_temperature'
+    above: '20'
+
+  action:
+    service: notify.get_notified
+    data:
+      message: "test"
+      title: "this is a test"

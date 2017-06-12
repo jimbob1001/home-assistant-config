@@ -1,19 +1,39 @@
-- alias: notify_restart
+- alias: notify_restarting
   initial_state: True
+
   trigger:
   - platform: homeassistant
-    event: start
-  - platform: event
-    event_type: homeassistant_start
+    event: 'start'
+
+  action:
+  - delay:
+      minutes: 2
+      seconds: 30
+  - service: notify.get_notified
+    data:
+      message: "Home Assistant should now be available"
+      title: "Hass Restarted"
+
+########################
+
+- alias: notify_shutdown
+  initial_state: True
+
+  trigger:
+  - platform: homeassistant
+    event: 'shutdown'
 
   action:
     service: notify.get_notified
     data:
-      message: "Home Assistant should now be available"
-      title: "Home Assistant Restarted"
+      message: "Home Assistant is shutting down"
+      title: "Hass Shutting Down"
+
+########################
 
 - alias: notify_update
   initial_state: True
+
   trigger:
     platform: state
     entity_id: updater.updater
@@ -25,5 +45,11 @@
   action:
     service: notify.get_notified
     data:
-      message: "Home Assistant {{ states('updater.updater') }} is now available. Go to https://home-assistant.io"
+      message: "
+      Home Assistant
+
+      {{ states('updater.updater') }}
+
+      is now available. Go to https://home-assistant.io
+      "
       title: "Home Assistant Update"

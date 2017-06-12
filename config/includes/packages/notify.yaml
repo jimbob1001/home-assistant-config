@@ -4,7 +4,7 @@ notify:
     api_key: !secret pushover_api
     user_key: !secret pushover_user
 
-  - platform: telegram 
+  - platform: telegram
     name: bot
     api_key: !secret telegram_api
     chat_id: !secret telegram_id
@@ -12,9 +12,14 @@ notify:
   - platform: group
     name: get_notified
     services:
-      #- service: slack
       - service: pushover
       - service: bot
+      #- service: shield
+      #- service: slack
+
+  # - platform: nfandroidtv
+  #   name: shield
+  #   host: !secret cast_ip
 
   # - platform: slack
   #   name: 'Slack'
@@ -22,3 +27,19 @@ notify:
   #   default_channel: 'home-assistant'
   #   icon: ':rocket:'
   #   username: 'home-assistant'
+
+automation:
+- alias: notify_restart
+  initial_state: True
+
+  trigger:
+  - platform: homeassistant
+    event: start
+  - platform: homeassistant
+    event: 'start'
+
+  action:
+    service: notify.get_notified
+    data:
+      message: "Home Assistant should now be available"
+      title: "Home Assistant Restarted"
