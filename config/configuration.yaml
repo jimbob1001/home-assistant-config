@@ -18,7 +18,7 @@ homeassistant:
 emulated_hue:
   #listen_port: 80
 updater:
-frontend:
+#frontend:
   # themes:
   #   james:
   #     primary-color: "#00AA8D"
