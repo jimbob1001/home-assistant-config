@@ -12,6 +12,9 @@
 *.backup
 .uuid
 
+.ios.conf
+.shopping_list.json
+emulated_hue_ids.json
 phue.conf
 plex.conf
 *.conf
@@ -26,3 +29,4 @@ deps
 www
 tts
 deprecated
+dev_config
