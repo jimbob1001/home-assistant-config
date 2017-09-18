@@ -1,4 +1,4 @@
-- alias: notify_restarting
+- alias: notify_restart
   initial_state: True
 
   trigger:
@@ -6,9 +6,9 @@
     event: 'start'
 
   action:
-  - delay:
-      minutes: 2
-      seconds: 30
+#  - delay:
+#      minutes: 2
+#      seconds: 30
   - service: notify.get_notified
     data:
       message: "Home Assistant should now be available"

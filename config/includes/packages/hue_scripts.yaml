@@ -55,6 +55,14 @@ script:
           group_name: "Outside"
           scene_name: "Full"
 
+  hue_outside_dim:
+    alias: Outside Dim
+    sequence:
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Outside"
+          scene_name: "Dim"
+
 group:
 
   all_scripts:
@@ -72,6 +80,7 @@ group:
       - script.hue_white
       - script.hue_night
       - script.hue_outside_full
+      - script.hue_outside_dim
 
   scenes:
       name: Hue Scenes
@@ -82,3 +91,5 @@ group:
       - scene.hue_morning
       - scene.hue_white
       - scene.hue_night
+      - scene.hue_outside_full
+      - scene.hue_outside_dim

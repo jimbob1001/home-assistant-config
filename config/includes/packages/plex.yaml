@@ -1,7 +1,10 @@
 media_player:
   - platform: plex
     entity_namespace: 'plex'
-    scan_interval: 5
+    ssl: true
+    include_non_clients: true
+    #use_episode_art: true
+    scan_interval: 10
 
   - platform: cast
     entity_namespace: 'cast'
@@ -17,6 +20,12 @@ media_player:
     children:
        - media_player.plex_shield
        - media_player.cast_shield
+
+sensor:
+  - platform: plex
+    name: plex_shield
+    host: !secret plex_ip
+    port: !secret plex_port
 
 group:
   media_centre:

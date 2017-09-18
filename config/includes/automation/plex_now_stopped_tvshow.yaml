@@ -6,25 +6,14 @@
     entity_id:
     - media_player.plex_shield
     from: 'playing'
-    to: 'idle'
-    for:
-      seconds: 5
-
-  - platform: state
+#    for:
+#      seconds: 5
+  - platform: numeric_state
     entity_id:
-    - media_player.plex_shield
-    from: 'playing'
-    to: 'off'
-    for:
-      seconds: 5
-
-  - platform: state
-    entity_id:
-    - media_player.plex_shield
-    from: 'playing'
-    to: 'paused'
-    for:
-      seconds: 5
+    - sensor.plex_shield
+    below: '1'
+#    for:
+#      seconds: 5
 
   condition:
     condition: and

@@ -21,3 +21,11 @@
 - name: hue_night
   entities:
       script.hue_night: on
+
+- name: hue_outside_full
+  entities:
+      script.hue_outside_full: on
+
+- name: hue_outside_dim
+  entities:
+      script.hue_outside_dim: on

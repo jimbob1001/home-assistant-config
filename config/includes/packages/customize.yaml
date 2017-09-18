@@ -90,6 +90,9 @@ homeassistant:
       friendly_name: ITV
       icon: mdi:chart-areaspline
 
+    sensor.motion_hue_living_room:
+      friendly_name: Living Room Motion
+
     scene.hue_dim:
       friendly_name: Dim
       homebridge_name: DIM

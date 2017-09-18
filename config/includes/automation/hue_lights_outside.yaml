@@ -1,10 +1,14 @@
-- alias: lights_on_sunset_outside
+- alias: lights_full_outside
   initial_state: True
 
   trigger:
   - platform: sun
     event: sunset
     offset: '-1:00:00'
+
+  - platform: time
+    at: "06:00:00"
+
   - platform: event
     event_type: telegram_command
     event_data:
@@ -18,12 +22,10 @@
 
 ########################
 
-- alias: lights_dim_night_outside
+- alias: lights_dim_outside
   initial_state: True
 
   trigger:
-  # - platform: time
-  #   after: '22:30:00'
   - platform: time
     at: '22:30:00'
 
@@ -35,26 +37,19 @@
 
 ########################
 
-- alias: lights_off_morning_outside
+- alias: lights_off_outside
   initial_state: True
 
   trigger:
+  - platform: time
+    at: "23:00:00"
+
   - platform: sun
     event: sunrise
     offset: '1:00:00'
 
-  # - platform: time
-  #   after: '08:30:00'
   - platform: time
     at: '08:30:00'
-  # - platform: time
-  #   after: '08:35:00'
-  - platform: time
-    at: '08:35:00'
-  # - platform: time
-  #   after: '08:40:00'
-  - platform: time
-    at: '08:40:00'
 
   action:
   - service: scene.turn_on

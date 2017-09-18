@@ -7,7 +7,6 @@
   - platform: time
     at: '02:00:00'
 
-
   condition:
     condition: state
     entity_id: input_boolean.enable_guest

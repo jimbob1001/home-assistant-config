@@ -1,14 +1,14 @@
-- alias: Test
-  initial_state: False
+- alias: monzo_below
+  initial_state: True
 
   trigger:
-  - platform: state
+  - platform: numeric_state
     entity_id:
-    - sensor.plex_shield
-    from: '0'
+    - sensor.monzo
+    below: '20'
 
   action:
     service: notify.get_notified
     data:
-      message: "Test Alert"
+      message: "Monzo Alert"
       title: "Monzo account is below £20. Time to top up?"

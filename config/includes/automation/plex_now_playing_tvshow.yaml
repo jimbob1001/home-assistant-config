@@ -6,6 +6,10 @@
     entity_id:
     - media_player.plex_shield
     to: 'playing'
+  - platform: numeric_state
+    entity_id:
+    - sensor.plex_shield
+    above: '0'
 
   condition:
     condition: and

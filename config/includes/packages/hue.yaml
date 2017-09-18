@@ -5,6 +5,9 @@ light:
     allow_unreachable: true
     allow_hue_groups: true
 
+sensor:
+  - platform: hue_sensors
+
 group:
   outside:
       name: Outside

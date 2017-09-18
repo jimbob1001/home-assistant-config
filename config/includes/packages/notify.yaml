@@ -13,7 +13,7 @@ notify:
     name: get_notified
     services:
       - service: pushover
-      - service: bot
+      #- service: bot
       #- service: shield
       #- service: slack
 
@@ -28,18 +28,18 @@ notify:
   #   icon: ':rocket:'
   #   username: 'home-assistant'
 
-automation:
-- alias: notify_restart
-  initial_state: True
-
-  trigger:
-  - platform: homeassistant
-    event: start
-  - platform: homeassistant
-    event: 'start'
-
-  action:
-    service: notify.get_notified
-    data:
-      message: "Home Assistant should now be available"
-      title: "Home Assistant Restarted"
+# automation:
+# - alias: notify_restart
+#   initial_state: True
+#
+#   trigger:
+#   - platform: homeassistant
+#     event: start
+#   - platform: homeassistant
+#     event: 'start'
+#
+#   action:
+#     service: notify.get_notified
+#     data:
+#       message: "Home Assistant should now be available"
+#       title: "Home Assistant Restarted"
