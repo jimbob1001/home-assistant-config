@@ -1,6 +1,6 @@
 ### HOME ASSISTANT ###
 ###  BASIC CONFIG  ###
-#
+
 homeassistant:
   name: No. 33
   latitude: !secret latitude_home
@@ -9,28 +9,15 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/London
   packages: !include_dir_named includes/packages
-#
+
 ### ADDITIONAL CONFIG ###
-#
+
 #introduction:
 #discovery:
 #ios:
-emulated_hue:
+#emulated_hue:
   #listen_port: 80
 updater:
-#frontend:
-  # themes:
-  #   james:
-  #     primary-color: "#00AA8D"
-  #     light-primary-color: "#00BF9A"
-  #     dark-primary-color: "#008975"
-  #     accent-color: "#3F51B5"
-  #     # text-primary-color: "#ffffff"
-  #     # primary-background-color: var(--paper-grey-50);
-  #     # primary-text-color: "#232121"
-  #     # secondary-text-color: "#737272"
-  #     # disabled-text-color: "#bfbdbd"
-  #     # divider-color: rgba(0, 0, 0, .12)
 config:
 sun:
 conversation:
@@ -38,27 +25,21 @@ shopping_list:
 history:
 logger:
   default: error
-#
+
 recorder:
   purge_days: 10
-  #db_url: !secret recorder_db_url
   exclude:
     domains:
     - sun
     - sensor
-#
+
 logbook:
   exclude:
     domains:
     - sun
     - sensor
-#
-sensor:
-- platform: time_date
-  display_options:
-  - time
-  - date
-#
+    - device_tracker
+
 http:
   api_password: !secret http_password
   trusted_networks:

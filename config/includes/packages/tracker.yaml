@@ -13,9 +13,14 @@ zone:
 
 device_tracker:
   - platform: ping
+    count: 3
     hosts:
       james_ping: !secret james_ip
       gillian_ping: !secret gillian_ip
+
+    consider_home: 0:05:00
+    interval_seconds: 0:03:00
+    track_new_devices: true
 
   - platform: tado
     username: !secret tado_user
@@ -31,29 +36,3 @@ device_tracker:
 #    host: !secret asus_ip
 #    username: !secret asus_username
 #    password: !secret asus_password
-
-    consider_home: 0:03:00
-    interval_seconds: 0:03:00
-    track_new_devices: true
-
-binary_sensor:
-  - platform: 'bayesian'
-    prior: 0.75
-    name: 'James Home'
-    probability_threshold: 0.95
-    observations:
-      - entity_id: 'device_tracker.james_tado'
-        prob_given_true: 0.8
-        prob_given_false: 0.2
-        platform: 'state'
-        to_state: 'home'
-      - entity_id: 'device_tracker.james_ping'
-        prob_given_true: 0.99
-        prob_given_false: 0.10
-        platform: 'state'
-        to_state: 'home'
-      - entity_id: 'device_tracker.james_oneplus_3'
-        prob_given_true: 0.95
-        prob_given_false: 0.4
-        platform: 'state'
-        to_state: 'home'

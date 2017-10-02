@@ -93,6 +93,10 @@ homeassistant:
     sensor.motion_hue_living_room:
       friendly_name: Living Room Motion
 
+    binary_sensor.james_home:
+      friendly_name: James (Bayesian)
+      entity_picture: /local/poe.png
+
     scene.hue_dim:
       friendly_name: Dim
       homebridge_name: DIM
@@ -111,6 +115,12 @@ homeassistant:
     scene.hue_night:
       friendly_name: Night
       homebridge_name: NIGHT
+    scene.hue_outside_full:
+      friendly_name: Outside Full
+      homebridge_name: OUTSIDE FULL
+    scene.hue_outside_dim:
+      friendly_name: Outside Dim
+      homebridge_name: OUTSIDE DIM
     scene.hue_outside_off:
       friendly_name: Outside Off
       homebridge_hidden: true

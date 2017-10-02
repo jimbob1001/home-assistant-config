@@ -2,30 +2,34 @@
   initial_state: True
 
   trigger:
-  # - platform: time
-  #   after: '08:45:00'
   - platform: time
     at: '08:45:00'
+    # Triggers at 8.45 am
 
   condition:
     condition: and
+    # THINK I SHOULD BE USING OR CONDITIONS HERE
+    # AS THESE WILL STILL TRIGGER UNLESS ALL CONDITIONS ARE MET
     conditions:
-
     - condition: state
       entity_id: input_boolean.disable_work
       state: 'off'
+      # Don't trigger if disable work is on
     - condition: state
       entity_id: input_boolean.enable_guest
       state: 'off'
+      # Don't trigger if we have guests
     - condition: state
       entity_id: binary_sensor.workday_sensor
       state: 'on'
+      # Don't trigger if it is not a UK workday
 
   action:
     service: homeassistant.turn_off
     entity_id: light.hue_living_room
     data:
       transition: 2
+      # Turns off the lights
 
 ########################
 
@@ -33,27 +37,31 @@
   initial_state: True
 
   trigger:
-  # - platform: time
-  #   after: '22:15:00'
   - platform: time
     at: '22:15:00'
+    # Triggers at 10.15 pm
 
   condition:
     condition: and
+    # THINK I SHOULD BE USING OR CONDITIONS HERE
+    # AS THESE WILL STILL TRIGGER UNLESS ALL CONDITIONS ARE MET
     conditions:
-
     - condition: state
       entity_id: media_player.plex_shield
       state: 'idle'
+      # Don't trigger if you're watching plex
     - condition: state
       entity_id: input_boolean.disable_bedtime
       state: 'off'
+      # Don't trigger if disable bedtime is on
     - condition: state
       entity_id: input_boolean.enable_guest
       state: 'off'
+      # Don't trigger if we have guests
 
   action:
     service: homeassistant.turn_off
     entity_id: light.hue_living_room
     data:
       transition: 2
+      # Turns off the lights

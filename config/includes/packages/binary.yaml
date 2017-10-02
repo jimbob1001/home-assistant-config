@@ -1,11 +1,13 @@
 binary_sensor:
   - platform: workday
     country: UK
-    #province:
+    # weekdays: sensor "on"
+    # weekends or bank holidays: sensor "off"
 
   - platform: ping
     host: !secret cast_ip
     name: ping_shield
+    # Checks if device is "on" or "off"
 
   - platform: ping
     host: !secret tado_ip

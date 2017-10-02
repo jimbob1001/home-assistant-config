@@ -17,12 +17,12 @@ group:
       name: Home
       control: hidden
       entities:
-      # - group.james
-      # - group.gillian
+      - binary_sensor.james_home
       - sensor.james_group
       - sensor.gillian_group
       - sensor.heating_temperature
       - sensor.heating_humidity
       - sensor.motion_hue_living_room
+      - sensor.hue_tap
       - input_boolean.enable_guest
       - input_boolean.text_to_speech

@@ -5,7 +5,8 @@
   - platform: state
     entity_id:
     - sensor.motion_hue_living_room
-    to: 'True'
+    to: 'on'
+    # Triggers if motion detected
 
   condition:
     condition: and
@@ -16,31 +17,11 @@
     - condition: state
       entity_id: group.gillian
       state: 'not_home'
+      # Only trigger if we are both away
 
   action:
     service: notify.get_notified
     data:
       message: "Motion Detected"
       title: "Motion has been detected at home"
-
-#############
-
-- alias: motion_detected_night
-  initial_state: True
-
-  trigger:
-  - platform: state
-    entity_id:
-    - sensor.motion_hue_living_room
-    to: 'True'
-
-  condition:
-  - condition: time
-    after: "22:30:00"
-    before: "06:00:00"
-
-  action:
-    service: light.hue_activate_scene
-    data:
-      group_name: "Living Room"
-      scene_name: "Night"
+      # Send a notification

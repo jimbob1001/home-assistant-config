@@ -6,12 +6,14 @@
     event_type: telegram_command
     event_data:
       command: '/white'
+      # Type "/white" in the no.33 bot
 
   action:
     service: light.hue_activate_scene
     data:
       group_name: "Living Room"
       scene_name: "White"
+      # Activates native Hue 'White' scene
 
 ########################
 
@@ -23,12 +25,14 @@
     event_type: telegram_command
     event_data:
       command: '/night'
+      # Type "/night" in the no.33 bot
 
   action:
     service: light.hue_activate_scene
     data:
       group_name: "Living Room"
       scene_name: "Night"
+      # Activates native Hue 'Night' scene
 
 ########################
 
@@ -40,9 +44,11 @@
     event_type: telegram_command
     event_data:
       command: '/morning'
+      # Type "/morning" in the no.33 bot
 
   action:
     service: light.hue_activate_scene
     data:
       group_name: "Living Room"
       scene_name: "Dim"
+      # Activates native Hue 'Dim' scene

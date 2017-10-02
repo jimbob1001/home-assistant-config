@@ -6,14 +6,7 @@
     entity_id:
     - media_player.plex_shield
     from: 'playing'
-#    for:
-#      seconds: 5
-  - platform: numeric_state
-    entity_id:
-    - sensor.plex_shield
-    below: '1'
-#    for:
-#      seconds: 5
+    # Triggers if plex is paused or stopped
 
   condition:
     condition: and
@@ -21,33 +14,38 @@
       - condition: state
         entity_id: input_boolean.plex_movie
         state: 'on'
+        # Only triggers if plex movie scene was active
       - condition: or
         conditions:
         - condition: time
           after: "17:30:00"
+          # Only triggers after 5.30 pm
         - condition: sun
           after: sunset
           after_offset: "-1:30:00"
+          # Or the sun has set
         - condition: state
           entity_id: input_boolean.simulate_sunset
           state: 'on'
+          # Or if simulate sunset button is on
 
       - condition: or
         conditions:
         - condition: state
           entity_id: input_boolean.enable_guest
           state: 'off'
+          # Don't trigger if we have guests
         - condition: state
           entity_id: input_boolean.disable_plex
           state: 'off'
-        - condition: state
-          entity_id: input_boolean.simulate_sunset
-          state: 'on'
+          # Don't trigger is disable plex is on
 
   action:
   - service: homeassistant.turn_on
     entity_id: scene.now_stopped_movie
+    # Activates now stopped scene
   - service: light.hue_activate_scene
     data:
       group_name: "Living Room"
       scene_name: "Dim"
+      # Activates native Hue scene 'Dim'

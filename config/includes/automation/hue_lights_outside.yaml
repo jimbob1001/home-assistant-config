@@ -5,20 +5,22 @@
   - platform: sun
     event: sunset
     offset: '-1:00:00'
-
+    # Triggers an hour before sunset in the evenings
   - platform: time
     at: "06:00:00"
-
+    # Also triggers at 6 am in the morning
   - platform: event
     event_type: telegram_command
     event_data:
       command: '/outside'
+      # Type "/outside" in the no.33 bot
 
   action:
     service: light.hue_activate_scene
     data:
       group_name: "Outside"
       scene_name: "Full"
+      # Activates native Hue scene 'Outside'
 
 ########################
 
@@ -28,12 +30,14 @@
   trigger:
   - platform: time
     at: '22:30:00'
+    # Triggers at 10.30 pm
 
   action:
     service: light.hue_activate_scene
     data:
       group_name: "Outside"
       scene_name: "Dim"
+      # Activates native Hue scene 'Dim'
 
 ########################
 
@@ -43,14 +47,16 @@
   trigger:
   - platform: time
     at: "23:00:00"
-
+    # Triggers at 11 pm
   - platform: sun
     event: sunrise
     offset: '1:00:00'
-
+    # Triggers an hour after sunrise
   - platform: time
     at: '08:30:00'
+    # Triggers at 8.30 am
 
   action:
   - service: scene.turn_on
     entity_id: scene.hue_outside_off
+    # Turns off the outside lights

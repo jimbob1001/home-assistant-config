@@ -6,11 +6,13 @@
     event_type: telegram_command
     event_data:
       command: '/ping'
+      # Type "/ping" in the no.33 bot
 
   action:
   - service: notify.bot
     data:
       message: 'pong'
+      # Reply "pong" to no.33 bot
 
 ########################
 
@@ -22,13 +24,16 @@
     event_type: telegram_command
     event_data:
       command: '/restart'
+      # Type "/restart" in the no.33 bot
 
   action:
   - service: notify.bot
     data:
       message: 'restarting hass'
+      # Reply "restarting hass" in no.33 bot
 
   - service: homeassistant.restart
+    # Restarts homeassistant
 
 ########################
 
@@ -40,13 +45,16 @@
     event_type: telegram_command
     event_data:
       command: '/reload'
+      # Type "/reload" in the no.33 bot
 
   action:
   - service: notify.bot
     data:
       message: 'reloading core config'
+      # Reply "reloading core config" inside the no.33 bot
 
   - service: homeassistant.reload_core_config
+    # Reloads homeassistant
 
 ########################
 
@@ -58,10 +66,13 @@
     event_type: telegram_command
     event_data:
       command: '/config'
+      # Type "/config" in the no.33 bot
 
   action:
   - service: notify.bot
     data:
       message: 'checking config'
+      # Reply "checking config" inside the no.33 bot
 
   - service: homeassistant.check_config
+    # Checks homeassistant config

@@ -6,40 +6,45 @@
     entity_id:
     - media_player.plex_shield
     to: 'playing'
-  - platform: numeric_state
-    entity_id:
-    - sensor.plex_shield
-    above: '0'
+    # Triggers when plex is playing on shield tv
 
   condition:
     condition: and
     conditions:
       - condition: template
         value_template: '{{ states.media_player.plex_shield.attributes.media_content_type == "tvshow" }}'
+        # Only trigger if watching a tv show
       - condition: or
         conditions:
         - condition: time
           after: "17:30:00"
+          # Only trigger after 5.30 pm
         - condition: sun
           after: sunset
           after_offset: "-1:30:00"
+          # Or if the sun has set
         - condition: state
           entity_id: input_boolean.simulate_sunset
           state: 'on'
+          # Or if the simulate sunset button is on (used fir testing automations)
 
       - condition: or
         conditions:
         - condition: state
           entity_id: input_boolean.enable_guest
           state: 'off'
+          # Don't trigger if we have guests
         - condition: state
           entity_id: input_boolean.disable_plex
           state: 'off'
+          # Don't trigger if disable plex button is on
 
   action:
   - service: homeassistant.turn_on
     entity_id: scene.now_playing_tvshow
+    # Activates now playing scene
   - service: light.hue_activate_scene
     data:
       group_name: "Living Room"
       scene_name: "Dim"
+      # Activates native Hue scene 'Dim'

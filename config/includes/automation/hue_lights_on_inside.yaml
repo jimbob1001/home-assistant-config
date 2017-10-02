@@ -2,20 +2,21 @@
   initial_state: True
 
   trigger:
-  # - platform: time
-  #   after: '05:55:00'
   - platform: time
     at: '05:55:00'
+    # Triggers at 5.55 am
   - platform: event
     event_type: telegram_command
     event_data:
       command: '/dim'
+      # Type "/dim" in the no.33 bot
 
   action:
     service: light.hue_activate_scene
     data:
       group_name: "Living Room"
       scene_name: "Dim"
+      # Activates native Hue scene 'Dim'
 
 ########################
 
@@ -23,17 +24,18 @@
   initial_state: True
 
   trigger:
-  # - platform: time
-  #   after: '17:30:00'
   - platform: time
     at: '17:30:00'
+    # Triggers at 5.30 pm
   - platform: sun
     event: sunset
     offset: '-1:30:00'
+    # Triggers an hour & a half before sunset
   - platform: event
     event_type: telegram_command
     event_data:
       command: '/full'
+      # Type "/full" in the no.33 bot
 
   condition:
     condition: and
@@ -41,12 +43,15 @@
     - condition: state
       entity_id: input_boolean.disable_sunset
       state: 'off'
+      # Don't trigger if disable sunset switch is on
     - condition: state
       entity_id: group.living_room_lights
       state: 'off'
+      # Don't trigger if lights are already on
 
   action:
     service: light.hue_activate_scene
     data:
       group_name: "Living Room"
       scene_name: "Full"
+      # Activates native Hue 'Full' scene

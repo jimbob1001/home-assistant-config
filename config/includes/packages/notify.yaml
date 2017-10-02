@@ -17,29 +17,9 @@ notify:
       #- service: shield
       #- service: slack
 
-  # - platform: nfandroidtv
-  #   name: shield
-  #   host: !secret cast_ip
-
   # - platform: slack
   #   name: 'Slack'
   #   api_key: !secret slack_api
   #   default_channel: 'home-assistant'
   #   icon: ':rocket:'
   #   username: 'home-assistant'
-
-# automation:
-# - alias: notify_restart
-#   initial_state: True
-#
-#   trigger:
-#   - platform: homeassistant
-#     event: start
-#   - platform: homeassistant
-#     event: 'start'
-#
-#   action:
-#     service: notify.get_notified
-#     data:
-#       message: "Home Assistant should now be available"
-#       title: "Home Assistant Restarted"

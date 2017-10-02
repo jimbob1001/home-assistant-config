@@ -2,16 +2,17 @@
   initial_state: True
 
   trigger:
-  # - platform: time
-  #   after: '02:00:00'
   - platform: time
     at: '02:00:00'
+    # Triggers at 2 am
 
   condition:
     condition: state
     entity_id: input_boolean.enable_guest
     state: 'off'
+    # Don't trigger if we have guests
 
   action:
     service: homeassistant.turn_on
     entity_id: scene.input_reset
+    # Activates the reset scene

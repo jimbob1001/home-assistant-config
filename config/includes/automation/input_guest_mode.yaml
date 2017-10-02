@@ -5,20 +5,25 @@
   - platform: state
     entity_id: input_boolean.enable_guest
     to: 'on'
+    # Triggers if the switch is turned on
   - platform: event
     event_type: telegram_command
     event_data:
       command: '/guest_on'
+      # Type "/guest_on" in no.33 bot
 
   action:
   - service: homeassistant.turn_on
     entity_id: scene.input_guests
+    # Activates the guests scene
   - service: homeassistant.turn_on
     entity_id: input_boolean.enable_guest
+    # Turns the guest switch "on"
   - service: notify.get_notified
     data:
       message: 'Automations are off until guest mode has been disabled.'
       title: "Guest Mode Enabled"
+      # Sends confirmation message
 
 ########################
 
@@ -29,15 +34,19 @@
   - platform: state
     entity_id: input_boolean.enable_guest
     to: 'off'
+    # Triggers if the switch is turned off
   - platform: event
     event_type: telegram_command
     event_data:
       command: '/guest_off'
+      # Type "/guest_off" in no.33 bot
 
   action:
   - service: homeassistant.turn_on
     entity_id: scene.input_reset
+    # Runs the reset scene
   - service: notify.get_notified
     data:
       message: 'Automations have been re-enabled.'
       title: "Guest Mode Disabled"
+      # Sends confirmation message

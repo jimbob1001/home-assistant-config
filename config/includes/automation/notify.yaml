@@ -4,15 +4,14 @@
   trigger:
   - platform: homeassistant
     event: 'start'
+    # Triggers when hass starts up
 
   action:
-#  - delay:
-#      minutes: 2
-#      seconds: 30
   - service: notify.get_notified
     data:
       message: "Home Assistant should now be available"
       title: "Hass Restarted"
+      # Sends a notification
 
 ########################
 
@@ -22,12 +21,14 @@
   trigger:
   - platform: homeassistant
     event: 'shutdown'
+    # Triggers when hass shuts down
 
   action:
     service: notify.get_notified
     data:
       message: "Home Assistant is shutting down"
       title: "Hass Shutting Down"
+      # Sends a notification
 
 ########################
 
@@ -37,6 +38,7 @@
   trigger:
     platform: state
     entity_id: updater.updater
+    # Triggers if hass detects an updated version
 
   condition:
     condition: template
@@ -53,3 +55,4 @@
       is now available. Go to https://home-assistant.io
       "
       title: "Home Assistant Update"
+      # Sends a notification
