@@ -19,6 +19,7 @@ phue.conf
 plex.conf
 *.conf
 home-assistant.log
+.monzo-token-cache
 *.log
 home-assistant_v2.db
 *.db
