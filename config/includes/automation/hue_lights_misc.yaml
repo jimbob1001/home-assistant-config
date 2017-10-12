@@ -1,4 +1,5 @@
 - alias: lights_on_white
+  id: lights_on_white
   initial_state: True
 
   trigger:
@@ -18,6 +19,7 @@
 ########################
 
 - alias: lights_on_night
+  id: lights_on_night
   initial_state: True
 
   trigger:
@@ -37,6 +39,7 @@
 ########################
 
 - alias: lights_on_morning
+  id: lights_on_morning
   initial_state: True
 
   trigger:

@@ -1,4 +1,5 @@
 - alias: plex_playing_pauses_sonos
+  id: plex_playing_pauses_sonos
   initial_state: True
 
   trigger:

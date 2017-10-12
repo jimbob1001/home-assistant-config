@@ -2,38 +2,29 @@ homeassistant:
   customize_domain:
   ### Customize entire domains
     script:
-      entity_picture: /local/bobafett.png
+      entity_picture: /local/sw/bobafett.png
     scene:
-      entity_picture: /local/jawa.png
-      homebridge_hidden: true
+      entity_picture: /local/sw/jawa.png
     input_boolean:
-      entity_picture: /local/thumbs_up.png
-      homebridge_hidden: true
-    light:
-      homebridge_hidden: true
-    media_player:
-      homebridge_hidden: true
+      entity_picture: /local/sw/thumbs_up.png
 
   customize_glob:
   ### Customize similar entities
   ### Overrides domain
     "device_tracker.james*":
-      entity_picture: /local/anakin.png
+      entity_picture: /local/sw/anakin.png
     "device_tracker.gillian*":
-      entity_picture: /local/hologram.png
+      entity_picture: /local/sw/hologram.png
     "device_tracker.home*":
-      entity_picture: /local/deathstar.png
+      entity_picture: /local/sw/deathstar.png
 
     "sensor.james*":
-      entity_picture: /local/anakin.png
+      entity_picture: /local/sw/anakin.png
     "sensor.gillian*":
-      entity_picture: /local/hologram.png
+      entity_picture: /local/sw/hologram.png
 
     "scene.hue*":
-      entity_picture: /local/k2so.png
-      homebridge_hidden: false
-    "light.hue*":
-      homebridge_hidden: false
+      entity_picture: /local/sw/k2so.png
 
     "sensor.dark_sky_daily_high_temp*":
       friendly_name: Daily High
@@ -52,15 +43,15 @@ homeassistant:
   ### Overrides domain & glob
     group.scripts:
       control: hidden
-      entity_picture: /local/deathstar.png
+      entity_picture: /local/sw/deathstar.png
     group.james:
-      entity_picture: /local/hansolo.png
+      entity_picture: /local/sw/hansolo.png
     group.gillian:
-      entity_picture: /local/leia.png
+      entity_picture: /local/sw/leia.png
     sensor.james_group:
-      entity_picture: /local/hansolo.png
+      entity_picture: /local/sw/hansolo.png
     sensor.gillian_group:
-      entity_picture: /local/leia.png
+      entity_picture: /local/sw/leia.png
 
     sensor.heating_temperature:
       friendly_name: Tado˚ Temperature
@@ -95,7 +86,7 @@ homeassistant:
 
     binary_sensor.james_home:
       friendly_name: James (Bayesian)
-      entity_picture: /local/poe.png
+      entity_picture: /local/sw/poe.png
 
     scene.hue_dim:
       friendly_name: Dim
@@ -123,10 +114,21 @@ homeassistant:
       homebridge_name: OUTSIDE DIM
     scene.hue_outside_off:
       friendly_name: Outside Off
-      homebridge_hidden: true
     scene.input_guests:
-      homebridge_hidden: false
+      friendly_name: Guests
       homebridge_name: GUEST
+    scene.input_reset:
+      friendly_name: Reset
+      homebridge_name: RESET
+    scene.input_after_sunset:
+      friendly_name: After Sunset
+      homebridge_name: AFTER SUNSET
+    scene.now_playing_movie:
+      friendly_name: Now Playing Movie
+      homebridge_name: NOW PLAYING MOVIE
+    scene.now_playing_tvshow:
+      friendly_name: Now Playing TV
+      homebridge_name: NOW PLAYING TV
 
     media_player.kodi_kodi:
       friendly_name: KODI

@@ -53,6 +53,8 @@ group:
       - group.today
       - group.tomorrow
       - group.home
+      - group.james
+      - group.gillian
       - group.living_room_lights
       - group.outside
       - media_player.plex_shield
@@ -98,5 +100,3 @@ group:
     - weblink.homeassistant
     - weblink.router
     - sensor.monzo
-    - sensor.hass
-    - sensor.itvl

@@ -1,4 +1,5 @@
 - alias: Test
+  id: test
   initial_state: False
 
   trigger:

@@ -10,8 +10,8 @@ binary_sensor:
         platform: 'state'
         to_state: 'home'
       - entity_id: 'device_tracker.james_ping'
-        prob_given_true: 0.99
-        prob_given_false: 0.4
+        prob_given_true: 0.8
+        prob_given_false: 0.5
         platform: 'state'
         to_state: 'home'
       - entity_id: 'device_tracker.james_oneplus_3'

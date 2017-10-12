@@ -27,7 +27,9 @@ logger:
   default: error
 
 recorder:
-  purge_days: 10
+  #purge_days: 10
+  purge_interval: 5
+  purge_keep_days: 2
   exclude:
     domains:
     - sun
@@ -48,8 +50,8 @@ http:
     - !secret trusted_ip_3
   ip_ban_enabled: true
   login_attempts_threshold: 5
-#
+
 ### INCLUDE FURTHER CONFIG FILES ###
-#
+
 automation: !include_dir_merge_list includes/automation
 scene: !include_dir_merge_list includes/scene

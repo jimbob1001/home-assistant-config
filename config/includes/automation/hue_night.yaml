@@ -1,4 +1,5 @@
 - alias: lights_on_night_inside
+  id: lights_on_night_inside
   initial_state: True
 
   trigger:
@@ -11,13 +12,9 @@
     condition: and
     conditions:
     - condition: time
-      after: "22:30:00"
+      after: "22:15:01"
       before: "05:50:00"
-      # Only trigger between 10.30 pm & 5.50 am
-    - condition: state
-      entity_id: input_boolean.enable_guest
-      state: 'off'
-      # Don't trigger if you have guests
+      # Only trigger between 10.15 pm & 5.50 am
     - condition: state
       entity_id: group.living_room_lights
       state: 'off'

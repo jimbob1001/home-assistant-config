@@ -1,4 +1,5 @@
 - alias: input_daily_reset
+  id: input_daily_reset
   initial_state: True
 
   trigger:

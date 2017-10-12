@@ -1,4 +1,5 @@
 - alias: auto_bot_ping
+  id: auto_bot_ping
   initial_state: True
 
   trigger:
@@ -17,6 +18,7 @@
 ########################
 
 - alias: auto_bot_restart
+  id: auto_bot_restart
   initial_state: True
 
   trigger:
@@ -38,6 +40,7 @@
 ########################
 
 - alias: auto_bot_reload
+  id: auto_bot_reload
   initial_state: True
 
   trigger:
@@ -59,6 +62,7 @@
 ########################
 
 - alias: auto_bot_check_config
+  id: auto_bot_check_config
   initial_state: True
 
   trigger:

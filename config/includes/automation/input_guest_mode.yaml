@@ -1,4 +1,5 @@
 - alias: input_guest_mode_on
+  id: input_guest_mode_on
   initial_state: True
 
   trigger:
@@ -28,6 +29,7 @@
 ########################
 
 - alias: input_guest_mode_off
+  id: input_guest_mode_off
   initial_state: True
 
   trigger:

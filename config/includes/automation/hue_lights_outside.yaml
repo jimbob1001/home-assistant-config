@@ -1,4 +1,5 @@
 - alias: lights_full_outside
+  id: lights_full_outside
   initial_state: True
 
   trigger:
@@ -25,6 +26,7 @@
 ########################
 
 - alias: lights_dim_outside
+  id: lights_dim_outside
   initial_state: True
 
   trigger:
@@ -42,6 +44,7 @@
 ########################
 
 - alias: lights_off_outside
+  id: lights_off_outside
   initial_state: True
 
   trigger:

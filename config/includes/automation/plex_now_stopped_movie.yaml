@@ -1,4 +1,5 @@
 - alias: plex_now_stopped_movie
+  id: plex_now_stopped_movie
   initial_state: True
 
   trigger:

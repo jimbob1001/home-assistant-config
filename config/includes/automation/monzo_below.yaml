@@ -1,4 +1,5 @@
 - alias: monzo_below
+  id: monzo_below
   initial_state: True
 
   trigger:

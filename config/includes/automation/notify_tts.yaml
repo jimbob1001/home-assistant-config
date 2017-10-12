@@ -1,4 +1,5 @@
 - alias: notify_tts
+  id: notify_tts
   initial_state: True
 
   trigger:

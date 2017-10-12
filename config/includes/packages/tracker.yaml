@@ -13,13 +13,13 @@ zone:
 
 device_tracker:
   - platform: ping
-    count: 3
+    count: 5
     hosts:
       james_ping: !secret james_ip
       gillian_ping: !secret gillian_ip
 
-    consider_home: 0:05:00
-    interval_seconds: 0:03:00
+    #consider_home: 0:05:00
+    interval_seconds: 0:00:30
     track_new_devices: true
 
   - platform: tado
@@ -31,6 +31,7 @@ device_tracker:
     hosts:
       - !secret james_ip
       - !secret gillian_ip
+    home_interval: 10
 
 #  - platform: asuswrt
 #    host: !secret asus_ip

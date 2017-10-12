@@ -1,4 +1,5 @@
 - alias: motion_detected
+  id: motion_detected
   initial_state: True
 
   trigger:

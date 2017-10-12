@@ -1,4 +1,5 @@
 - alias: plex_now_playing_movie
+  id: plex_now_playing_movie
   initial_state: True
 
   trigger:

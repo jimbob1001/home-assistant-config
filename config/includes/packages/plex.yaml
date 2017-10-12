@@ -1,9 +1,8 @@
 media_player:
   - platform: plex
     entity_namespace: 'plex'
-    ssl: true
-    include_non_clients: true
-    scan_interval: 10
+    # include_non_clients: true
+    scan_interval: 2
 
   - platform: cast
     entity_namespace: 'cast'
@@ -24,7 +23,10 @@ sensor:
   - platform: plex
     name: plex_shield
     host: !secret plex_ip
-    port: !secret plex_port
+    # port: !secret plex_port
+    # username: !secret plex_username
+    # password: !secret plex_password
+    # server: !secret plex_server
 
 group:
   media_centre:
