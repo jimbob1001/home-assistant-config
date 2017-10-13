@@ -5,9 +5,9 @@ weblink:
     - name: Router
       url: https://192.168.179.1:8443/index.asp
 
-sensor:
-  - platform: monzo
-    client_id: !secret monzo_client_id
-    client_secret: !secret monzo_client_secret
-    name: 'Monzo'
+# sensor:
+#   - platform: monzo
+#     client_id: !secret monzo_client_id
+#     client_secret: !secret monzo_client_secret
+#     name: 'Monzo'
     #cache_path: '/.homeassistant/cache'

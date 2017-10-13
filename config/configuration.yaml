@@ -27,7 +27,6 @@ logger:
   default: error
 
 recorder:
-  #purge_days: 10
   purge_interval: 5
   purge_keep_days: 2
   exclude:
