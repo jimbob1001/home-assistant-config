@@ -35,12 +35,26 @@ input_boolean:
     name: text-to-speech
     initial: off
 
+  james_is_at_home:
+    name: James
+    #initial: off
+
+  gillian_is_at_home:
+    name: Gillian
+    #initial: off
+
 group:
   guest:
     name: Guest mode
     entities:
     - input_boolean.enable_guest
     # - sensor.guest_mode
+
+  anybody_home:
+    name: Anybody Home
+    entities:
+    - input_boolean.james_is_at_home
+    - input_boolean.gillian_is_at_home
 
   bedtime:
     name: Bedtime mode

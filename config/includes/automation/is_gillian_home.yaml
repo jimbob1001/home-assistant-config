@@ -1,0 +1,29 @@
+- alias: is_gillian_home
+  id: is_gillian_home
+  initial_state: True
+
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.gillian_home
+    to: 'on'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.gillian_is_home
+
+################################
+
+- alias: is_gillian_away
+  id: is_gillian_away
+  initial_state: True
+
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.gillian_home
+    to: 'off'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.gillian_is_away

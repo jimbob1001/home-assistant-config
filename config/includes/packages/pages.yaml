@@ -37,6 +37,7 @@ group:
     name: Page 4
     view: true
     entities:
+      - group.anybody_home
       - group.guest
       - group.bedtime
       - group.overrides

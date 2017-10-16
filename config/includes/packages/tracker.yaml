@@ -17,7 +17,8 @@ device_tracker:
     hosts:
       james_ping: !secret james_ip
       gillian_ping: !secret gillian_ip
-    #consider_home: 0:05:00
+
+    consider_home: 0:05:00
     interval_seconds: 0:00:30
     track_new_devices: true
     
@@ -36,3 +37,5 @@ device_tracker:
       - !secret james_ip
       - !secret gillian_ip
     home_interval: 10
+
+  - platform: bluetooth_tracker

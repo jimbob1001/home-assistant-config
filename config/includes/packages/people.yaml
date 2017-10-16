@@ -3,6 +3,7 @@ group:
       name: James
       entities:
       - device_tracker.james_oneplus_3
+      - device_tracker.james_bt_oneplus_3
       - device_tracker.james_tado
       - device_tracker.james_ping
 
@@ -10,6 +11,7 @@ group:
       name: Gillian
       entities:
       - device_tracker.gillian_oneplus_3
+      - device_tracker.gillian_bt_oneplus_3
       - device_tracker.gillian_tado
       - device_tracker.gillian_ping
 
@@ -18,6 +20,7 @@ group:
       control: hidden
       entities:
       - binary_sensor.james_home
+      - binary_sensor.gillian_home
       - sensor.james_group
       - sensor.gillian_group
       - sensor.heating_temperature

@@ -1,0 +1,18 @@
+- alias: plex_tv_now_stopped
+  id: plex_tv_now_stopped
+  initial_state: True
+
+  trigger:
+  - platform: state
+    entity_id:
+    - media_player.plex_shield
+    from: 'playing'
+
+  condition:
+  - condition: state
+    entity_id: input_boolean.plex_tvshow
+    state: 'on'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.now_stopped_tvshow

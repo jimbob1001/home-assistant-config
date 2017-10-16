@@ -1,0 +1,17 @@
+- alias: plex_tv_now_playing
+  id: plex_tv_now_playing
+  initial_state: True
+
+  trigger:
+  - platform: state
+    entity_id:
+    - media_player.plex_shield
+    to: 'playing'
+
+  condition:
+  - condition: template
+    value_template: '{{ states.media_player.plex_shield.attributes.media_content_type == "tvshow" }}'
+        
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.now_playing_tvshow

@@ -33,7 +33,6 @@
     data:
       message: 'restarting hass'
       # Reply "restarting hass" in no.33 bot
-
   - service: homeassistant.restart
     # Restarts homeassistant
 
@@ -55,7 +54,6 @@
     data:
       message: 'reloading core config'
       # Reply "reloading core config" inside the no.33 bot
-
   - service: homeassistant.reload_core_config
     # Reloads homeassistant
 
@@ -77,6 +75,5 @@
     data:
       message: 'checking config'
       # Reply "checking config" inside the no.33 bot
-
   - service: homeassistant.check_config
     # Checks homeassistant config

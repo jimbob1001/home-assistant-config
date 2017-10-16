@@ -87,6 +87,9 @@ homeassistant:
     binary_sensor.james_home:
       friendly_name: James (Bayesian)
       entity_picture: /local/sw/poe.png
+    binary_sensor.gillian_home:
+      friendly_name: Gillian (Bayesian)
+      entity_picture: /local/sw/rey2.png
 
     scene.hue_dim:
       friendly_name: Dim

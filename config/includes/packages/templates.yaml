@@ -3,7 +3,7 @@ sensor:
     sensors:
       james_group:
         value_template:
-          "{% if is_state('group.james', 'home') %}
+          "{% if is_state('binary_sensor.james_home', 'on') %}
           is at home
           {% else %}
           is away
@@ -14,7 +14,7 @@ sensor:
     sensors:
       gillian_group:
         value_template:
-          "{% if is_state('group.gillian', 'home') %}
+          "{% if is_state('binary_sensor.gillian_home', 'on') %}
           is at home
           {% else %}
           is away
