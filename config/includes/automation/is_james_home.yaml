@@ -14,6 +14,25 @@
 
 ################################
 
+- alias: is_james_home_startup
+  id: is_james_home_startup
+  initial_state: True
+
+  trigger:
+  - platform: homeassistant
+    event: 'start'
+
+  condition:
+  - condition: state
+    entity_id: binary_sensor.james_home
+    state: 'on'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.james_is_home
+
+################################
+
 - alias: is_james_away
   id: is_james_away
   initial_state: True

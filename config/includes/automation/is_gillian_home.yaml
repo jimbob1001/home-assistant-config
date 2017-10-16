@@ -14,6 +14,25 @@
 
 ################################
 
+- alias: is_gillian_home_startup
+  id: is_gillian_home_startup
+  initial_state: True
+
+  trigger:
+  - platform: homeassistant
+    event: 'start'
+
+  condition:
+  - condition: state
+    entity_id: binary_sensor.gillian_home
+    state: 'on'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.gillian_is_home
+
+################################
+
 - alias: is_gillian_away
   id: is_gillian_away
   initial_state: True
