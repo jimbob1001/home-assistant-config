@@ -15,13 +15,12 @@ homeassistant:
 #introduction:
 #discovery:
 #ios:
-#emulated_hue:
-  #listen_port: 80
 updater:
 config:
 sun:
 conversation:
 shopping_list:
+#hue:
 history:
 logger:
   default: error

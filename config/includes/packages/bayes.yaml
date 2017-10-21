@@ -1,0 +1,70 @@
+binary_sensor:
+  - platform: 'bayesian'
+    prior: 0.75
+    name: 'James Home'
+    probability_threshold: 0.95
+    observations:
+      - entity_id: 'device_tracker.james_tado'
+        prob_given_true: 0.8
+        platform: 'state'
+        to_state: 'home'
+      - entity_id: 'device_tracker.james_ping'
+        prob_given_true: 0.8
+        platform: 'state'
+        to_state: 'home'
+      - entity_id: 'device_tracker.james_oneplus3'
+        prob_given_true: 0.6
+        platform: 'state'
+        to_state: 'home'
+
+################################
+
+  - platform: 'bayesian'
+    prior: 0.75
+    name: 'Gillian Home'
+    probability_threshold: 0.95
+    observations:
+      - entity_id: 'device_tracker.gillian_tado'
+        prob_given_true: 0.8
+        platform: 'state'
+        to_state: 'home'
+      - entity_id: 'device_tracker.gillian_ping'
+        prob_given_true: 0.8
+        platform: 'state'
+        to_state: 'home'
+      - entity_id: 'device_tracker.gillian_oneplus3t'
+        prob_given_true: 0.6
+        platform: 'state'
+        to_state: 'home'
+
+################################
+
+  - platform: 'bayesian'
+    name: In Bed
+    prior: 0.33
+    probability_threshold: 0.95
+    observations:
+      - entity_id: 'input_boolean.bedtime'
+        prob_given_true: 0.9
+        platform: 'state'
+        to_state: 'on'
+      - entity_id: 'binary_sensor.gillian_home'
+        prob_given_true: 0.7
+        platform: 'state'
+        to_state: 'on'
+      - entity_id: 'binary_sensor.james_home'
+        prob_given_true: 0.7
+        platform: 'state'
+        to_state: 'on'
+      - entity_id: 'binary_sensor.ping_sony'
+        prob_given_true: 0.5
+        platform: 'state'
+        to_state: 'off'
+      - entity_id: 'media_player.plex_shield'
+        prob_given_true: 0.5
+        platform: 'state'
+        to_state: 'idle'
+      - entity_id: 'group.living_room_lights'
+        prob_given_true: 0.8
+        platform: 'state'
+        to_state: 'off'

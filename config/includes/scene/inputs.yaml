@@ -36,3 +36,11 @@
 - name: gillian_is_away
   entities:
     input_boolean.gillian_is_at_home: off
+
+- name: bedtime_on
+  entities:
+    input_boolean.bedtime: on
+
+- name: bedtime_off
+  entities:
+    input_boolean.bedtime: off

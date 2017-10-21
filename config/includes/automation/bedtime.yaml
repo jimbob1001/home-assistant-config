@@ -1,0 +1,63 @@
+- alias: bedtime_on
+  id: bedtime_on
+  initial_state: True
+
+  trigger:
+  - platform: time
+    at: '21:30:00'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.bedtime_on
+
+######################
+
+- alias: bedtime_on_startup
+  id: bedtime_on_startup
+  initial_state: True
+
+  trigger:
+  - platform: homeassistant
+    event: 'start'
+
+  condition:
+    - condition: time
+      after: "21:30:01"
+      before: "08:59:59"
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.bedtime_on
+
+######################
+
+- alias: bedtime_off
+  id: bedtime_off
+  initial_state: True
+
+  trigger:
+  - platform: time
+    at: '09:00:00'
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.bedtime_off
+
+######################
+
+- alias: bedtime_off_startup
+  id: bedtime_off_startup
+  initial_state: True
+
+  trigger:
+  - platform: homeassistant
+    event: 'start'
+
+  condition:
+    - condition: time
+      after: "09:00:01"
+      before: "21:29:59"
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.bedtime_off

@@ -3,6 +3,10 @@ input_boolean:
     name: Disable Bedtime Automation
     #initial: off
 
+  bedtime:
+    name: Bedtime
+    #initial: off
+
   disable_plex:
     name: Disable Plex Automation
     #initial: off
@@ -61,6 +65,7 @@ group:
     control: hidden
     entities:
     - input_boolean.disable_bedtime
+    - input_boolean.bedtime
 
   overrides:
     name: Automation Overrides

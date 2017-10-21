@@ -23,10 +23,6 @@ sensor:
   - platform: plex
     name: plex_shield
     host: !secret plex_ip
-    # port: !secret plex_port
-    # username: !secret plex_username
-    # password: !secret plex_password
-    # server: !secret plex_server
 
 group:
   media_centre:

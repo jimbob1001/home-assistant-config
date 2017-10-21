@@ -13,11 +13,11 @@
     condition: and
     conditions:
     - condition: state
-      entity_id: group.james
-      state: 'not_home'
+      entity_id: binary_sensor.james_home
+      state: 'off'
     - condition: state
-      entity_id: group.gillian
-      state: 'not_home'
+      entity_id: binary_sensor.gillian_home
+      state: 'off'
       # Only trigger if we are both away
 
   action:

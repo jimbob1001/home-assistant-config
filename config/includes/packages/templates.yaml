@@ -1,7 +1,7 @@
 sensor:
   - platform: template
     sensors:
-      james_group:
+      james_home:
         value_template:
           "{% if is_state('binary_sensor.james_home', 'on') %}
           is at home
@@ -12,7 +12,7 @@ sensor:
 
   - platform: template
     sensors:
-      gillian_group:
+      gillian_home:
         value_template:
           "{% if is_state('binary_sensor.gillian_home', 'on') %}
           is at home

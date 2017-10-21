@@ -100,4 +100,3 @@ group:
     entities:
     - weblink.homeassistant
     - weblink.router
-    - sensor.monzo

@@ -41,6 +41,14 @@ binary_sensor:
     host: !secret synology_ip
     name: ping_synology
 
+  - platform: ping
+    host: !secret james_ip
+    name: ping_james
+
+  - platform: ping
+    host: !secret gillian_ip
+    name: ping_gillian
+
 group:
   binary_sensors:
     name: Online/Offline
@@ -54,3 +62,5 @@ group:
     - binary_sensor.ping_sony
     - binary_sensor.ping_humax
     - binary_sensor.ping_synology
+    - binary_sensor.ping_james
+    - binary_sensor.ping_gillian

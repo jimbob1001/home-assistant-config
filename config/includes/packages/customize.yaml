@@ -17,6 +17,7 @@ homeassistant:
       entity_picture: /local/sw/hologram.png
     "device_tracker.home*":
       entity_picture: /local/sw/deathstar.png
+      hidden: true
 
     "sensor.james*":
       entity_picture: /local/sw/anakin.png
@@ -48,9 +49,9 @@ homeassistant:
       entity_picture: /local/sw/hansolo.png
     group.gillian:
       entity_picture: /local/sw/leia.png
-    sensor.james_group:
+    sensor.james_home:
       entity_picture: /local/sw/hansolo.png
-    sensor.gillian_group:
+    sensor.gillian_home:
       entity_picture: /local/sw/leia.png
 
     sensor.heating_temperature:

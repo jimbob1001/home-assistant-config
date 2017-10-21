@@ -23,9 +23,9 @@ sensor:
 #  - platform: metoffice
 #    api_key: !secret metoffice
 
-#tado:
-#  username: !secret tado_user
-#  password: !secret tado_pass
+tado:
+  username: !secret tado_user
+  password: !secret tado_pass
 
 #group:
  #  Tado:
