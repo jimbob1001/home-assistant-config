@@ -9,20 +9,21 @@
     to: 'on'
 
   condition:
-  - condition: time
-    after: "17:30:00"
-  - condition: sun
-    after: sunset
-    after_offset: "-1:30:00"
-  - condition: state
-    entity_id: input_boolean.simulate_sunset
-    state: 'off'
-  - condition: state
-    entity_id: input_boolean.enable_guest
-    state: 'off'
-  - condition: state
-    entity_id: input_boolean.disable_plex
-    state: 'off'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.enable_guest
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.disable_plex
+        state: 'off'
+      - condition: or
+        conditions:
+          - condition: time
+            after: "17:30:00"
+          - condition: sun
+            after: sunset
+            after_offset: "-1:30:00"
 
   action:
   - service: light.hue_activate_scene

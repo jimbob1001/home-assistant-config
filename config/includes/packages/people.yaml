@@ -17,8 +17,8 @@ group:
       name: Home
       control: hidden
       entities:
-      - binary_sensor.james_home
-      - binary_sensor.gillian_home
+      - binary_sensor.james_presence
+      - binary_sensor.gillian_presence
       - sensor.james_home
       - sensor.gillian_home
       - sensor.heating_temperature
@@ -26,4 +26,3 @@ group:
       - sensor.motion_hue_living_room
       - sensor.hue_tap
       - input_boolean.enable_guest
-      - input_boolean.text_to_speech

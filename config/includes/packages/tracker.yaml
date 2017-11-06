@@ -18,7 +18,7 @@ device_tracker:
       james_ping: !secret james_ip
       gillian_ping: !secret gillian_ip
     consider_home: 0:05:00
-    interval_seconds: 0:00:30
+    interval_seconds: 0:02:00
     track_new_devices: true
 
   - platform: bluetooth_tracker

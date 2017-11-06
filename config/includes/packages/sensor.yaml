@@ -1,0 +1,11 @@
+sensor:
+  - platform: uptime
+
+  - platform: pi_hole
+    host: 192.168.179.74
+    
+  - platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload

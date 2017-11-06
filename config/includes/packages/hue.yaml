@@ -5,10 +5,10 @@ light:
     allow_unreachable: true
     allow_hue_groups: true
 
-#hue:
+hue:
 
-#sensor:
-#  - platform: hue
+sensor:
+  - platform: hue
     # Custom component allows hue motion & hue tap sensors
 
 group:

@@ -14,13 +14,12 @@ homeassistant:
 
 #introduction:
 #discovery:
-#ios:
 updater:
 config:
 sun:
 conversation:
 shopping_list:
-#hue:
+map:
 history:
 logger:
   default: error
@@ -53,3 +52,4 @@ http:
 
 automation: !include_dir_merge_list includes/automation
 scene: !include_dir_merge_list includes/scene
+script: !include includes/script/script.yaml

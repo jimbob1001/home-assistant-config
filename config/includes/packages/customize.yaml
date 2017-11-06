@@ -42,7 +42,13 @@ homeassistant:
   customize:
   ### Customize individual entities
   ### Overrides domain & glob
-    group.scripts:
+    group.hue_light_scripts:
+      control: hidden
+      entity_picture: /local/sw/deathstar.png
+    group.hue_scripts:
+      control: hidden
+      entity_picture: /local/sw/deathstar.png
+    group.hue_scenes:
       control: hidden
       entity_picture: /local/sw/deathstar.png
     group.james:
@@ -78,61 +84,45 @@ homeassistant:
       icon: mdi:home-assistant
     weblink.router:
       icon: mdi:router-wireless
-    sensor.itvl:
-      friendly_name: ITV
-      icon: mdi:chart-areaspline
 
     sensor.motion_hue_living_room:
       friendly_name: Living Room Motion
 
-    binary_sensor.james_home:
+    binary_sensor.james_presence:
       friendly_name: James (Bayesian)
       entity_picture: /local/sw/poe.png
-    binary_sensor.gillian_home:
+    binary_sensor.gillian_presence:
       friendly_name: Gillian (Bayesian)
       entity_picture: /local/sw/rey2.png
 
     scene.hue_dim:
       friendly_name: Dim
-      homebridge_name: DIM
     scene.hue_full:
       friendly_name: Full
-      homebridge_name: FULL
     scene.hue_movie:
       friendly_name: Movie
-      homebridge_name: MOVIE
     scene.hue_morning:
       friendly_name: Morning
-      homebridge_name: MORNING
     scene.hue_white:
       friendly_name: White
-      homebridge_name: WHITE
     scene.hue_night:
       friendly_name: Night
-      homebridge_name: NIGHT
     scene.hue_outside_full:
       friendly_name: Outside Full
-      homebridge_name: OUTSIDE FULL
     scene.hue_outside_dim:
       friendly_name: Outside Dim
-      homebridge_name: OUTSIDE DIM
     scene.hue_outside_off:
       friendly_name: Outside Off
     scene.input_guests:
       friendly_name: Guests
-      homebridge_name: GUEST
     scene.input_reset:
       friendly_name: Reset
-      homebridge_name: RESET
     scene.input_after_sunset:
       friendly_name: After Sunset
-      homebridge_name: AFTER SUNSET
     scene.now_playing_movie:
       friendly_name: Now Playing Movie
-      homebridge_name: NOW PLAYING MOVIE
     scene.now_playing_tvshow:
       friendly_name: Now Playing TV
-      homebridge_name: NOW PLAYING TV
 
     media_player.kodi_kodi:
       friendly_name: KODI
@@ -151,20 +141,3 @@ homeassistant:
       friendly_name: SONOS BEDROOM
     media_player.sonos_all:
       friendly_name: SONOS
-
-    group.today:
-      order: 1
-    group.tomorrow:
-      order: 2
-    group.home:
-      order: 3
-    group.living_room_lights:
-      order: 4
-    group.all_scripts:
-      order: 5
-    group.outside:
-      order: 6
-    group.media_centre:
-      order: 7
-    group.web:
-      order: 8

@@ -42,12 +42,37 @@ binary_sensor:
     name: ping_synology
 
   - platform: ping
-    host: !secret james_ip
-    name: ping_james
+    host: !secret pihole_ip
+    name: ping_pihole
 
-  - platform: ping
-    host: !secret gillian_ip
-    name: ping_gillian
+  - platform: template
+    sensors:
+      james_normal_home_hours:
+        entity_id:
+          - sensor.time
+        value_template: '{{not(strptime("09:00", "%H:%M").time() < now().time() < strptime("18:00", "%H:%M").time())}}'
+        friendly_name: James normal home hours
+
+      james_normal_work_hours:
+        entity_id:
+          - sensor.time
+        value_template: '{{(strptime("09:00", "%H:%M").time() < now().time() < strptime("18:00", "%H:%M").time())}}'
+        friendly_name: James normal home hours
+
+      dark_outside:
+        entity_id:
+          - sun.sun
+        value_template: "{{states.sun.sun.attributes.elevation|float < 2}}"
+        friendly_name: Dark outside
+
+    # Is on for 5 minutes after motion detectors trigger
+      # motion_detected:
+      #   delay_off:
+      #     minutes: 3
+      #   entity_id:
+      #     - group.motion_detectors
+      #   value_template: "{{is_state('group.motion_detectors', 'on')}}"
+      #   friendly_name: Motion detected
 
 group:
   binary_sensors:
@@ -62,5 +87,12 @@ group:
     - binary_sensor.ping_sony
     - binary_sensor.ping_humax
     - binary_sensor.ping_synology
+    - binary_sensor.ping_pihole
     - binary_sensor.ping_james
     - binary_sensor.ping_gillian
+
+  presence:
+    name: Presence
+    entities:
+    - binary_sensor.james_presence
+    - binary_sensor.gillian_presence

@@ -11,11 +11,11 @@
 - homebridge-homeassistant
 
 ## Things
-- Plex Media Server *(currently running via synology docker)*
+- Plex Media Server *(currently running via nvidia shield)*
 - Philips Hue
 - Sonos
 - [Tado Smart Thermostat](https://www.tado.com/gb/)
-- Nvidia Shield TV *(also runs plex media server but not yet good enough for main server due to smb bug in software)*
+- Nvidia Shield TV *(plex client)*
 
 ## Automations
 Plex

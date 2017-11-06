@@ -1,4 +1,3 @@
-script:
   hue_dim:
     alias: Dim
     sequence:
@@ -62,34 +61,3 @@ script:
         data:
           group_name: "Outside"
           scene_name: "Dim"
-
-group:
-
-  all_scripts:
-      name: Hue Scenes
-      entities:
-      - group.scripts
-
-  scripts:
-      name: Hue Scenes
-      entities:
-      - script.hue_dim
-      - script.hue_full
-      - script.hue_movie
-      - script.hue_morning
-      - script.hue_white
-      - script.hue_night
-      - script.hue_outside_full
-      - script.hue_outside_dim
-
-  scenes:
-      name: Hue Scenes
-      entities:
-      - scene.hue_dim
-      - scene.hue_full
-      - scene.hue_movie
-      - scene.hue_morning
-      - scene.hue_white
-      - scene.hue_night
-      - scene.hue_outside_full
-      - scene.hue_outside_dim

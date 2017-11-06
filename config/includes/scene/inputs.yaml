@@ -20,27 +20,3 @@
 - name: input_tts
   entities:
     input_boolean.text_to_speech: off
-
-- name: james_is_home
-  entities:
-    input_boolean.james_is_at_home: on
-
-- name: james_is_away
-  entities:
-    input_boolean.james_is_at_home: off
-
-- name: gillian_is_home
-  entities:
-    input_boolean.gillian_is_at_home: on
-
-- name: gillian_is_away
-  entities:
-    input_boolean.gillian_is_at_home: off
-
-- name: bedtime_on
-  entities:
-    input_boolean.bedtime: on
-
-- name: bedtime_off
-  entities:
-    input_boolean.bedtime: off

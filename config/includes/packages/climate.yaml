@@ -1,16 +1,16 @@
 sensor:
   - platform: darksky
     api_key: !secret darksky_api
-    update_inverval:
-      hours: 6
+    update_inverval: '06:00:00'
+      #hours: 6
     forecast: 1
     monitored_conditions:
-    - temperature_max
-    - temperature_min
+    #- temperature_max
+    #- temperature_min
     - apparent_temperature_max
     - apparent_temperature_min
     - summary
-    - icon
+    #- icon
 
   - platform: time_date
     display_options:
@@ -23,9 +23,9 @@ sensor:
 #  - platform: metoffice
 #    api_key: !secret metoffice
 
-tado:
-  username: !secret tado_user
-  password: !secret tado_pass
+#tado:
+#  username: !secret tado_user
+#  password: !secret tado_pass
 
 #group:
  #  Tado:

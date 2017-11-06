@@ -15,9 +15,6 @@
     after: sunset
     after_offset: "-1:30:00"
   - condition: state
-    entity_id: input_boolean.simulate_sunset
-    state: 'off'
-  - condition: state
     entity_id: input_boolean.enable_guest
     state: 'off'
   - condition: state

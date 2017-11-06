@@ -3,5 +3,8 @@ telegram_bot:
   api_key: !secret telegram_api
   allowed_chat_ids:
     - !secret telegram_id
-  # Telegram polling bot allows control of hass 
+  # Telegram polling bot allows control of hass
   # from outside lan without any open ports
+
+tts:
+  - platform: google

@@ -10,15 +10,10 @@
     # Triggers if motion detected
 
   condition:
-    condition: and
-    conditions:
-    - condition: state
-      entity_id: binary_sensor.james_home
-      state: 'off'
-    - condition: state
-      entity_id: binary_sensor.gillian_home
-      state: 'off'
-      # Only trigger if we are both away
+  - condition: state
+    entity_id: group.presence
+    state: 'off'
+    # Only trigger if we are both away
 
   action:
     service: notify.get_notified

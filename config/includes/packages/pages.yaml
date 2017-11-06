@@ -7,11 +7,11 @@ group:
       - group.today
       - group.tomorrow
       - group.home
-      - group.web
       - group.living_room_lights
-      - group.all_scripts
+      - group.hue_light_scripts
       - group.outside
       - group.media_centre
+      - group.web
 
 ### Page 2 ###
 
@@ -100,3 +100,43 @@ group:
     entities:
     - weblink.homeassistant
     - weblink.router
+    - sensor.uptime
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+  speedtest:
+    name: Speedtest
+    entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+  hue_light_scripts:
+      name: Hue Lights
+      entities:
+      - group.hue_scripts
+
+  hue_scripts:
+      name: Hue Scripts
+      entities:
+      - script.hue_dim
+      - script.hue_full
+      - script.hue_movie
+      - script.hue_morning
+      - script.hue_white
+      - script.hue_night
+      - script.hue_outside_full
+      - script.hue_outside_dim
+
+  hue_scenes:
+      name: Hue Scenes
+      entities:
+      - scene.hue_dim
+      - scene.hue_full
+      - scene.hue_movie
+      - scene.hue_morning
+      - scene.hue_white
+      - scene.hue_night
+      - scene.hue_outside_full
+      - scene.hue_outside_dim

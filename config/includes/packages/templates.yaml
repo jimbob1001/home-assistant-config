@@ -3,18 +3,16 @@ sensor:
     sensors:
       james_home:
         value_template:
-          "{% if is_state('binary_sensor.james_home', 'on') %}
+          "{% if is_state('binary_sensor.james_presence', 'on') %}
           is at home
           {% else %}
           is away
           {% endif %}"
         friendly_name: James
 
-  - platform: template
-    sensors:
       gillian_home:
         value_template:
-          "{% if is_state('binary_sensor.gillian_home', 'on') %}
+          "{% if is_state('binary_sensor.gillian_presence', 'on') %}
           is at home
           {% else %}
           is away
