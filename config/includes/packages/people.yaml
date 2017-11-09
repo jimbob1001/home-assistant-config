@@ -17,8 +17,6 @@ group:
       name: Home
       control: hidden
       entities:
-      - binary_sensor.james_presence
-      - binary_sensor.gillian_presence
       - sensor.james_home
       - sensor.gillian_home
       - sensor.heating_temperature

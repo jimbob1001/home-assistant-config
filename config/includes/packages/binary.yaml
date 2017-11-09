@@ -1,4 +1,6 @@
 binary_sensor:
+  - platform: iss
+
   - platform: workday
     country: UK
     # weekdays: sensor "on"

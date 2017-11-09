@@ -89,11 +89,14 @@ homeassistant:
       friendly_name: Living Room Motion
 
     binary_sensor.james_presence:
-      friendly_name: James (Bayesian)
+      friendly_name: James
       entity_picture: /local/sw/poe.png
     binary_sensor.gillian_presence:
-      friendly_name: Gillian (Bayesian)
+      friendly_name: Gillian
       entity_picture: /local/sw/rey2.png
+    binary_sensor.iss:
+      entity_picture: /local/sw/falcon.png
+      icon: mdi:rocket
 
     scene.hue_dim:
       friendly_name: Dim
