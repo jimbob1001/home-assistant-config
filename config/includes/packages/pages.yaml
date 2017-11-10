@@ -6,7 +6,7 @@ group:
     entities:
       - binary_sensor.james_presence
       - binary_sensor.gillian_presence
-      - binary_sensor.iss
+    # - binary_sensor.iss
       - group.today
       - group.tomorrow
       - group.home
