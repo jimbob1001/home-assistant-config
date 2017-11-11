@@ -3,8 +3,10 @@ sensor:
 
   - platform: pi_hole
     host: 192.168.179.74
-    
+
   - platform: speedtest
+    hour:
+      - 6
     monitored_conditions:
       - ping
       - download
