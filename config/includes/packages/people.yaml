@@ -21,6 +21,9 @@ group:
       - sensor.gillian_home
       - sensor.heating_temperature
       - sensor.heating_humidity
+      - sensor.living_room_temp
       - sensor.motion_hue_living_room
       - sensor.hue_tap
+      - sensor.motion_sensor_battery
       - input_boolean.enable_guest
+      - input_select.at_home_today

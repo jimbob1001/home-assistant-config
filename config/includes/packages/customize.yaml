@@ -42,9 +42,9 @@ homeassistant:
   customize:
   ### Customize individual entities
   ### Overrides domain & glob
-    group.hue_light_scripts:
-      control: hidden
-      entity_picture: /local/sw/deathstar.png
+    # group.hue_light_scripts:
+    #   control: hidden
+    #   entity_picture: /local/sw/deathstar.png
     group.hue_scripts:
       control: hidden
       entity_picture: /local/sw/deathstar.png
@@ -144,3 +144,22 @@ homeassistant:
       friendly_name: SONOS BEDROOM
     media_player.sonos_all:
       friendly_name: SONOS
+
+    group.today:
+      order: 1
+    group.tomorrow:
+      order: 2
+    group.home:
+      order: 3
+    group.living_room_lights:
+      order: 4
+    group.hue_light_scripts:
+      control: hidden
+      entity_picture: /local/sw/deathstar.png
+      order: 5
+    group.outside:
+      order: 6
+    group.media_centre:
+      order: 7
+    group.web:
+      order: 8

@@ -6,7 +6,6 @@ group:
     entities:
       - binary_sensor.james_presence
       - binary_sensor.gillian_presence
-    # - binary_sensor.iss
       - group.today
       - group.tomorrow
       - group.home
@@ -31,8 +30,8 @@ group:
     view: true
     entities:
       - group.other_scenes
-      - group.scripts
-      - group.scenes
+      - group.hue_scripts
+      - group.hue_scenes
 
 ### Page 4 ###
 
@@ -104,6 +103,7 @@ group:
     - weblink.homeassistant
     - weblink.router
     - sensor.uptime
+    - sensor.monzo
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.speedtest_ping

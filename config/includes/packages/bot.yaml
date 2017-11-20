@@ -6,5 +6,5 @@ telegram_bot:
   # Telegram polling bot allows control of hass
   # from outside lan without any open ports
 
-tts:
-  - platform: google
+#tts:
+#  - platform: google

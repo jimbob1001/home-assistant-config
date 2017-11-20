@@ -11,6 +11,17 @@ sensor:
   - platform: hue
     # Custom component allows hue motion & hue tap sensors
 
+  - platform: template
+    sensors:
+      living_room_temp:
+        friendly_name: Living Room Temp
+        value_template: '{{ states.sensor.motion_hue_living_room.attributes.temperature }}'
+        unit_of_measurement: "°C"
+
+      motion_sensor_battery:
+        friendly_name: Motion Sensor Battery
+        value_template: '{{ states.sensor.motion_hue_living_room.attributes.battery }}'
+        unit_of_measurement: "%"
 group:
   outside:
       name: Outside

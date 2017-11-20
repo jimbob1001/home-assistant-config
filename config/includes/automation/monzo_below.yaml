@@ -1,0 +1,17 @@
+- alias: monzo_below
+  id: monzo_below
+  initial_state: True
+
+  trigger:
+  - platform: numeric_state
+    entity_id:
+    - sensor.monzo
+    below: '20'
+    # Triggers if monzo account gets below £20
+
+  action:
+    service: notify.get_notified
+    data:
+      message: "Monzo Alert"
+      title: "Monzo account is below £20. Time to top up?"
+      # Sends a notification

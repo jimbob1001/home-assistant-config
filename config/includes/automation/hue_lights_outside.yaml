@@ -8,7 +8,7 @@
     offset: '-1:00:00'
     # Triggers an hour before sunset in the evenings
   - platform: time
-    at: "06:00:00"
+    at: "05:30:00"
     # Also triggers at 6 am in the morning
   - platform: event
     event_type: telegram_command

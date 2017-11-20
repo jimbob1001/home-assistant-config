@@ -1,0 +1,50 @@
+- alias: theme_day
+  id: theme_day
+  initial_state: True
+
+  trigger:
+   - platform: time
+     at: '05:55:00'
+
+  action:
+    - service: frontend.set_theme
+      data:
+        name: 'stormy_hues_james'
+
+##################################
+
+- alias: theme_night
+  id: theme_night
+  initial_state: True
+
+  trigger:
+  - platform: time
+    at: '17:30:00'
+    # Triggers at 5.30 pm
+  - platform: sun
+    event: sunset
+    offset: '-1:30:00'
+
+  action:
+    - service: frontend.set_theme
+      data:
+        name: 'pmx_mono_night'
+
+##################################
+
+- alias: theme_restart
+  id: theme_restart
+  initial_state: True
+
+  trigger:
+  - platform: homeassistant
+    event: start
+
+#  condition:
+#  - condition: sun
+#    after: sunset
+
+  action:
+    - service: frontend.set_theme
+      data:
+        name: 'stormy_hues_james'
