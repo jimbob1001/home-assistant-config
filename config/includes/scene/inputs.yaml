@@ -16,6 +16,7 @@
     input_boolean.disable_sunset: off
     input_boolean.simulate_sunset: off
     input_boolean.disable_work: off
+    input_select.at_home_today: Not Set
 
 - name: input_tts
   entities:

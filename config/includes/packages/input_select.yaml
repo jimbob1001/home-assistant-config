@@ -1,0 +1,11 @@
+input_select:
+  at_home_today:
+    name: at home today
+    options:
+     - James
+     - Gillian
+     - Both
+     - Guests
+     - None
+     - Not Set
+    #icon: mdi:panda

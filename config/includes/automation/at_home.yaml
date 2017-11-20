@@ -1,0 +1,127 @@
+- alias: bot_at_home_today
+  id: bot_at_home_today
+  initial_state: True
+
+  trigger:
+  - platform: time
+    at: '07:30:00'
+
+  condition:
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: 'on'
+
+  action:
+  - service: telegram_bot.send_message
+    data_template:
+      message: 'at home today?'
+      disable_notification: true
+      inline_keyboard:
+        - 'James:/james, Gillian:/gillian'
+        - 'Both:/both, None:/none'
+        - 'Guests:/guests'
+
+############################################
+
+- alias: bot_reply_james_home_today
+  id: bot_reply_james_home_today
+  initial_state: True
+
+  trigger:
+    platform: event
+    event_type: telegram_callback
+    event_data:
+      data: '/james'
+  action:
+    - service: telegram_bot.answer_callback_query
+      data_template:
+        callback_query_id: '{{ trigger.event.data.id }}'
+        message: 'Ok, James is at home today'
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.at_home_today
+        option: James
+
+############################################
+
+- alias: bot_reply_gillian_home_today
+  id: bot_reply_gillian_home_today
+  initial_state: True
+
+  trigger:
+    platform: event
+    event_type: telegram_callback
+    event_data:
+      data: '/gillian'
+  action:
+    - service: telegram_bot.answer_callback_query
+      data_template:
+        callback_query_id: '{{ trigger.event.data.id }}'
+        message: 'Ok, Gillian is at home today'
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.at_home_today
+        option: Gillian
+
+############################################
+
+- alias: bot_reply_both_home_today
+  id: bot_reply_both_home_today
+  initial_state: True
+
+  trigger:
+    platform: event
+    event_type: telegram_callback
+    event_data:
+      data: '/both'
+  action:
+    - service: telegram_bot.answer_callback_query
+      data_template:
+        callback_query_id: '{{ trigger.event.data.id }}'
+        message: 'Ok, You are both at home today'
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.at_home_today
+        option: Both
+
+#####################################
+
+- alias: bot_reply_james_none_today
+  id: bot_reply_james_none_today
+  initial_state: True
+
+  trigger:
+    platform: event
+    event_type: telegram_callback
+    event_data:
+      data: '/none'
+  action:
+    - service: telegram_bot.answer_callback_query
+      data_template:
+        callback_query_id: '{{ trigger.event.data.id }}'
+        message: 'Ok, thanks'
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.at_home_today
+        option: None
+
+#####################################
+
+- alias: bot_reply_guest_home_today
+  id: bot_reply_guest_home_today
+  initial_state: True
+
+  trigger:
+    platform: event
+    event_type: telegram_callback
+    event_data:
+      data: '/guests'
+  action:
+    - service: telegram_bot.answer_callback_query
+      data_template:
+        callback_query_id: '{{ trigger.event.data.id }}'
+        message: 'Ok thanks'
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.at_home_today
+        option: Guests
