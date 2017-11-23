@@ -1,3 +1,7 @@
+###############################
+###### DARKSKY WEATHER  #######
+###############################
+
 sensor:
   - platform: darksky
     api_key: !secret darksky_api
@@ -12,30 +16,17 @@ sensor:
     - summary
     #- icon
 
+###############################
+##### TIME & DATE SENSOR ######
+###############################
+
   - platform: time_date
     display_options:
     - time
     - date
 
+###############################
+####### SEASON SENSOR #########
+###############################
+
   - platform: season
-
-#weather:
-#  - platform: metoffice
-#    api_key: !secret metoffice
-
-#tado:
-#  username: !secret tado_user
-#  password: !secret tado_pass
-
-#group:
- #  Tado:
-   #    name: Tado˚
-     #  entities:
-     #  - sensor.heating_heating
-      # - sensor.heating_humidity
-      # - sensor.heating_link
-      # - sensor.heating_overlay
-      # - sensor.heating_power
-       #- sensor.heating_tado_mode
-      # - sensor.heating_temperature
-     #  - sensor.james__gillians_tado_bridge_status

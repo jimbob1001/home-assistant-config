@@ -1,47 +1,101 @@
+###############################
+########### PLEX ##############
+###############################
+
 media_player:
   - platform: plex
     entity_namespace: 'plex'
     # include_non_clients: true
     scan_interval: 2
 
+###############################
+########### CAST ##############
+###############################
+
   - platform: cast
     entity_namespace: 'cast'
     host: !secret cast_ip
+
+###############################
+########### KODI ##############
+###############################
 
   - platform: kodi
     entity_namespace: 'kodi'
     host: !secret cast_ip
     port: 8033
 
+###############################
+### ALL-IN-ONE MEDIA CENTRE ###
+###############################
+
   - platform: universal
-    name: 'universal_tv'
+    name: MEDIA CENTRE
+    children:
+       - media_player.sonos_all_universal
+       - media_player.plex_shield_universal
+       - media_player.kodi_kodi_universal
+       - media_player.cast_shield_universal
+
+###############################
+### UNIVERSAL MEDIA PLAYERS ###
+###############################
+
+  - platform: universal
+    name: plex_shield_universal
+    state_template: >
+      {% if is_state('media_player.plex_shield', 'idle') %}
+      off
+      {% else %}
+      {{ states('media_player.plex_shield') }}
+      {% endif %}
     children:
        - media_player.plex_shield
+
+  - platform: universal
+    name: kodi_kodi_universal
+    state_template: >
+      {% if is_state('media_player.kodi_kodi', 'idle') %}
+      off
+      {% else %}
+      {{ states('media_player.kodi_kodi') }}
+      {% endif %}
+    children:
+       - media_player.kodi_kodi
+
+  - platform: universal
+    name: cast_shield_universal
+    state_template: >
+      {% if is_state('media_player.cast_shield', 'off') %}
+      off
+      {% else %}
+      {{ states('media_player.cast_shield') }}
+      {% endif %}
+    children:
        - media_player.cast_shield
+
+###############################
+######### PLEX SENSOR #########
+###############################
 
 sensor:
   - platform: plex
     name: plex_shield
     host: !secret plex_ip
 
+###############################
+### ALL-IN-ONE MEDIA GROUP ####
+###############################
+
 group:
   media_centre:
       name: Media Centre
       entities:
-      - media_player.plex_shield
-      - media_player.sonos_all
+      - media_player.media_centre
 
-  media_players:
-      name: Media Players
-      entities:
-      - media_player.plex_shield
-      - media_player.kodi_kodi
-      - media_player.cast_shield
-      - media_player.sonos_living_room
-      - media_player.sonos_kitchen
-      - media_player.sonos_bedroom
-      - media_player.universal_tv
-      - media_player.sonos_all
+###############################
+###### NOW-PLAYING GROUP ######
+###############################
 
   now_playing:
       name: Now Playing
@@ -49,3 +103,28 @@ group:
       entities:
       - input_boolean.plex_movie
       - input_boolean.plex_tvshow
+
+###############################
+###### MEDIA - PAGE 2 - #######
+###############################
+
+  Page_2:
+    name: Page 2
+    view: true
+    entities:
+      - media_player.plex_shield
+      - media_player.cast_shield
+      - media_player.kodi_kodi
+      #
+      - media_player.plex_shield_universal
+      - media_player.cast_shield_universal
+      - media_player.kodi_kodi_universal
+      #
+      - media_player.sonos_living_room
+      - media_player.sonos_kitchen
+      - media_player.sonos_bedroom
+      #
+      - media_player.sonos_living_room_universal
+      - media_player.sonos_kitchen_universal
+      - media_player.sonos_bedroom_universal
+      - media_player.sonos_all_universal

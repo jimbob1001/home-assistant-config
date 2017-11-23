@@ -1,3 +1,7 @@
+###############################
+##### NOW PLAYING SCENES ######
+###############################
+
 - name: now_playing_movie
   entities:
       input_boolean.plex_movie: on
@@ -5,6 +9,10 @@
 - name: now_playing_tvshow
   entities:
       input_boolean.plex_tvshow: on
+
+###############################
+##### NOW STOPPED SCENES ######
+###############################
 
 - name: now_stopped_movie
   entities:

@@ -1,3 +1,7 @@
+###############################
+######## INPUT SELECT #########
+###############################
+
 input_select:
   at_home_today:
     name: at home today
@@ -8,4 +12,3 @@ input_select:
      - Guests
      - None
      - Not Set
-    #icon: mdi:panda

@@ -1,3 +1,13 @@
+###############################
+########### HUE HUB ###########
+###############################
+
+hue:
+
+###############################
+########## HUE LIGHTS #########
+###############################
+
 light:
   - platform: hue
     entity_namespace: 'hue'
@@ -5,7 +15,9 @@ light:
     allow_unreachable: true
     allow_hue_groups: true
 
-hue:
+###############################
+########## HUE SENSORS ########
+###############################
 
 sensor:
   - platform: hue
@@ -17,11 +29,18 @@ sensor:
         friendly_name: Living Room Temp
         value_template: '{{ states.sensor.motion_hue_living_room.attributes.temperature }}'
         unit_of_measurement: "°C"
+        # Creates a sensor to display living room temperature
 
       motion_sensor_battery:
         friendly_name: Motion Sensor Battery
         value_template: '{{ states.sensor.motion_hue_living_room.attributes.battery }}'
         unit_of_measurement: "%"
+        # Creates a sensor to display the motion sensor battery
+
+###############################
+########## HUE GROUPS #########
+###############################
+
 group:
   outside:
       name: Outside
@@ -35,3 +54,32 @@ group:
       - light.hue_small_floor_lamp
       - light.hue_table_lamp
       - light.hue_tv_backlight
+
+  hue_light_scripts:
+      name: Hue Lights
+      entities:
+      - group.hue_scripts
+
+  hue_scripts:
+      name: Hue Scripts
+      entities:
+      - script.hue_dim
+      - script.hue_full
+      - script.hue_movie
+      - script.hue_morning
+      - script.hue_white
+      - script.hue_night
+      - script.hue_outside_full
+      - script.hue_outside_dim
+
+  hue_scenes:
+      name: Hue Scenes
+      entities:
+      - scene.hue_dim
+      - scene.hue_full
+      - scene.hue_movie
+      - scene.hue_morning
+      - scene.hue_white
+      - scene.hue_night
+      - scene.hue_outside_full
+      - scene.hue_outside_dim

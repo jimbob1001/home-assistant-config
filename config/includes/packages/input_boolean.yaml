@@ -1,3 +1,7 @@
+###############################
+######## INPUT BOOLEAN ########
+###############################
+
 input_boolean:
   disable_bedtime:
     name: Disable Bedtime Automation
@@ -35,16 +39,16 @@ input_boolean:
     name: Simulate Sunset
     initial: off
 
-  text_to_speech:
-    name: text-to-speech
-    initial: off
+
+###############################
+######## INPUT GROUPS #########
+###############################
 
 group:
   guest:
     name: Guest mode
     entities:
     - input_boolean.enable_guest
-    # - sensor.guest_mode
 
   bedtime:
     name: Bedtime mode

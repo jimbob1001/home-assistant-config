@@ -1,3 +1,7 @@
+###############################
+####### ZONES SENSOR ##########
+###############################
+
 zone:
   - name: Home
     latitude: !secret latitude_home
@@ -11,7 +15,11 @@ zone:
     radius: 150
     icon: mdi:account-multiple
 
+###############################
+###### DEVICE TRACKERS ########
+###############################
 device_tracker:
+############ PING #############
   - platform: ping
     count: 5
     hosts:
@@ -21,9 +29,30 @@ device_tracker:
     interval_seconds: 0:02:00
     track_new_devices: true
 
+########## BLUETOOTH ##########
   - platform: bluetooth_tracker
 
+############ TADO #############
   - platform: tado
     username: !secret tado_user
     password: !secret tado_pass
     home_id: !secret home_id
+
+###############################
+###### TRACKING GROUPS ########
+###############################
+
+group:
+  james:
+      name: James
+      entities:
+      - device_tracker.james_oneplus3
+      - device_tracker.james_tado
+      - device_tracker.james_ping
+
+  gillian:
+      name: Gillian
+      entities:
+      - device_tracker.gillian_oneplus3t
+      - device_tracker.gillian_tado
+      - device_tracker.gillian_ping

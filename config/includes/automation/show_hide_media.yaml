@@ -1,0 +1,37 @@
+#############PLEX#############
+
+- alias: show_media_centre
+  id: show_media_centre
+  initial_state: True
+
+  trigger:
+  - platform: state
+    entity_id: media_player.media_centre
+    from: 'off'
+  # - platform: template
+  #   value_template: "{{ not is_state('media_player.plex_shield', 'idle') }}"
+
+  action:
+  - service: group.set_visibility
+    entity_id: group.media_centre
+    data:
+      visible: True
+
+#############PLEX#############
+
+- alias: hide_media_centre
+  id: hide_media_centre
+  initial_state: True
+
+  trigger:
+  - platform: homeassistant
+    event: start
+  - platform: state
+    entity_id: media_player.media_centre
+    to: 'off'
+
+  action:
+  - service: group.set_visibility
+    entity_id: group.media_centre
+    data:
+      visible: False

@@ -1,16 +1,27 @@
+###############################
+##### CUSTOMIZE DOMAINS #######
+###############################
+
 homeassistant:
   customize_domain:
-  ### Customize entire domains
+
     script:
       entity_picture: /local/sw/bobafett.png
     scene:
       entity_picture: /local/sw/jawa.png
     input_boolean:
       entity_picture: /local/sw/thumbs_up.png
+    input_select:
+      entity_picture: /local/sw/falcon.png
+
+###############################
+##### CUSTOMIZE GLOBAL ########
+###############################
+##### OVERRIDES DOMAINS #######
+###############################
 
   customize_glob:
-  ### Customize similar entities
-  ### Overrides domain
+
     "device_tracker.james*":
       entity_picture: /local/sw/anakin.png
     "device_tracker.gillian*":
@@ -39,12 +50,14 @@ homeassistant:
     "group.all*":
       hidden: false
 
+###############################
+##### CUSTOMIZE ENTITIES ######
+###############################
+##### OVERRIDES DOMAINS #######
+##### OVERRIDES GLOBAL #######
+###############################
+
   customize:
-  ### Customize individual entities
-  ### Overrides domain & glob
-    # group.hue_light_scripts:
-    #   control: hidden
-    #   entity_picture: /local/sw/deathstar.png
     group.hue_scripts:
       control: hidden
       entity_picture: /local/sw/deathstar.png
@@ -60,26 +73,6 @@ homeassistant:
     sensor.gillian_home:
       entity_picture: /local/sw/leia.png
 
-    sensor.heating_temperature:
-      friendly_name: Tado˚ Temperature
-    sensor.heating_humidity:
-      friendly_name: Tado˚ Humidity
-    sensor.heating_heating:
-      friendly_name: Tado˚ Heating
-      entity_picture: /local/Tado/manual.png
-    sensor.heating_link:
-      friendly_name: Tado˚ Link
-    sensor.heating_overlay:
-      friendly_name: Tado˚ Overlay
-    sensor.heating_power:
-      friendly_name: Tado˚ Power
-    sensor.heating_tado_mode:
-      friendly_name: Tado˚ Mode
-    sensor.james__gillians_tado_bridge_status:
-      friendly_name: Tado˚ Bridge Status
-
-    sensor.hass:
-      icon: mdi:home-assistant
     weblink.homeassistant:
       icon: mdi:home-assistant
     weblink.router:
@@ -133,8 +126,13 @@ homeassistant:
       friendly_name: PLEX
     media_player.cast_shield:
       friendly_name: CAST
-    media_player.universal_tv:
-      friendly_name: MEDIA CENTRE
+
+    media_player.kodi_kodi_universal:
+      friendly_name: KODI
+    media_player.plex_shield_universal:
+      friendly_name: PLEX
+    media_player.cast_shield_universal:
+      friendly_name: CAST
 
     media_player.sonos_living_room:
       friendly_name: SONOS LIVING ROOM
@@ -142,7 +140,15 @@ homeassistant:
       friendly_name: SONOS KITCHEN
     media_player.sonos_bedroom:
       friendly_name: SONOS BEDROOM
-    media_player.sonos_all:
+
+    media_player.sonos_living_room_universal:
+      friendly_name: SONOS LIVING ROOM
+    media_player.sonos_kitchen_universal:
+      friendly_name: SONOS KITCHEN
+    media_player.sonos_bedroom_universal:
+      friendly_name: SONOS BEDROOM
+
+    media_player.sonos_all_universal:
       friendly_name: SONOS
 
     group.today:

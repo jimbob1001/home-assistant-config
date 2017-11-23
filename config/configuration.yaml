@@ -1,5 +1,7 @@
-### HOME ASSISTANT ###
-###  BASIC CONFIG  ###
+###############################
+####### HOME ASSISTANT ########
+######## BASIC CONFIG #########
+###############################
 
 homeassistant:
   name: No. 33
@@ -10,7 +12,9 @@ homeassistant:
   time_zone: Europe/London
   packages: !include_dir_named includes/packages
 
-### ADDITIONAL CONFIG ###
+###############################
+##### ADDITIONAL CONFIG #######
+###############################
 
 #introduction:
 #discovery:
@@ -48,7 +52,10 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 5
 
-### INCLUDE FURTHER CONFIG FILES ###
+###############################
+####### INCLUDE FURTHER #######
+######## CONFIG FILES #########
+###############################
 
 automation: !include_dir_merge_list includes/automation
 scene: !include_dir_merge_list includes/scene

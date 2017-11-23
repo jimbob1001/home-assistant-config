@@ -10,7 +10,10 @@
 
   condition:
   - condition: template
-    value_template: '{{ states.media_player.plex_shield.attributes.media_content_type == "movie" }}'
+    value_template: >
+      {{ 
+      states.media_player.plex_shield.attributes.media_content_type == "movie" 
+      }}
 
   action:
   - service: homeassistant.turn_on

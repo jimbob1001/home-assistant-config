@@ -9,9 +9,12 @@
     to: 'playing'
 
   condition:
-  - condition: template
-    value_template: '{{ states.media_player.plex_shield.attributes.media_content_type == "tvshow" }}'
-        
+    condition: template
+    value_template: >
+      {{ 
+      states.media_player.plex_shield.attributes.media_content_type == "tvshow" 
+      }}
+
   action:
   - service: homeassistant.turn_on
     entity_id: scene.now_playing_tvshow

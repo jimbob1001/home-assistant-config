@@ -1,9 +1,17 @@
+###############################
+########## WEBLINKS ###########
+###############################
+
 weblink:
   entities:
     - name: homeassistant
       url: https://home-assistant.io
     - name: Router
       url: https://192.168.179.1:8443/index.asp
+
+###############################
+####### MONZO SENSOR ##########
+###############################
 
 sensor:
   - platform: monzo
@@ -12,3 +20,19 @@ sensor:
     name: 'Monzo'
     current_account: true
     #cache_path: '/.homeassistant/cache'
+
+###############################
+######### WEB GROUP ###########
+###############################
+
+group:
+  web:
+    name: Info
+    entities:
+    - weblink.homeassistant
+    - weblink.router
+    - sensor.uptime
+    - sensor.monzo
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping

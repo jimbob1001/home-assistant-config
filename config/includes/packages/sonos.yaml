@@ -1,3 +1,7 @@
+###############################
+########### SONOS #############
+###############################
+
 media_player:
   - platform: sonos
     entity_namespace: 'sonos'
@@ -6,9 +10,51 @@ media_player:
       - !secret sonos_ip_2
       - !secret sonos_ip_3
 
+###############################
+### ALL-IN-ONE SONOS PLAYER ###
+###############################
+
   - platform: universal
-    name: sonos_all
+    name: sonos_all_universal
+    children:
+       - media_player.sonos_living_room_universal
+       - media_player.sonos_kitchen_universal
+       - media_player.sonos_bedroom_universal
+       # Merges all three sonos speakers into one media_player
+
+###############################
+### UNIVERSAL SONOS PLAYERS ###
+###############################
+
+  - platform: universal
+    name: sonos_living_room_universal
+    state_template: >
+      {% if is_state('media_player.sonos_living_room', 'paused') %}
+      off
+      {% else %}
+      {{ states('media_player.sonos_living_room') }}
+      {% endif %}
     children:
        - media_player.sonos_living_room
+
+  - platform: universal
+    name: sonos_kitchen_universal
+    state_template: >
+      {% if is_state('media_player.sonos_kitchen', 'paused') %}
+      off
+      {% else %}
+      {{ states('media_player.sonos_kitchen') }}
+      {% endif %}
+    children:
        - media_player.sonos_kitchen
+
+  - platform: universal
+    name: sonos_bedroom_universal
+    state_template: >
+      {% if is_state('media_player.sonos_bedroom', 'paused') %}
+      off
+      {% else %}
+      {{ states('media_player.sonos_bedroom') }}
+      {% endif %}
+    children:
        - media_player.sonos_bedroom

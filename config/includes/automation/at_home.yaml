@@ -32,6 +32,7 @@
     event_type: telegram_callback
     event_data:
       data: '/james'
+
   action:
     - service: telegram_bot.answer_callback_query
       data_template:
@@ -53,6 +54,7 @@
     event_type: telegram_callback
     event_data:
       data: '/gillian'
+
   action:
     - service: telegram_bot.answer_callback_query
       data_template:
@@ -74,6 +76,7 @@
     event_type: telegram_callback
     event_data:
       data: '/both'
+
   action:
     - service: telegram_bot.answer_callback_query
       data_template:
@@ -95,6 +98,7 @@
     event_type: telegram_callback
     event_data:
       data: '/none'
+
   action:
     - service: telegram_bot.answer_callback_query
       data_template:
@@ -116,6 +120,7 @@
     event_type: telegram_callback
     event_data:
       data: '/guests'
+
   action:
     - service: telegram_bot.answer_callback_query
       data_template:

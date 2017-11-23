@@ -1,25 +1,39 @@
+###############################
+####### NOTIFY PUSHOVER #######
+###############################
+
 notify:
   - platform: pushover
     name: Pushover
     api_key: !secret pushover_api
     user_key: !secret pushover_user
 
+###############################
+####### NOTIFY TELEGRAM #######
+###############################
+
   - platform: telegram
     name: bot
     api_key: !secret telegram_api
     chat_id: !secret telegram_id
 
+###############################
+##### NOTIFY ALL-IN-ONE #######
+###############################
+
   - platform: group
     name: get_notified
     services:
       - service: pushover
-      #- service: bot
-      #- service: shield
-      #- service: slack
 
-  # - platform: slack
-  #   name: 'Slack'
-  #   api_key: !secret slack_api
-  #   default_channel: 'home-assistant'
-  #   icon: ':rocket:'
-  #   username: 'home-assistant'
+###############################
+######## TELEGRAM BOT #########
+###############################
+
+telegram_bot:
+  platform: polling
+  api_key: !secret telegram_api
+  allowed_chat_ids:
+    - !secret telegram_id
+  # Telegram polling bot allows control of hass
+  # from outside lan without any open ports

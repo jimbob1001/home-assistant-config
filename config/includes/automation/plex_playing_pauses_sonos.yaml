@@ -7,18 +7,19 @@
     entity_id:
     - media_player.plex_shield
     - media_player.cast_shield
+    - media_player.kodi_kodi
     to: 'playing'
-    # Triggers if watching tv (currently only plex & chromecast supported)
+    # Triggers if watching tv
 
   condition:
     condition: state
-    entity_id: media_player.sonos_all
+    entity_id: media_player.sonos_all_universal
     state: 'playing'
     # Only trigger if music is playing on sonos
 
   action:
     service: media_player.media_pause
     data:
-      entity_id: media_player.sonos_all
+      entity_id: media_player.sonos_all_universal
       # Pauses all sonos speakers
       # This automation may become redundant if we get a playbase

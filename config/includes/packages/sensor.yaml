@@ -1,8 +1,20 @@
+###############################
+###### UPTIME SENSOR ##########
+###############################
+
 sensor:
   - platform: uptime
 
+###############################
+###### PIHOLE SENSOR ##########
+###############################
+
   - platform: pi_hole
-    host: 192.168.179.74
+    host: !secret pihole_ip
+
+###############################
+#### SPEEDTEST SENSOR #########
+###############################
 
   - platform: speedtest
     hour:
@@ -11,3 +23,15 @@ sensor:
       - ping
       - download
       - upload
+
+###############################
+##### SPEEDTEST GROUP #########
+###############################
+
+group:
+  speedtest:
+    name: Speedtest
+    entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
