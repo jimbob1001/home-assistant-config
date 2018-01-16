@@ -24,7 +24,21 @@ media_player:
     entity_namespace: 'kodi'
     host: !secret cast_ip
     port: 8033
+    
+###############################
+########### SONYTV #############
+###############################
 
+  - platform: braviatv_psk
+    name: Bravia4k
+    host: !secret sony_ip
+    psk: !secret sony_psk
+    mac: !secret sony_mac
+    amp: True
+    android: True
+    sourcefilter:
+      - HDMI
+    
 ###############################
 ### ALL-IN-ONE MEDIA CENTRE ###
 ###############################
@@ -33,45 +47,8 @@ media_player:
     name: MEDIA CENTRE
     children:
        - media_player.sonos_all_universal
-       - media_player.plex_shield_universal
-       - media_player.kodi_kodi_universal
-       - media_player.cast_shield_universal
-
-###############################
-### UNIVERSAL MEDIA PLAYERS ###
-###############################
-
-  - platform: universal
-    name: plex_shield_universal
-    state_template: >
-      {% if is_state('media_player.plex_shield', 'idle') %}
-      off
-      {% else %}
-      {{ states('media_player.plex_shield') }}
-      {% endif %}
-    children:
        - media_player.plex_shield
-
-  - platform: universal
-    name: kodi_kodi_universal
-    state_template: >
-      {% if is_state('media_player.kodi_kodi', 'idle') %}
-      off
-      {% else %}
-      {{ states('media_player.kodi_kodi') }}
-      {% endif %}
-    children:
        - media_player.kodi_kodi
-
-  - platform: universal
-    name: cast_shield_universal
-    state_template: >
-      {% if is_state('media_player.cast_shield', 'off') %}
-      off
-      {% else %}
-      {{ states('media_player.cast_shield') }}
-      {% endif %}
-    children:
        - media_player.cast_shield
 
 ###############################
@@ -112,19 +89,14 @@ group:
     name: Page 2
     view: true
     entities:
+      - media_player.bravia4k
       - media_player.plex_shield
       - media_player.cast_shield
       - media_player.kodi_kodi
       #
-      - media_player.plex_shield_universal
-      - media_player.cast_shield_universal
-      - media_player.kodi_kodi_universal
-      #
       - media_player.sonos_living_room
       - media_player.sonos_kitchen
       - media_player.sonos_bedroom
-      #
-      - media_player.sonos_living_room_universal
-      - media_player.sonos_kitchen_universal
-      - media_player.sonos_bedroom_universal
       - media_player.sonos_all_universal
+      #
+      - media_player.media_centre

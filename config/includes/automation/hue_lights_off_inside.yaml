@@ -7,18 +7,19 @@
     at: '08:45:00'
 
   condition:
-    - condition: template
-      value_template: >
-        {{
-        states.input_boolean.disable_work.state == 'off' or
-        states.input_boolean.enable_guest.state == 'off' or
-        states.binary_sensor.workday_sensor.state == 'on' and
-        not is_state('input_select.at_home_today', 'James')
-        }}
+  - condition: state
+    entity_id: input_boolean.disable_work
+    state: 'off'
+  - condition: state
+    entity_id: input_boolean.enable_guest
+    state: 'off'
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
 
   action:
     service: homeassistant.turn_off
-    entity_id: light.hue_living_room
+    entity_id: light.living_room
     data:
       transition: 2
 
@@ -33,16 +34,18 @@
     at: '22:15:00'
 
   condition:
-    - condition: template
-      value_template: >
-        {{
-        states.input_boolean.disable_bedtime.state == 'off' or
-        states.input_boolean.enable_guest.state == 'off' or
-        states.media_player.plex_shield.state == 'idle'
-        }}
+  - condition: state
+    entity_id: input_boolean.disable_bedtime
+    state: 'off'
+  - condition: state
+    entity_id: input_boolean.enable_guest
+    state: 'off'
+  - condition: state
+    entity_id: media_player.plex_shield
+    state: 'idle'
 
   action:
     service: homeassistant.turn_off
-    entity_id: light.hue_living_room
+    entity_id: light.living_room
     data:
       transition: 2

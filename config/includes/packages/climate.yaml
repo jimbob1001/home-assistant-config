@@ -2,19 +2,19 @@
 ###### DARKSKY WEATHER  #######
 ###############################
 
+# weather:
+#   - platform: darksky
+#     api_key: !secret darksky_api
+
 sensor:
   - platform: darksky
     api_key: !secret darksky_api
     update_inverval: '06:00:00'
-      #hours: 6
     forecast: 1
     monitored_conditions:
-    #- temperature_max
-    #- temperature_min
     - apparent_temperature_max
     - apparent_temperature_min
     - summary
-    #- icon
 
 ###############################
 ##### TIME & DATE SENSOR ######
@@ -30,3 +30,11 @@ sensor:
 ###############################
 
   - platform: season
+
+###############################
+######### TADO SENSOR #########
+###############################
+
+tado:
+  username: !secret tado_user
+  password: !secret tado_pass

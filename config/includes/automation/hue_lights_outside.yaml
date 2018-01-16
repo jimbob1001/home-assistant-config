@@ -17,7 +17,7 @@
       # Type "/outside" in the no.33 bot
 
   action:
-    service: light.hue_activate_scene
+    service: hue.hue_activate_scene
     data:
       group_name: "Outside"
       scene_name: "Full"
@@ -35,7 +35,7 @@
     # Triggers at 10.30 pm
 
   action:
-    service: light.hue_activate_scene
+    service: hue.hue_activate_scene
     data:
       group_name: "Outside"
       scene_name: "Dim"
@@ -58,6 +58,11 @@
   - platform: time
     at: '08:30:00'
     # Triggers at 8.30 am
+
+  condition:
+  - condition: state
+    entity_id: input_boolean.enable_guest
+    state: 'off'
 
   action:
   - service: scene.turn_on

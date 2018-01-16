@@ -4,37 +4,50 @@
 
 - name: hue_outside_off
   entities:
-      light.hue_front_porch: off
-      light.hue_outside: off
+      # light.hue_front_porch: off
+      # light.hue_outside: off
+      #
+      light.front_porch: off
+      light.outside: off
 
-- name: hue_dim
-  entities:
-      script.hue_dim: on
+###############################
+######### HUE SCENES ##########
+###############################
 
-- name: hue_full
-  entities:
-      script.hue_full: on
+###############################
+## NOT SURE THESE SCENES ARE ##
+### REQUIRED ANY MORE AS ALL ##
+### THEY DO IS CALL SCRIPTS? ##
+###############################
 
-- name: hue_movie
-  entities:
-      script.hue_movie: on
-
-- name: hue_morning
-  entities:
-      script.hue_morning: on
-
-- name: hue_white
-  entities:
-      script.hue_white: on
-
-- name: hue_night
-  entities:
-      script.hue_night: on
-
-- name: hue_outside_full
-  entities:
-      script.hue_outside_full: on
-
-- name: hue_outside_dim
-  entities:
-      script.hue_outside_dim: on
+# - name: hue_dim
+#   entities:
+#       script.hue_dim: on
+#
+# - name: hue_full
+#   entities:
+#       script.hue_full: on
+#
+# - name: hue_movie
+#   entities:
+#       script.hue_movie: on
+#
+# - name: hue_morning
+#   entities:
+#       script.hue_morning: on
+#
+# - name: hue_white
+#   entities:
+#       script.hue_white: on
+#
+# - name: hue_night
+#   entities:
+#       script.hue_night: on
+#
+# - name: hue_outside_full
+#   entities:
+#       script.hue_outside_full: on
+#
+# - name: hue_outside_dim
+#   entities:
+#       script.hue_outside_dim: on

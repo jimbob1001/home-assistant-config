@@ -1,6 +1,6 @@
 - alias: bot_at_home_today
   id: bot_at_home_today
-  initial_state: True
+  initial_state: False
 
   trigger:
   - platform: time
@@ -20,6 +20,7 @@
         - 'James:/james, Gillian:/gillian'
         - 'Both:/both, None:/none'
         - 'Guests:/guests'
+        - 'Away:/away'
 
 ############################################
 

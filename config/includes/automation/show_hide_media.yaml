@@ -1,4 +1,4 @@
-#############PLEX#############
+############ SHOW ############
 
 - alias: show_media_centre
   id: show_media_centre
@@ -8,8 +8,6 @@
   - platform: state
     entity_id: media_player.media_centre
     from: 'off'
-  # - platform: template
-  #   value_template: "{{ not is_state('media_player.plex_shield', 'idle') }}"
 
   action:
   - service: group.set_visibility
@@ -17,7 +15,7 @@
     data:
       visible: True
 
-#############PLEX#############
+############ HIDE ############
 
 - alias: hide_media_centre
   id: hide_media_centre

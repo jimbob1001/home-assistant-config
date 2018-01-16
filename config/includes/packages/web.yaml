@@ -19,7 +19,6 @@ sensor:
     client_secret: !secret monzo_client_secret
     name: 'Monzo'
     current_account: true
-    #cache_path: '/.homeassistant/cache'
 
 ###############################
 ######### WEB GROUP ###########

@@ -11,10 +11,10 @@
 
   condition:
   - condition: state
-    entity_id: binary_sensor.james_presence
+    entity_id: binary_sensor.presence_james
     state: 'off'
   - condition: state
-    entity_id: binary_sensor.gillian_presence
+    entity_id: binary_sensor.presence_gillian
     state: 'off'
     # Only trigger if we are both away
 

@@ -1,0 +1,22 @@
+- alias: plex_movie_now_playing2
+  id: plex_movie_now_playing2
+  initial_state: True
+
+  trigger:
+  - platform: template
+    entity_id: media_player.plex_shield
+    value_template: >
+      {{
+      states.media_player.plex_shield.attributes.media_content_type == "movie"
+      }}
+
+  # condition:
+  # - condition: template
+  #   value_template: >
+  #     {{
+  #     states.media_player.plex_shield.attributes.media_content_type == "movie"
+  #     }}
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.now_playing_movie

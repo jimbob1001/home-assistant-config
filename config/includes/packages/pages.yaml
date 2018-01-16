@@ -6,8 +6,8 @@ group:
   default_view:
     view: true
     entities:
-      - binary_sensor.james_presence
-      - binary_sensor.gillian_presence
+      - binary_sensor.presence_james
+      - binary_sensor.presence_gillian
       - group.today
       - group.tomorrow
       - group.home
@@ -37,13 +37,11 @@ group:
     name: Page 4
     view: true
     entities:
-      - group.anybody_home
       - group.guest
       - group.bedtime
       - group.overrides
       - group.now_playing
       - group.sunset
-      - group.tado
 
 ###############################
 ########## PAGE -5- ###########
@@ -81,6 +79,7 @@ group:
       entities:
       - sensor.time
       - sensor.date
+      - weather.dark_sky
       - sensor.dark_sky_summary
       - sensor.dark_sky_daily_high_apparent_temperature
       - sensor.dark_sky_daily_low_apparent_temperature
@@ -99,6 +98,8 @@ group:
       entities:
       - sensor.james_home
       - sensor.gillian_home
+      - sensor.heating_tado_mode
+      - sensor.heating_temperature
       - sensor.living_room_temp
       - sensor.motion_hue_living_room
       - sensor.hue_tap

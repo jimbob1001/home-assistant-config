@@ -13,7 +13,7 @@
       # Type "/dim" in the no.33 bot
 
   action:
-    service: light.hue_activate_scene
+    service: hue.hue_activate_scene
     data:
       group_name: "Living Room"
       scene_name: "Dim"
@@ -49,7 +49,7 @@
       # Only fires if the lights are off & the switch is off
 
   action:
-    service: light.hue_activate_scene
+    service: hue.hue_activate_scene
     data:
       group_name: "Living Room"
       scene_name: "Full"

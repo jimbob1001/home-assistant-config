@@ -18,6 +18,7 @@ zone:
 ###############################
 ###### DEVICE TRACKERS ########
 ###############################
+
 device_tracker:
 ############ PING #############
   - platform: ping
@@ -27,7 +28,9 @@ device_tracker:
       gillian_ping: !secret gillian_ip
     consider_home: 0:05:00
     interval_seconds: 0:02:00
-    track_new_devices: true
+    new_device_defaults:
+      track_new_devices: true
+      hide_if_away: false
 
 ########## BLUETOOTH ##########
   - platform: bluetooth_tracker
@@ -38,6 +41,14 @@ device_tracker:
     password: !secret tado_pass
     home_id: !secret home_id
 
+############ ASUS #############
+  - platform: asuswrt
+    host: !secret asus_ip
+    username: !secret asus_username
+    password: !secret asus_password
+    protocol: ssh
+    port: 32
+
 ###############################
 ###### TRACKING GROUPS ########
 ###############################
@@ -46,13 +57,15 @@ group:
   james:
       name: James
       entities:
-      - device_tracker.james_oneplus3
+      - device_tracker.james_oneplus3_blue
       - device_tracker.james_tado
       - device_tracker.james_ping
+      - device_tracker.james_oneplus3
 
   gillian:
       name: Gillian
       entities:
-      - device_tracker.gillian_oneplus3t
+      - device_tracker.gillian_oneplus3t_blue
       - device_tracker.gillian_tado
       - device_tracker.gillian_ping
+      - device_tracker.gillian_oneplus_3t

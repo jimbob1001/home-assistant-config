@@ -35,6 +35,11 @@ homeassistant:
     "sensor.gillian*":
       entity_picture: /local/sw/hologram.png
 
+    "binary_sensor.ping*":
+      device_class: connectivity
+    "binary_sensor.presence*":
+      device_class: presence
+
     "scene.hue*":
       entity_picture: /local/sw/k2so.png
 
@@ -54,7 +59,7 @@ homeassistant:
 ##### CUSTOMIZE ENTITIES ######
 ###############################
 ##### OVERRIDES DOMAINS #######
-##### OVERRIDES GLOBAL #######
+##### OVERRIDES GLOBAL ########
 ###############################
 
   customize:
@@ -81,10 +86,10 @@ homeassistant:
     sensor.motion_hue_living_room:
       friendly_name: Living Room Motion
 
-    binary_sensor.james_presence:
+    binary_sensor.presence_james:
       friendly_name: James
       entity_picture: /local/sw/poe.png
-    binary_sensor.gillian_presence:
+    binary_sensor.presence_gillian:
       friendly_name: Gillian
       entity_picture: /local/sw/rey2.png
     binary_sensor.iss:
@@ -126,13 +131,8 @@ homeassistant:
       friendly_name: PLEX
     media_player.cast_shield:
       friendly_name: CAST
-
-    media_player.kodi_kodi_universal:
-      friendly_name: KODI
-    media_player.plex_shield_universal:
-      friendly_name: PLEX
-    media_player.cast_shield_universal:
-      friendly_name: CAST
+    media_player.bravia4k:
+      friendly_name: BRAVIA
 
     media_player.sonos_living_room:
       friendly_name: SONOS LIVING ROOM
@@ -151,21 +151,32 @@ homeassistant:
     media_player.sonos_all_universal:
       friendly_name: SONOS
 
-    group.today:
+    group.default_view:
       order: 1
-    group.tomorrow:
+    group.page_2:
       order: 2
-    group.home:
+    group.page_3:
       order: 3
-    group.living_room_lights:
+    group.page_4:
       order: 4
+    group.page_5:
+      order: 5
+      
+    group.today:
+      order: 6
+    group.tomorrow:
+      order: 7
+    group.home:
+      order: 8
+    group.living_room_lights:
+      order: 9
     group.hue_light_scripts:
       control: hidden
       entity_picture: /local/sw/deathstar.png
-      order: 5
+      order: 10
     group.outside:
-      order: 6
+      order: 11
     group.media_centre:
-      order: 7
+      order: 12
     group.web:
-      order: 8
+      order: 13

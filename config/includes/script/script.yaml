@@ -5,7 +5,7 @@
   hue_dim:
     alias: Dim
     sequence:
-      - service: light.hue_activate_scene
+      - service: hue.hue_activate_scene
         data:
           group_name: "Living Room"
           scene_name: "Dim"
@@ -13,7 +13,7 @@
   hue_full:
     alias: Full
     sequence:
-      - service: light.hue_activate_scene
+      - service: hue.hue_activate_scene
         data:
           group_name: "Living Room"
           scene_name: "Full"
@@ -21,7 +21,7 @@
   hue_morning:
     alias: Morning
     sequence:
-      - service: light.hue_activate_scene
+      - service: hue.hue_activate_scene
         data:
           group_name: "Living Room"
           scene_name: "Dim"
@@ -29,7 +29,7 @@
   hue_movie:
     alias: Movie
     sequence:
-      - service: light.hue_activate_scene
+      - service: hue.hue_activate_scene
         data:
           group_name: "Living Room"
           scene_name: "Movie"
@@ -37,7 +37,7 @@
   hue_night:
     alias: Night
     sequence:
-      - service: light.hue_activate_scene
+      - service: hue.hue_activate_scene
         data:
           group_name: "Living Room"
           scene_name: "Night"
@@ -45,7 +45,7 @@
   hue_white:
     alias: White
     sequence:
-      - service: light.hue_activate_scene
+      - service: hue.hue_activate_scene
         data:
           group_name: "Living Room"
           scene_name: "White"
@@ -53,7 +53,7 @@
   hue_outside_full:
     alias: Outside Full
     sequence:
-      - service: light.hue_activate_scene
+      - service: hue.hue_activate_scene
         data:
           group_name: "Outside"
           scene_name: "Full"
@@ -61,7 +61,7 @@
   hue_outside_dim:
     alias: Outside Dim
     sequence:
-      - service: light.hue_activate_scene
+      - service: hue.hue_activate_scene
         data:
           group_name: "Outside"
           scene_name: "Dim"
