@@ -4,6 +4,7 @@
 
 group:
   default_view:
+    name: no. 33
     view: true
     entities:
       - binary_sensor.presence_james
