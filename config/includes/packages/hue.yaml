@@ -5,22 +5,10 @@
 hue:
   bridges:
     - host: !secret hue_ip
-      #entity_namespace: 'hue'
+      entity_namespace: 'hue'
       filename: phue.conf
       allow_unreachable: true
       allow_hue_groups: true
-
-
-###############################
-########## HUE LIGHTS #########
-###############################
-
-#light:
-#  - platform: hue
-#    entity_namespace: 'hue'
-#    host: !secret hue_ip
-#    allow_unreachable: true
-#    allow_hue_groups: true
 
 ###############################
 ########## HUE SENSORS ########
@@ -52,20 +40,20 @@ group:
   outside:
       name: Outside
       entities:
-      # - light.hue_front_porch
-      - light.front_porch
+      - light.hue_front_porch
+      #- light.front_porch
 
   living_room_lights:
       name: Living Room Lights
       entities:
-      # - light.hue_big_floor_lamp
-      # - light.hue_small_floor_lamp
-      # - light.hue_table_lamp
-      # - light.hue_tv_backlight
-      - light.big_floor_lamp
-      - light.small_floor_lamp
-      - light.table_lamp
-      - light.tv_backlight
+      - light.hue_big_floor_lamp
+      - light.hue_small_floor_lamp
+      - light.hue_table_lamp
+      - light.hue_tv_backlight
+      #- light.big_floor_lamp
+      #- light.small_floor_lamp
+      #- light.table_lamp
+      #- light.tv_backlight
 
   hue_light_scripts:
       name: Hue Lights

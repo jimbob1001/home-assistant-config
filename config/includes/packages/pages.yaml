@@ -99,8 +99,8 @@ group:
       entities:
       - sensor.james_home
       - sensor.gillian_home
-      - sensor.heating_tado_mode
-      - sensor.heating_temperature
+      - sensor.tado_heating_mode
+      - sensor.tado_heating_temperature
       - sensor.living_room_temp
       - sensor.motion_hue_living_room
       - sensor.hue_tap

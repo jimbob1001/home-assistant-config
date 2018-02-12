@@ -55,10 +55,10 @@ media_player:
 ######### PLEX SENSOR #########
 ###############################
 
-sensor:
-  - platform: plex
-    name: plex_shield
-    host: !secret plex_ip
+#sensor:
+#  - platform: plex
+#    name: plex_shield
+#    host: !secret plex_ip
 
 ###############################
 ### ALL-IN-ONE MEDIA GROUP ####

@@ -10,6 +10,7 @@
 *.sqlite
 *.xml
 *.backup
+*.HA_VERSION
 .uuid
 
 .HA_VERSION
@@ -33,3 +34,4 @@ tts
 deprecated
 dev_config
 dockermon.yaml
+entity_registry.yaml
