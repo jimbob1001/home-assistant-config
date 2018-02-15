@@ -13,8 +13,8 @@ sensor:
 
   - platform: template
     sensors:
-      next_bus_to_work:
-        friendly_name: 'Next bus to work'
+      next_bus_to_work_scheduled:
+        friendly_name: 'Next scheduled bus to work'
         value_template: >
           {%
           if is_state
@@ -28,7 +28,23 @@ sensor:
           }}
           {% endif %}
 
-      next_bus_home:
+      next_bus_to_work_route:
+        friendly_name: 'Next route to work'
+        value_template: >
+          {%
+          if is_state
+          ('sensor.next_bus_to_leeds.attributes.next_buses[0].route',
+          'unknown')
+          %}
+          none
+          {% else %}
+          {{
+          states.sensor.next_bus_to_leeds.attributes.next_buses[0].route
+          }}
+          {% endif %}
+
+
+      next_bus_home_scheduled:
         friendly_name: 'Next bus home'
         value_template: >
           {%
@@ -56,12 +72,3 @@ sensor:
     #       {{
     #       states.sensor.next_bus_to_keighley.attributes.next_buses[0].scheduled
     #       }}
-
-group:
-  next_bus:
-      name: Next Bus
-      entities:
-      - sensor.next_bus_to_leeds
-      - sensor.next_bus_to_keighley
-      - sensor.next_bus_home
-      - sensor.next_bus_to_work
