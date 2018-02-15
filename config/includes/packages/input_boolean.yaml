@@ -39,6 +39,9 @@ input_boolean:
     name: Simulate Sunset
     initial: off
 
+  restart_hass_dockermon:
+    name: Restart homeassistant
+    initial: off
 
 ###############################
 ######## INPUT GROUPS #########

@@ -28,6 +28,11 @@
       command: '/restart'
       # Type "/restart" in the no.33 bot
 
+  - platform: state
+    entity_id: input_boolean.restart_hass_dockermon
+    to: 'on'
+    # Triggers if the switch is turned on
+
   action:
   - service: notify.bot
     data:
