@@ -5,7 +5,7 @@
 hue:
   bridges:
     - host: !secret hue_ip
-      entity_namespace: 'hue'
+      #entity_namespace: 'hue'
       filename: phue.conf
       allow_unreachable: true
       allow_hue_groups: true
@@ -22,13 +22,15 @@ sensor:
     sensors:
       living_room_temp:
         friendly_name: Living Room Temp
-        value_template: '{{ states.sensor.motion_hue_living_room.attributes.temperature }}'
+        value_template: >
+          {{ states.sensor.motion_hue_living_room.attributes.temperature }}
         unit_of_measurement: "°C"
         # Creates a sensor to display living room temperature
 
       motion_sensor_battery:
         friendly_name: Motion Sensor Battery
-        value_template: '{{ states.sensor.motion_hue_living_room.attributes.battery }}'
+        value_template: >
+          {{ states.sensor.motion_hue_living_room.attributes.battery }}
         unit_of_measurement: "%"
         # Creates a sensor to display the motion sensor battery
 
