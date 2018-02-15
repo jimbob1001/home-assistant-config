@@ -86,6 +86,10 @@ group:
       - sensor.dark_sky_daily_low_apparent_temperature
       - sensor.season
       - sun.sun
+      - sensor.next_bus_to_leeds
+      - sensor.next_bus_to_keighley
+      - sensor.next_bus_home
+      - sensor.next_bus_to_work
 
   tomorrow:
       name: Tomorrow

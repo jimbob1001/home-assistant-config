@@ -1,0 +1,67 @@
+sensor:
+  - platform: uk_transport
+    app_id: !secret transport_app_id
+    app_key: !secret transport_app_key
+    scan_interval: 600
+    queries:
+      - mode: bus
+        origin: 450017197
+        destination: Leeds
+      - mode: bus
+        origin: 450011770
+        destination: Keighley
+
+  - platform: template
+    sensors:
+      next_bus_to_work:
+        friendly_name: 'Next bus to work'
+        value_template: >
+          {%
+          if is_state
+          ('sensor.next_bus_to_leeds.attributes.next_buses[0].scheduled',
+          'unknown')
+          %}
+          no more buses today
+          {% else %}
+          {{
+          states.sensor.next_bus_to_leeds.attributes.next_buses[0].scheduled
+          }}
+          {% endif %}
+
+      next_bus_home:
+        friendly_name: 'Next bus home'
+        value_template: >
+          {%
+          if is_state
+          ('sensor.next_bus_to_keighley.attributes.next_buses[0].scheduled',
+          'unknown')
+          %}
+          no more buses today
+          {% else %}
+          {{
+          states.sensor.next_bus_to_keighley.attributes.next_buses[0].scheduled
+          }}
+          {% endif %}
+
+    # sensors:
+    #   next_bus_to_work:
+    #     friendly_name: 'Next bus to work'
+    #     value_template: >
+    #       {{
+    #       states.sensor.next_bus_to_leeds.attributes.next_buses[0].scheduled
+    #       }}
+    #   next_bus_home:
+    #     friendly_name: 'Next bus home'
+    #     value_template: >
+    #       {{
+    #       states.sensor.next_bus_to_keighley.attributes.next_buses[0].scheduled
+    #       }}
+
+group:
+  next_bus:
+      name: Next Bus
+      entities:
+      - sensor.next_bus_to_leeds
+      - sensor.next_bus_to_keighley
+      - sensor.next_bus_home
+      - sensor.next_bus_to_work

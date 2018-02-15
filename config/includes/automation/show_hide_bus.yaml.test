@@ -1,0 +1,35 @@
+############ SHOW ############
+
+- alias: show_next_bus_home
+  id: show_next_bus_home
+  initial_state: True
+
+  trigger:
+  - platform: state
+    entity_id: media_player.media_centre
+    from: 'off'
+
+  action:
+  - service: group.set_visibility
+    entity_id: group.next_bus_home
+    data:
+      visible: True
+
+############ HIDE ############
+
+- alias: hide_next_bus_home
+  id: hide_next_bus_home
+  initial_state: True
+
+  trigger:
+  - platform: homeassistant
+    event: start
+  - platform: state
+    entity_id: media_player.media_centre
+    to: 'off'
+
+  action:
+  - service: group.set_visibility
+    entity_id: group.next_bus_home
+    data:
+      visible: False
