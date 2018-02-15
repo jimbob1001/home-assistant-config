@@ -151,6 +151,10 @@ homeassistant:
     media_player.sonos_all_universal:
       friendly_name: SONOS
 
+###############################
+######## PAGE ORDERS ##########
+###############################
+
     group.default_view:
       order: 1
     group.page_2:
@@ -159,24 +163,30 @@ homeassistant:
       order: 3
     group.page_4:
       order: 4
-    group.page_5:
+    group.docker:
       order: 5
-      
-    group.today:
+    group.page_5:
       order: 6
+
+###############################
+####### GROUP ORDERS ##########
+###############################
+
+    group.today:
+      order: 11
     group.tomorrow:
-      order: 7
+      order: 12
+    group.buses:
+      order: 13
     group.home:
-      order: 8
-    group.living_room_lights:
-      order: 9
+      order: 14
     group.hue_light_scripts:
       control: hidden
       entity_picture: /local/sw/deathstar.png
-      order: 10
+      order: 15
+    group.living_room_lights:
+      order: 16
     group.outside:
-      order: 11
+      order: 17
     group.media_centre:
-      order: 12
-    group.web:
-      order: 13
+      order: 18

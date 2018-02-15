@@ -4,19 +4,17 @@
 
 group:
   default_view:
-    name: no. 33
+    name: Home
     view: true
     entities:
-      - binary_sensor.presence_james
-      - binary_sensor.presence_gillian
       - group.today
       - group.tomorrow
+      - group.buses
       - group.home
       - group.living_room_lights
-      - group.hue_light_scripts
       - group.outside
+      - group.hue_light_scripts
       - group.media_centre
-      - group.web
 
 ###############################
 ########## PAGE -3- ###########
@@ -26,6 +24,7 @@ group:
     name: Page 3
     view: true
     entities:
+      - group.web
       - group.other_scenes
       - group.hue_scripts
       - group.hue_scenes
@@ -86,10 +85,15 @@ group:
       - sensor.dark_sky_daily_low_apparent_temperature
       - sensor.season
       - sun.sun
+
+  buses:
+      name: Buses
+      control: hidden
+      entities:
       - sensor.next_bus_to_leeds
       - sensor.next_bus_to_keighley
-      - sensor.next_bus_home
-      - sensor.next_bus_to_work
+      - sensor.next_bus_to_work_scheduled
+      - sensor.next_bus_home_scheduled
 
   tomorrow:
       name: Tomorrow
@@ -103,6 +107,8 @@ group:
       entities:
       - sensor.james_home
       - sensor.gillian_home
+      - binary_sensor.presence_james
+      - binary_sensor.presence_gillian
       - sensor.tado_heating_mode
       - sensor.tado_heating_temperature
       - sensor.living_room_temp
@@ -110,7 +116,9 @@ group:
       - sensor.hue_tap
       - sensor.motion_sensor_battery
       - input_boolean.enable_guest
-      - input_select.at_home_today
+      - input_boolean.restart_hass_dockermon
+      #- script.restart_hass
+      #- input_select.at_home_today
 
   other_scenes:
       name: Other Scenes
