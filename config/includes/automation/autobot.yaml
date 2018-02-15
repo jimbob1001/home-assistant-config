@@ -33,8 +33,9 @@
     data:
       message: 'restarting hass'
       # Reply "restarting hass" in no.33 bot
-  - service: homeassistant.restart
-    # Restarts homeassistant
+#- service: homeassistant.restart
+  - service: script.restart_hass
+    # Restarts homeassistant docker
 
 ########################
 
