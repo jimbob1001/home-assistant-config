@@ -35,3 +35,4 @@ deprecated
 dev_config
 dockermon.yaml
 entity_registry.yaml
+docker-compose.yaml
