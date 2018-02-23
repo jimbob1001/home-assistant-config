@@ -1,0 +1,35 @@
+############ SHOW ############
+
+- alias: show_next_bus_group
+  id: show_next_bus_group
+  initial_state: True
+
+  trigger:
+  - platform: time
+    at: '05:55:00'
+    # Triggers at 5.55 am
+
+  action:
+  - service: group.set_visibility
+    entity_id: group.buses
+    data:
+      visible: True
+
+############ HIDE ############
+
+- alias: hide_next_bus_group
+  id: hide_next_bus_group
+  initial_state: True
+
+  trigger:
+  # - platform: homeassistant
+  #   event: start
+  - platform: time
+    at: '20:00:00'
+    # Triggers at 8.00 pm
+
+  action:
+  - service: group.set_visibility
+    entity_id: group.buses
+    data:
+      visible: False
