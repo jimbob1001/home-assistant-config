@@ -26,6 +26,10 @@ input_boolean:
   enable_guest:
     name: Enable Guest Mode
     #initial: off
+    
+  enable_dim:
+    name: Enable Dim Lights
+    initial: off
 
   plex_movie:
     name: Plex Movie
