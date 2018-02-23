@@ -11,6 +11,7 @@ group:
       - group.tomorrow
       - group.buses
       - group.home
+      - group.info
       - group.living_room_lights
       - group.outside
       - group.hue_light_scripts
@@ -109,13 +110,18 @@ group:
       - sensor.gillian_home
       - binary_sensor.presence_james
       - binary_sensor.presence_gillian
+      - input_boolean.enable_guest
+
+  info:
+      name: Info
+      control: hidden
+      entities:
       - sensor.tado_heating_mode
       - sensor.tado_heating_temperature
       - sensor.living_room_temp
       - sensor.motion_hue_living_room
       - sensor.hue_tap
       - sensor.motion_sensor_battery
-      - input_boolean.enable_guest
       - input_boolean.restart_hass_dockermon
       #- script.restart_hass
       #- input_select.at_home_today

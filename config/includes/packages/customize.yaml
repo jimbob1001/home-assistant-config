@@ -176,9 +176,9 @@ homeassistant:
       order: 11
     group.tomorrow:
       order: 12
-    group.buses:
-      order: 13
     group.home:
+      order: 13
+    group.info:
       order: 14
     group.hue_light_scripts:
       control: hidden
