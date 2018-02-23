@@ -14,6 +14,7 @@
 .uuid
 
 .HA_VERSION
+*VERSION
 .ios.conf
 .shopping_list.json
 emulated_hue_ids.json
