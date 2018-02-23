@@ -3,6 +3,9 @@
   initial_state: True
 
   trigger:
+  - platform: state
+    entity_id: input_boolean.enable_dim
+    to: 'on'
   - platform: time
     at: '05:55:00'
     # Triggers at 5.55 am

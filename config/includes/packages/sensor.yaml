@@ -9,8 +9,8 @@ sensor:
 ###### PIHOLE SENSOR ##########
 ###############################
 
-  - platform: pi_hole
-    host: !secret pihole_ip
+  # - platform: pi_hole
+  #   host: !secret pihole_ip
 
 ###############################
 #### SPEEDTEST SENSOR #########

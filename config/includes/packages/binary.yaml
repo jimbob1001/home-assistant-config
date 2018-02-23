@@ -3,7 +3,7 @@
 ###############################
 
 binary_sensor:
-  - platform: iss
+  # - platform: iss
     # International Space Station sensor
 
   - platform: workday
