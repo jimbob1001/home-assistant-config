@@ -13,12 +13,12 @@ weblink:
 ####### MONZO SENSOR ##########
 ###############################
 
-sensor:
-  - platform: monzo
-    client_id: !secret monzo_client_id
-    client_secret: !secret monzo_client_secret
-    name: 'Monzo'
-    current_account: true
+# sensor:
+#   - platform: monzo
+#     client_id: !secret monzo_client_id
+#     client_secret: !secret monzo_client_secret
+#     name: 'Monzo'
+#     current_account: true
 
 ###############################
 ######### WEB GROUP ###########
