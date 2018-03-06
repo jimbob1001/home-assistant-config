@@ -6,10 +6,20 @@ media_player:
   - platform: sonos
     entity_namespace: 'sonos'
     hosts:
-      - !secret sonos_ip_1
-      - !secret sonos_ip_2
-      - !secret sonos_ip_3
+      - !secret sonos_ip_living_room
+      - !secret sonos_ip_kitchen
+      - !secret sonos_ip_bedroom
 
+#  - platform: sonos
+#    hosts:
+#      - !secret sonos_ip_living_room
+#  - platform: sonos
+#    hosts:
+#      - !secret sonos_ip_kitchen
+#  - platform: sonos
+#    hosts:
+#      - !secret sonos_ip_bedroom
+      
 ###############################
 ### ALL-IN-ONE SONOS PLAYER ###
 ###############################

@@ -25,16 +25,16 @@ binary_sensor:
     name: ping_hue
 
   - platform: ping
-    host: !secret sonos_ip_1
-    name: ping_sonos_1
+    host: !secret sonos_ip_living_room
+    name: ping_sonos_living_room
 
   - platform: ping
-    host: !secret sonos_ip_2
-    name: ping_sonos_2
+    host: !secret sonos_ip_kitchen
+    name: ping_sonos_kitchen
 
   - platform: ping
-    host: !secret sonos_ip_3
-    name: ping_sonos_3
+    host: !secret sonos_ip_bedroom
+    name: ping_sonos_bedroom
 
   - platform: ping
     host: !secret sony_ip
@@ -71,9 +71,9 @@ group:
     - binary_sensor.ping_hue
     - binary_sensor.ping_tado
     - binary_sensor.ping_shield
-    - binary_sensor.ping_sonos_1
-    - binary_sensor.ping_sonos_2
-    - binary_sensor.ping_sonos_3
+    - binary_sensor.ping_sonos_living_room
+    - binary_sensor.ping_sonos_kitchen
+    - binary_sensor.ping_sonos_bedroom
     - binary_sensor.ping_sony
     - binary_sensor.ping_humax
     - binary_sensor.ping_synology

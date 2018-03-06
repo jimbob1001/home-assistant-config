@@ -7,9 +7,17 @@ input_boolean:
     name: Disable Bedtime Automation
     #initial: off
 
-  bedtime:
-    name: Bedtime
+  working_from_home:
+    name: Working from home today
     #initial: off
+  
+  group_all_sonos:
+    name: Group all Sonos
+    initial: off
+
+#  bedtime:
+#    name: Bedtime
+#    initial: off
 
   disable_plex:
     name: Disable Plex Automation
@@ -26,10 +34,6 @@ input_boolean:
   enable_guest:
     name: Enable Guest Mode
     #initial: off
-    
-  enable_dim:
-    name: Enable Dim Lights
-    initial: off
 
   plex_movie:
     name: Plex Movie

@@ -1,0 +1,12 @@
+
+- alias: group_all_sonos
+  id: group_all_sonos
+  initial_state: True
+  
+  trigger:
+  - platform: state
+    entity_id: input_boolean.group_all_sonos
+    to: 'on'
+
+  action:
+  - service: script.sonos_script
