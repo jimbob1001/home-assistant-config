@@ -15,6 +15,7 @@ sensor:
     - apparent_temperature_max
     - apparent_temperature_min
     - summary
+    - uv_index
 
 ###############################
 ##### TIME & DATE SENSOR ######
