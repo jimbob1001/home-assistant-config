@@ -1,0 +1,35 @@
+
+  sonos_script:
+    alias: Sonos Script
+    sequence:
+      - service: media_player.sonos_snapshot
+        entity_id:
+          - media_player.sonos_kitchen
+          - media_player.sonos_bedroom
+          - media_player.sonos_living_room
+      - delay: '00:00:03'
+      - service: media_player.sonos_unjoin
+        entity_id:
+          - media_player.sonos_kitchen
+          - media_player.sonos_bedroom
+          - media_player.sonos_living_room
+      - delay: '00:00:03'
+      - service: media_player.sonos_join
+        data:
+          master: media_player.sonos_kitchen
+        entity_id:
+          #- media_player.sonos_kitchen
+          - media_player.sonos_bedroom
+          - media_player.sonos_living_room
+      - delay: '00:00:03'
+      - service: media_player.volume_set
+        data:
+          volume_level: 0.15
+        entity_id:
+          - media_player.sonos_kitchen
+          - media_player.sonos_bedroom
+          - media_player.sonos_living_room
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.sonos_kitchen
+          source: 'BBC Radio 6 Music'

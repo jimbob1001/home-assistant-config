@@ -1,0 +1,31 @@
+
+  restart_hass:
+    alias: Restart Home Assistant
+    sequence:
+      - service: shell_command.restart_hass
+
+  restart_hydra:
+    alias: Restart Hydra
+    sequence:
+      - service: shell_command.restart_hydra
+
+  restart_nzbget:
+    alias: Restart NZBGet
+    sequence:
+      - service: shell_command.restart_nzbget
+
+  restart_radarr:
+    alias: Restart Radarr
+    sequence:
+      - service: shell_command.restart_radarr
+
+  restart_sonarr:
+    alias: Restart Sonarr
+    sequence:
+      - service: shell_command.restart_sonarr
+
+  restart_tautulli:
+    alias: Restart Tautulli
+    sequence:
+      - service: shell_command.restart_tautulli
+      
