@@ -34,9 +34,9 @@
     # Triggers if the switch is turned on
 
   action:
-  - service: notify.bot
-    data:
-      message: 'restarting hass'
+#  - service: notify.bot
+#    data:
+#      message: 'restarting hass'
       # Reply "restarting hass" in no.33 bot
 #- service: homeassistant.restart
   - service: script.restart_hass
