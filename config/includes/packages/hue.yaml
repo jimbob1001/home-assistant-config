@@ -60,7 +60,11 @@ group:
   hue_light_scripts:
       name: Hue Lights
       entities:
-      - group.hue_scripts
+      - input_boolean.enable_dim
+      - input_boolean.enable_full
+      - input_boolean.enable_movie
+      - input_boolean.enable_white
+      - input_boolean.enable_night
 
   hue_scripts:
       name: Hue Scripts
@@ -85,3 +89,20 @@ group:
   #     - scene.hue_night
   #     - scene.hue_outside_full
   #     - scene.hue_outside_dim
+
+input_boolean:
+  enable_dim:
+    name: Enable Dim Lights
+    initial: off
+  enable_full:
+    name: Enable Full Lights
+    initial: off
+  enable_movie:
+    name: Enable Movie Lights
+    initial: off
+  enable_white:
+    name: Enable White Lights
+    initial: off
+  enable_night:
+    name: Enable Night Lights
+    initial: off

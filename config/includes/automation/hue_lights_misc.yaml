@@ -8,6 +8,9 @@
     event_data:
       command: '/white'
       # Type "/white" in the no.33 bot
+  - platform: state
+    entity_id: input_boolean.enable_white
+    to: 'on'
 
   action:
     service: hue.hue_activate_scene
@@ -28,6 +31,9 @@
     event_data:
       command: '/night'
       # Type "/night" in the no.33 bot
+  - platform: state
+    entity_id: input_boolean.enable_night
+    to: 'on'
 
   action:
     service: hue.hue_activate_scene
@@ -38,20 +44,23 @@
 
 ########################
 
-- alias: lights_on_morning
-  id: lights_on_morning
+- alias: lights_on_movie
+  id: lights_on_movie
   initial_state: True
 
   trigger:
   - platform: event
     event_type: telegram_command
     event_data:
-      command: '/morning'
+      command: '/movie'
       # Type "/morning" in the no.33 bot
+  - platform: state
+    entity_id: input_boolean.enable_movie
+    to: 'on'
 
   action:
     service: hue.hue_activate_scene
     data:
       group_name: "Living Room"
-      scene_name: "Dim"
-      # Activates native Hue 'Dim' scene
+      scene_name: "Movie"
+      # Activates native Hue 'Movie' scene

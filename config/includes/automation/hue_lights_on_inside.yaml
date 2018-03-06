@@ -41,7 +41,10 @@
     event_data:
       command: '/full'
       # Type "/full" in the no.33 bot
-
+  - platform: state
+    entity_id: input_boolean.enable_full
+    to: 'on'
+    
   condition:
     - condition: template
       value_template: >

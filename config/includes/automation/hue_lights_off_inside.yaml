@@ -14,6 +14,9 @@
     entity_id: input_boolean.enable_guest
     state: 'off'
   - condition: state
+    entity_id: input_boolean.working_from_home
+    state: 'off'
+  - condition: state
     entity_id: binary_sensor.workday_sensor
     state: 'on'
 
@@ -41,8 +44,8 @@
     entity_id: input_boolean.enable_guest
     state: 'off'
   - condition: state
-    entity_id: media_player.plex_shield
-    state: 'idle'
+    entity_id: media_player.media_centre
+    state: 'off'
 
   action:
     service: homeassistant.turn_off
