@@ -9,7 +9,7 @@ group:
     entities:
       - group.today
       - group.tomorrow
-      - group.buses
+      #- group.buses
       - group.home
       - group.info
       - group.living_room_lights
@@ -48,28 +48,28 @@ group:
 ########## PAGE -5- ###########
 ###############################
 
-  Page_5:
-    name: ALL
-    view: true
-    entities:
-      - group.today
-      - group.tomorrow
-      - group.home
-      - group.james
-      - group.gillian
-      - group.living_room_lights
-      - group.outside
-      - media_player.plex_shield
-      - media_player.cast_shield
-      - media_player.kodi_kodi
-      - media_player.sonos_all_universal
-      - group.guest
-      - group.overrides
-      - group.all_devices
-      - group.all_automations
-      - group.all_lights
-      - group.all_scripts
-      - group.binary_sensors
+#  Page_5:
+#    name: ALL
+#    view: true
+#    entities:
+#      - group.today
+#      - group.tomorrow
+#      - group.home
+#      - group.james
+#      - group.gillian
+#      - group.living_room_lights
+#      - group.outside
+#      - media_player.plex_shield
+#      - media_player.cast_shield
+#      - media_player.kodi_kodi
+#      - media_player.sonos_all_universal
+#      - group.guest
+#      - group.overrides
+#      - group.all_devices
+#      - group.all_automations
+#      - group.all_lights
+#      - group.all_scripts
+#      - group.binary_sensors
 
 ###############################
 ######### MISC GROUPS #########
@@ -84,23 +84,25 @@ group:
       - sensor.dark_sky_summary
       - sensor.dark_sky_daily_high_apparent_temperature
       - sensor.dark_sky_daily_low_apparent_temperature
+      - sensor.dark_sky_uv_index
       - sensor.season
       - sun.sun
 
-  buses:
-      name: Buses
-      control: hidden
-      entities:
-      - sensor.next_bus_to_leeds
-      - sensor.next_bus_to_keighley
-      - sensor.next_bus_to_work_scheduled
-      - sensor.next_bus_home_scheduled
+#  buses:
+#      name: Buses
+#      control: hidden
+#      entities:
+#      - sensor.next_bus_to_leeds
+#      - sensor.next_bus_to_keighley
+#      - sensor.next_bus_to_work_scheduled
+#      - sensor.next_bus_home_scheduled
 
   tomorrow:
       name: Tomorrow
       entities:
       - sensor.dark_sky_daily_high_apparent_temperature_1
       - sensor.dark_sky_daily_low_apparent_temperature_1
+      - sensor.dark_sky_uv_index_1
 
   home:
       name: Home
@@ -108,15 +110,18 @@ group:
       entities:
       - sensor.james_home
       - sensor.gillian_home
+      - input_boolean.working_from_home
       - binary_sensor.presence_james
       - binary_sensor.presence_gillian
       - input_boolean.enable_guest
+      - input_boolean.group_all_sonos
 
   info:
       name: Info
       control: hidden
       entities:
-      - sensor.tado_heating_mode
+      - climate.heating
+      #- sensor.tado_heating_mode
       - sensor.tado_heating_temperature
       - sensor.living_room_temp
       - sensor.motion_hue_living_room

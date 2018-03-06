@@ -16,22 +16,22 @@ sensor:
 #### SPEEDTEST SENSOR #########
 ###############################
 
-  - platform: speedtest
-    hour:
-      - 6
-    monitored_conditions:
-      - ping
-      - download
-      - upload
+#  - platform: speedtest
+#    hour:
+#      - 6
+#    monitored_conditions:
+#      - ping
+#      - download
+#      - upload
 
 ###############################
 ##### SPEEDTEST GROUP #########
 ###############################
 
-group:
-  speedtest:
-    name: Speedtest
-    entities:
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.speedtest_ping
+#group:
+#  speedtest:
+#    name: Speedtest
+#    entities:
+#    - sensor.speedtest_download
+#    - sensor.speedtest_upload
+#    - sensor.speedtest_ping

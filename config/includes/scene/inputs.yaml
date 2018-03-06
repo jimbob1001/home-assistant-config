@@ -20,9 +20,10 @@
     input_boolean.disable_sunset: off
     input_boolean.simulate_sunset: off
     input_boolean.disable_work: off
-    input_select.at_home_today:
-      option: Not Set
+    input_boolean.working_from_home: off
+#  input_select.at_home_today:
+#    option: Not Set
 
-- name: input_tts
-  entities:
-    input_boolean.text_to_speech: off
+#- name: input_tts
+#  entities:
+#    input_boolean.text_to_speech: off
