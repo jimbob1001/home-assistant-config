@@ -83,3 +83,29 @@
       # Reply "checking config" inside the no.33 bot
   - service: homeassistant.check_config
     # Checks homeassistant config
+
+########################
+
+- alias: auto_bot_purge
+  id: auto_bot_check_purge
+  initial_state: True
+
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/purge'
+      # Type "/purge" in the no.33 bot
+
+  action:
+  - service: notify.bot
+    data:
+      message: 'purging database'
+      # Reply "purging database" inside the no.33 bot
+  - service: recorder.purge
+    data:
+      keep_days: 0
+      repack: yes
+    # Purges the database
+  - service: system_log.clear
+    # Clears the log of error messages
