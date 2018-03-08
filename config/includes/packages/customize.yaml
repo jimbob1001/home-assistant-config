@@ -131,7 +131,7 @@ homeassistant:
       friendly_name: PLEX
     media_player.cast_shield:
       friendly_name: CAST
-    media_player.bravia4k:
+    media_player.sony_bravia:
       friendly_name: BRAVIA
 
     media_player.sonos_living_room:

@@ -5,9 +5,10 @@
   trigger:
   - platform: state
     entity_id:
-    - media_player.plex_shield
-    - media_player.cast_shield
-    - media_player.kodi_kodi
+    - media_player.media_centre_video
+    #- media_player.plex_shield
+    #- media_player.cast_shield
+    #- media_player.kodi_kodi
     to: 'playing'
     # Triggers if watching tv
 

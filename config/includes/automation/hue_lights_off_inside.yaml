@@ -44,7 +44,7 @@
     entity_id: input_boolean.enable_guest
     state: 'off'
   - condition: state
-    entity_id: media_player.media_centre
+    entity_id: media_player.media_centre_video
     state: 'off'
 
   action:

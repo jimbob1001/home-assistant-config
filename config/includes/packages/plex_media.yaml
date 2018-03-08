@@ -6,15 +6,15 @@ media_player:
   - platform: plex
     entity_namespace: 'plex'
     # include_non_clients: true
-    scan_interval: 2
+    # scan_interval: 2
 
 ###############################
 ########### CAST ##############
 ###############################
 
-  - platform: cast
-    entity_namespace: 'cast'
-    host: !secret cast_ip
+  # - platform: cast
+  #   entity_namespace: 'cast'
+  #   host: !secret cast_ip
 
 ###############################
 ########### KODI ##############
@@ -24,13 +24,13 @@ media_player:
     entity_namespace: 'kodi'
     host: !secret cast_ip
     port: 8033
-    
+
 ###############################
 ########### SONYTV #############
 ###############################
 
   - platform: braviatv_psk
-    name: Bravia4k
+    name: Sony Bravia
     host: !secret sony_ip
     psk: !secret sony_psk
     mac: !secret sony_mac
@@ -38,18 +38,23 @@ media_player:
     android: True
     sourcefilter:
       - HDMI
-    
+
 ###############################
 ### ALL-IN-ONE MEDIA CENTRE ###
 ###############################
 
   - platform: universal
-    name: MEDIA CENTRE
+    name: MEDIA CENTRE VIDEO
     children:
-       - media_player.sonos_all_universal
        - media_player.plex_shield
        - media_player.kodi_kodi
        - media_player.cast_shield
+
+  - platform: universal
+    name: MEDIA CENTRE
+    children:
+       - media_player.sonos_all_universal
+       - media_player.media_centre_video
 
 ###############################
 ######### PLEX SENSOR #########
@@ -89,7 +94,7 @@ group:
     name: Page 2
     view: true
     entities:
-      - media_player.bravia4k
+      - media_player.sony_bravia
       - media_player.plex_shield
       - media_player.cast_shield
       - media_player.kodi_kodi
